@@ -1,0 +1,25 @@
+            /* 
+            console.log(x); // undefined
+            var x = 5;
+            console.log(x); // 5
+
+            Apesar de console.log(x) ser chamado antes da declaração var x = 5;, não gera um erro. Isso ocorre porque a declaração de variável é "elevada" (hoisted) para o topo do contexto de execução. No entanto, apenas a declaração é elevada, não a inicialização.
+
+            No entanto, é importante observar que o hoisting ocorre apenas com var e não com let ou const. Com let e const, você não pode acessar a variável antes da sua declaração no código.
+
+            
+            function exemplo() {
+            if (true) {
+                var x = 10; // escopo de função -> sofre hoisting e eh elevada para o escopo global
+                let y = 20; // escopo de bloco pois eh definida dentro de um bloco de codigo especifico
+                const z = 30; // escopo de bloco pois eh definida dentro de um bloco de codigo especifico
+            }
+
+            console.log(x); // x é visível aqui
+            // console.log(y); // y não é visível aqui (gerará um erro)
+            // console.log(z); // z não é visível aqui (gerará um erro)
+            }
+
+            exemplo();
+
+            /*
