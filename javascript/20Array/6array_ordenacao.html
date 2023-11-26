@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+
+  <script>
+  /*   var lista_frutas = Array()
+
+    lista_frutas[0] = 'Maçã'
+    lista_frutas[1] = 'Uva'
+    lista_frutas[2] = 'Banana'
+    lista_frutas[3] = 'Morango'
+
+    console.log(lista_frutas.sort()) */ //o metodo .sort do objeto array ordena em ordem alfabetica os itens da lista
+
+    var lista_numeros = Array()
+
+    //lembre-se, operador númerico em string funciona na ordenação.
+    lista_numeros[0] = 12
+    lista_numeros[1] = 40
+    lista_numeros[2] = 3
+    lista_numeros[3] = 7
+    lista_numeros[4] = 19
+    lista_numeros[5] = 1
+
+    // mesmo os numeros sendo strings o menos da funcao faz um casting automatico por conta do contexto e organiza os elementos mesmo assim
+
+    console.log(lista_numeros.sort(ordenaNumeros)) //o sort eh um metodo do objeto array que ordena em ordem alfabetica (str) (um, dois, tres, quatro, etc) por padrao
+
+    // nesse console.log eu estou usando uma funcao (ordenaNumeros) como parametro de outra funcao (.sort) -> exemplo de funcao de callback
+
+    function ordenaNumeros (a, b) { 
+      return a - b
+    } // em caso de querer ordenar arrays com valores numericos eh so fazer essa funcao e mostrar pro metodo sort como os valores devem ser ordenados
+
+    // < 0 = a ordenado antes de b
+    // > 0 = b ordenado antes de a
+    // == 0 a ordem eh amntida
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

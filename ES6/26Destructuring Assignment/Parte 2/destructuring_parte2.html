@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <!--destructing agora em objetos
+      notacoes: let {valores que eu quero desestruturar} = objeto que queremos extrair informacoes
+    -->
+    <script> //variavel prouto que recebe um objeto literal
+      let produto = {
+        descricao: "Notebook",
+        preco: 1800,
+        detalhes: { // atributo 'tem um', nosso produto tem um 'detalhes', e esse objeto que  representa esses detalhes tem seus respctivos atributos
+          fabricante: "abc",
+          modelo: "xyz",
+        },
+      };
+      // token do destructing em array => [] 
+      // token do destructing em objetos => {} 
+
+      let {descricao, preco} = produto
+      console.log(descricao, preco)
+
+      
+      // se quisermos trocar a notacao, para em vez na hora de chamar o nome do atributo, chama o nome que vc quiser
+      let {descricao: d, preco: p} = produto
+      console.log(d, p)
+
+      // se eu tentar extrair um atributo que nao existe dentro de um objeto vai dar undefined
+      let {descricao: e, preco: g, desconto} = produto // desconto eh um atributo que nao existe no objeto, portanto vai dar undefined (indefinido)
+
+      //Podemos usar valores default tambem
+      let {descricao: A, preco: B = 1000, DESCONTO = 5} = produto // caso venha um vlaor undefined para algum valor que eu criei e atribui um valor que eu quis como default, a variavel sera criada e assumira o valor default. Se eu definir um valor default para algum atributo que nao retorne undefined, o valor daquele atributo vai ser mantido e o default vai ser desconsiderado
+
+      //extracao de atributos de objetos pertencentes a outros objetos
+      //quero extrair fabricante e modelo, como:
+      //  let { atributo que contem o objeto que queremos acessar: atributos do objeto que eu quero extrair }
+      let { detalhes: { fabricante: f, modelo = "Não informado" }} = produto;
+      // renomeei o nome da variavel tambem e atribui um parametro default no atributo modelo. Se o modelo nao existir ou for undefined, o valor que sera recebido sera  "Não informado", se existir, permanecera o valor do atributo
+      console.log(f, modelo);
+    </script>
+  </head>
+
+  <body></body>
+</html>

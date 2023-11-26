@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+        
+
+        <script>
+            
+            //possibilidade de definicao de valores default para os parametros de uma funcao
+
+            function contarUmaHistoria(personagem, atividade, nome_dono) {
+                document.write(
+                    `Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} e eles viveram felizes para sempre`
+                )
+            }
+
+            contarUmaHistoria() // sem parametros => undefined no local dessas variaveis ao tentar imprimir essa funcao
+            // Para contornar esse comportamento undefined, podemos colocar valores default nesses parametros, como o exemplo abaixo
+
+            // valores default para o parametro personagem -> 'Fubá'
+            // valores default para o parametro atividade -> 'Correr'
+            // valores default para o parametro nome_dono -> 'João'                
+
+            
+            function contarUmaHistoria(personagem = 'Fubá', atividade = 'Correr', nome_dono = 'João') {
+                document.write(
+                    `Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} e eles viveram felizes para sempre`
+                )
+            }
+
+            contarUmaHistoria('Repolho', 'Enterrar ossos', 'Pedro')
+            // nada impeda da gente mudar esse parametros default depois 
+
+            contarUmaHistoria(undefined, 'Enterrar ossos', 'Pedro')
+            // ou mudar so alguns deles e os outros vao permanecer o default, usando o undefined no lugar 
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>

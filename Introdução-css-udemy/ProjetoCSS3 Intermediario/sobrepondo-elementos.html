@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">    <title>Sobrepondo elementos</title>
+        <style type="text/css">
+            .conteudo1{
+                border: 1px solid red;
+                background: orange;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                z-index: 10;
+            }
+            .conteudo2{
+                border: 1px solid red;
+                background: green;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 80px;
+                left: 80px;
+                z-index: 9;
+            }
+            .conteudo3{
+                border: 1px solid red;
+                background:yellow;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 160px;
+                left: 160px;
+                z-index: 8;
+            }
+            .conteudo4{
+                border: 1px solid red;
+                background:blue;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 240px;
+                left: 240px;
+                z-index: 7;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="conteudo1">
+            conteudo1
+        </div>
+        <div class="conteudo2">
+            conteudo2
+        </div>
+        <div class="conteudo3">
+            conteudo3
+        </div>
+        <div class="conteudo4">
+            conteudo4
+        </div>
+    </body>
+    </html>
+
+    <!-- z-index deifine qual elemento vai aparecer primeiro, quanto maior o numero dentro mais a frente aparece o conteudo; se o numero for o mesmo ele segue a ordem do documento -->

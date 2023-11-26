@@ -1,0 +1,111 @@
+<!--um id é um identificador (poltronas em um onibus, voce pode chamar o usuario pelo seu id que esta 
+    na poltrona 11, apenas existirá um unico usuario sentado na poltrona 11. Um unico ID podemos usar uma
+    unica vez par aum unico item/elemento) -->
+<!-- uma classe é possivel utilizar ela diversas vezes (em um onibus podemos chamar um passageiro 
+        do sexo masculino, nos podemos ter varios passageiros com essa memsma classificação ou classe.
+    Uma unica classe define varios itens/elementos dentro de um onibus)-->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Inline_style</title>
+
+        <style type="text/css">
+            p { /* utilizamos os seletores (p no caso) para uma formatação geral -> trabalhamos mais o geral*/
+                color: red;
+            }
+
+            h1{
+                color: green;
+            }
+
+            .azul { /* usamos classe para definir formatações especificas -> trabalhamos a excessão 
+                agora se quisermos ter varias colunas no nosso site, usamos classes pois temos a mesma 
+                formatação aplicada a mais de um elemento*/
+                color: blue;                    
+            }
+
+            #principal { /* criamos um id com o # e só teremos um unico id por pagina, vamos somente usar para estruturar o site
+                por exemplo, o cabeçalho, onde so temos 1 cabeçalho dentro do site*/
+                    background-color: grey;               
+            }
+            #cabeçalho{
+                background-color: green;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <div id="cabeçalho"> <!--aplicar uma unica formatação ao unico cabeçalho, vou usar o id uma unica vez no meu codigo, se vc tivesse
+            dois cabeçalhos iguais o recomendado seria usar uma classe -->
+                <img src="imagens">
+                <ul>
+                    <li>home</li>
+                    <li>quem somos</li>
+                    <li>contato</li>
+                </ul>
+            </div>
+            <div id="conteudo_principal">
+                <div class="coluna"> <!--colunas todas iguais, com a memsa cor, tamanho, formatação, etc.
+                     por isso usei classe, pois vou usar ela mais de uma vez no meu codigoi-->
+                    Coluna 1                                  
+                </div>
+                <div class="coluna">
+                    Coluna 2                                  
+                </div>
+                <div class="coluna">
+                    Coluna 3                                 
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    <h1>Estilo CSS (cascading style sheets)</h1>
+    <p class="azul">
+        Fusce vehicula eget diam eu cursus. Nullam at bibendum neque. 
+        Sed bibendum est eu suscipit vestibulum. Nullam et lacus ligula. 
+        Donec finibus sed felis pulvinar venenatis. Morbi semper neque ultrices felis consectetur vulputate. 
+        Praesent tempor sapien ac pulvinar commodo. Nulla mattis dolor ac nunc rutrum, at tristique arcu bibendum.
+        Maecenas non mauris convallis, faucibus nibh congue, maximus orci. 
+    </p>
+
+    <p>
+        Fusce vehicula eget diam eu cursus. Nullam at bibendum neque. 
+        Sed bibendum est eu suscipit vestibulum. Nullam et lacus ligula. 
+        Donec finibus sed felis pulvinar venenatis. Morbi semper neque ultrices felis consectetur vulputate. 
+        Praesent tempor sapien ac pulvinar commodo. Nulla mattis dolor ac nunc rutrum, at tristique arcu bibendum.
+        Maecenas non mauris convallis, faucibus nibh congue, maximus orci. 
+    </p>
+
+    
+    <h1>Formatacoes</h1>
+    <p>
+        Fusce vehicula eget diam eu cursus. Nullam at bibendum neque. 
+        Sed bibendum est eu suscipit vestibulum. Nullam et lacus ligula. 
+        Donec finibus sed felis pulvinar venenatis. Morbi semper neque ultrices felis consectetur vulputate. 
+        Praesent tempor sapien ac pulvinar commodo. Nulla mattis dolor ac nunc rutrum, at tristique arcu bibendum.
+        Maecenas non mauris convallis, faucibus nibh congue, maximus orci. 
+    </p>
+
+    <p>
+        Fusce vehicula eget diam eu cursus. Nullam at bibendum neque. 
+        Sed bibendum est eu suscipit vestibulum. Nullam et lacus ligula. 
+        Donec finibus sed felis pulvinar venenatis. Morbi semper neque ultrices felis consectetur vulputate. 
+        Praesent tempor sapien ac pulvinar commodo. Nulla mattis dolor ac nunc rutrum, at tristique arcu bibendum.
+        Maecenas non mauris convallis, faucibus nibh congue, maximus orci. 
+    </p>
+
+    
+        
+    </body>
+</html>

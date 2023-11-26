@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+          // foieach em js eh uma funcao que eh aplicado arrays (bem parecido comm o forin)
+
+            var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda'] //-> array com 5 indices que vao de 0 a 4 
+
+            console.log(listaFuncionarios)
+            console.log(listaFuncionarios[3])
+
+            listaFuncionarios.forEach(function(valor, indice, array) {
+
+               // o foreach aguarda como parametro uma funcao de callback => ou seja, uma funcao que indica pro foreach (uma funcao tbm) como o foreach tem que atuar em cada um dos indices do array. Ou seja, quando isso acontece, essa funcao de callback recebe determinados parametros (valor, indice, array), esses parametros que sao encaminhados para ela memsa a partir de instrucoes contidas dentro do proprio foreach
+
+               // Recebemos dentro da funcao de callback, valor, indice e array para cada um dos indices do nosso array, sendo que esses valores formados a partir desses parametros da funcao de callback sao formados no contexto (dentro) da funcao foreach e encaminhados para a funcao de callback
+               // logica que queremos que vai ser executada para cada um dos indices do nosso array, sendo que esses valores sao formados no contexto (dentro) da funcao foreach e encaminhados para a funcao de callback
+
+              console.log('indice: ' + indice) // para cada passo dentro de cada um dos indices do nosso array vamos exibir qual eh tal respectivo indice
+
+              console.log('valor ' + valor) // para cada passo dentro de cada um dos indices do nosso array vamos recuperar qual eh tal respectivo valor dentro do indice
+
+              // console.log(array) // Naturalmente nos teremos console.log 5 vezes pois temos 5 indices dentro do array e a cada indice ele via mostrar o array todo
+//---------------------------------------------------------------------------------------                       
+
+              if(valor == 'Lucas') { //se o valor dentro de um respectivo indice qualquer no array for Lucas
+                array[indice] = 'um novo valor' // o array nesse respectivo indice qualquer passa a receber 'um novo valor' substituido
+              }
+
+              //Isso serve para se quisermos manipular um determinado valor do array, ai nos podemos usar o parametro array, para recuperar o array propriamente dito em um determinado indice e atuar sobre ele.
+
+              console.log(listaFuncionarios)
+              document.write('<br />') 
+              document.write(listaFuncionarios[3]) //ja atualizado, por conta da logica acima
+              
+              // detalhe: recupera as inform atualizadas do array em um momento anterior da aplicacao, antes de ter essa logica toda acima //
+            })
+            
+//-------------------------------------------------------------------------------------------------------------          
+      
+              // ou coloca assim
+
+              /* listaFuncionarios.forEach(function(valor, indice, array) {
+
+                //logica
+
+                  console.log('indice ' + indice + ' | valor:' + valor)
+
+                  if(valor === 'Lucas'){
+                    
+                    array[indice] = 'Um novo valor'
+
+                }
+                  console.log(array)
+
+              }) */
+
+//-------------------------------------------------------------------------------------------------------------
+
+
+            listaFuncionarios.forEach(function(valor) { //paraemtros variaveis, ao inves de receber os tres, eu vou recer apenas o primeiro, que eh o valor
+              console.log(valor)
+            })
+
+            listaFuncionarios.forEach(function(valor, indice) { //paraemtros variaveis, ao inves de receber os tres, eu vou recer apenas doiso, que eh o valor e indice 
+              console.log(valor, indice)
+            })
+
+
+
+//-------------------------------------------------------------------------------------------------------------  
+
+// geralemnte nos encaminhamos uma variavel que contem a funcao de callback e nao a prporpia funcao de callback como parametro para a funcao foreach. Ilustracao abaixo:
+
+// isso pode pois funcoes em js elas podem ser atribuidas a variaveis pois elas funcionam como estrutura de dados tbm -> teccnica de wraper
+
+// dessa forma eh melhor pois se essa funcao de callback for comum para tratar outros arrays dentro da aplicacao, nos temos essa inform encapsulada em uma variavel. Se eu tiver outro array eu posso encaminhar essa mesma funcao para tratar o indice de outro array
+          
+            var f = function (valor, indice) { //recebe apenas dois parametros
+                console.log(valor, indice)
+            }
+
+            listaFuncionarios.forEach(f)
+            listaCoisas.forEach(f) // tenho outro array e eu posso encaminhar essa mesma funcao para tratar o indice de outro array
+
+
+//------------------------------------------------------------------------------------------------------------- 
+
+
+//------------------------------------------------------------------------------------------------------------- 
+
+            var listaFuncionarios = Array()
+
+            listaFuncionarios['x'] = 'Viviane'
+            listaFuncionarios[false] = 'Rosângela'
+            listaFuncionarios[3] = 'Miguel'
+            listaFuncionarios[27] = 'Lucas'
+            listaFuncionarios[-12] = 'Fernanda'
+
+            //forEach começa a partir de 0 (cuidado!!!), ele so atua em indices sequenciais iguais a 0 ou superirores, no caso so irira atuar no indice 3 e no 27
+
+            var f = function (valor, indice) { //recebe apenas dois parametros
+                console.log(valor, indice) // so vai mostrar o miguel e lucas e 3 e 27
+            }
+
+            listaFuncionarios.forEach(f)
+            listaCoisas.forEach(f) // tenho outro array e eu posso encaminhar essa mesma funcao para tratar o indice de outro array
+
+            
+
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

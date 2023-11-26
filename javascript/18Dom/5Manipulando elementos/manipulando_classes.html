@@ -1,0 +1,43 @@
+<!--ideia dessa aula, selecionar o elemento desejado e atraves do atributo classname, aplicar uma classe que representa o estilo visual. O resultado disso eh a modificação visual de um elemento baseado no atributo class (que tbm possui a função de amarrar elementos html a classes css) -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <style>
+            .estilo1 {
+                background: #FF0000;
+                color: #FFF;
+            }
+
+            .estilo2 {
+                width: 400px;
+                height: 50px;
+                background-color: #FF0000;
+                text-align: center;
+                font-size: 25px;
+                color: #FFF;
+                padding: 25px;
+            }
+        </style>
+        <script>
+            function modificaClasse() {
+                document
+                    .getElementById('mensagem')//seleciona o elemento com id mensagem e altera o atributo class (com o classname) e eu passo a string que vai ser atribuida ao elemento html, nesse caso o estilo2
+                    .className = 'estilo2' // atribuo a string estilo2 ao classname (nome da classe)
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <!--ideia: afetar a classe div que contem o elemento modificando a classe, ao
+        clicar sobre o botao-->
+        <div id="mensagem" class="estilo1">Modificando a classe do elemento</div>
+        <hr>
+        <button type="button" onclick="modificaClasse()">Aplicar classe</button>
+        <!-- ao clicar no botao dispara um evento e executa uma função modificaClasse, que vai a partir do objeto document vai selecionar o elemento com id mensagem e acessar o atributo class, modificando o valor de estilo1 para estilo2 do atributo class do elemento selecionado-->
+
+    </body>
+</html>

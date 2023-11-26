@@ -1,0 +1,78 @@
+<!--
+
+    OPERADORES LOGICOS (O JS TEM 3)
+
+    E (&&) - Verdadeiro se todas asoperacoes forem verdadeiras
+
+    OU (| |) - Verdadeiro se pelo menos uma das expressoes for verdadeira
+
+    Negacao(!) - Inverte o resultado da expressao de comparacao, se der true, o true eh convertido pra false
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <script>
+      // true && true && false = false
+      // retorna false se uma dela apenas for false
+      // tem false eh false
+
+      if (2 == 2 && 3 >= 1 && "a" == "b") {
+        document.write("Verdadeiro");
+      } else {
+        document.write("Falso");
+      }
+
+      // true || true || false = true
+
+      //so retorna false se todas forem false
+      //tem verdadeiro eh verdadeiro
+
+      if (2 == 2 || 3 >= 1 || "a" == "b") {
+        document.write("Verdadeiro");
+      } else {
+        document.write("Falso");
+      }
+
+      //false = false
+      //!false = true -> (nao false = true, ai entra no if)
+
+      if (!4 == 2) {
+        document.write("Verdadeiro");
+      } else {
+        document.write("Falso");
+      }
+
+      //true = true
+      //!true = false -> (nao true = false, ai entra no else)
+
+      if (!5 >= 2) {
+        document.write("Verdadeiro");
+      } else {
+        document.write("Falso");
+      }
+
+    var nota = prompt('Digite a nota do aluno: ')  
+    var faltas = prompt('Digite a quantidade de faltas: ')  
+
+    var media = 7
+    var faltas_maximas = 15
+
+
+    if (nota >= media && faltas <= faltas_maximas) { // comparando o numero 5 com 7
+        document.write('Aprovado')
+    }
+    else {
+        document.write('Reprovado')
+    }
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

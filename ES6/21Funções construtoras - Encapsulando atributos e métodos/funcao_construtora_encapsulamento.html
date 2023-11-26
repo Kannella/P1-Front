@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+
+
+    <script>
+
+      let Carro = function() {
+        this.cor = 'Amarelo'
+        this.modelo = 'Chevette'
+        this.velocidadeAtual = 0
+        this.velocidadeMaxima = 180 // da forma que a criado ele esta acessivel a partir da instancia do objeto, ou seja, ele eh um atributo publico.
+
+        this.acelerar = function() {
+          let velocidade = this.getVelocidadeAtual() + 50
+          if(velocidade > this.velocidadeMaxima) {
+            velocidade = this.velocidadeMaxima
+          }
+          this.setVelocidadeAtual(velocidade) //encaminha como parametro do metodo setVelocidadeAtual a variavel velocidade e retorna a atribuição dessa velocidade no parametro velocidadeAtual
+        }
+
+        // em todo momento, a partir do instante que a velocidade atual ultrapassa a maxima, automaticamente ela fica constantemente igual a maxima
+
+        this.getVelocidadeAtual = function() {
+          return this.velocidadeAtual
+        }
+
+        this.setVelocidadeAtual = function(velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual
+        }
+      }
+
+      let carro = new Carro() //instancia de um objeto carro
+      console.log(carro.velocidadeAtual)
+      carro.acelerar() //acelerando o carro, no caso, de 50 em 50
+      console.log(carro.velocidadeAtual)
+      carro.acelerar() // acelerando mais 50
+      console.log(carro.velocidadeAtual)
+      carro.acelerar() // acelerando mais 50
+      console.log(carro.velocidadeAtual)
+      carro.acelerar() // acelerando mais 50
+
+      // em todo momento, a partir do instante que a velocidade atual ultrapassa a maxima, automaticamente ela fica constantemente igual a maxima
+
+      console.log(carro.velocidadeAtual)
+      carro.velocidadeMaxima = 280 // Só que aqui eu consigo alterar a velocidade maxima e pra isso não acontecer, nos deixaremos esse atributos escondidos, privados, assim, só poderemos acessar esse atributo fazendo antes uma tratativa a partir de um metodo publico.
+      carro.acelerar() // acelerando mais 50
+      console.log(carro.velocidadeAtual)
+
+//--------------------------------------------------------
+//como criar atributos e metodos privados? Criando variaveis no contexto da função, em vez de ser um atributo do prorpio objeto, para aquele atributo que queremos que seja privado.
+//Esse atributo nao eh exibido a partir do momento em que ele foi criado como variavel no contexto de uma funcao e posto dentro de uma logica de um metodo do objeto
+
+      let Carro2 = function() {
+        
+        var velocidadeMaxima = 180 //criei uma variavel no contexto da funcao, com a palavra var, para a funcao dentro dessa ter acesso.
+        var quilometrosRodados = 0 //criei uma variavel no contexto da funcao, com a palavra var, para a funcao dentro dessa ter acesso.
+
+        this.cor = 'Amarelo'
+        this.modelo = 'Chevette'
+        this.velocidadeAtual = 0
+
+        this.getVelocidadeAtual = function() { 
+          return this.velocidadeAtual
+        }
+        //criei um metodo, pegando um atributo e atribuindo uma funcao a esse atributo, em que esse metodo retorna alguma logica com a variavel que criamos no contexto da função. 
+
+        this.setVelocidadeAtual = function(velocidadeAtual) {
+          this.velocidadeAtual = velocidadeAtual
+        }
+        //criei um metodo, pegando um atributo e atribuindo uma funcao a esse atributo, em que esse metodo retorna alguma logica com a variavel que criamos no contexto da função. No caso, ele retorna a atribuição do parametro enviado para a funcao ao atributo privado velocidadeAtual
+
+        var setQuilometrosRodados = function(q) {
+          quilometrosRodados += q 
+        }
+        //criei uma variavel que recebe uma funcao em que seu objetivo eh atuar sobre o atributo privado quilometrosRodados
+      
+        
+        this.acelerar = function() {
+          let velocidade = this.getVelocidadeAtual() + 50
+          if(velocidade > velocidadeMaxima) {
+            velocidade = velocidadeMaxima
+          }
+          this.setVelocidadeAtual(velocidade) //chama e encaminha como parametro do metodo setVelocidadeAtual a variavel velocidade e retorna a atribuição dessa velocidade no parametro velocidadeAtual
+
+          setQuilometrosRodados(0.07) //chama a variavel setQuilometrosRodados e encaminha como parametro da funcao que foi atribuida a essa variavel o valor de 0.07 e retorna a adicao dessa desse valor nos quilometrosRodados e subsequentemente a atribuição no atributo quilometrosRodados
+          
+          console.log(quilometrosRodados)
+        }
+
+        
+      }
+
+      let carro2 = new Carro2()
+      console.log(carro2.velocidadeAtual)
+      carro2.acelerar()
+      console.log(carro2.velocidadeAtual)
+      carro2.acelerar()
+      console.log(carro2.velocidadeAtual)
+      carro2.acelerar()
+      console.log(carro2.velocidadeAtual)
+      carro2.acelerar()
+      console.log(carro2.velocidadeAtual)
+      //carro2.velocidadeMaxima = 280
+      carro2.acelerar()
+      console.log(carro2.velocidadeAtual)
+
+      console.log(carro)
+      console.log(carro2)
+
+
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>

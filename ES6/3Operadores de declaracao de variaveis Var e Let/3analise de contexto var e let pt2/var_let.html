@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let serie = 'Friends' //essa variavel permanece no escopo global
+        {
+            let serie = "The Walking Dead" //agora essa variavel serie nao sofre roisting e nao sobrepoe a variavel fora do bloco (com o memso nome: serie), pois o let preserva o contexto  da variavel serie e assim ela nao sofre roisting, portanto permanece no escopo de bloco a variavel serie com valor the walking dead. Essa variavel serie com o let, existe somente dentro do escopo de bloco e no momento em que o interpretador do js interpreta a instrucao console.log com a variavel serie, ele esta usando a variavel do contexto e logo na sequencia essa variavel eh destruida.
+
+
+            //var serie = "The Walking Dead" (conflito!) -> nesse caso, vai ter um conflito pois ja temos uma variavel amarrada no contexto global do tipo let, e no momento que eu tentar sobrescrever a variavel do escopo global, havera um conflito.
+
+
+            console.log('dentro do bloco: ' + serie) // vai imprimir the walking dead
+        }
+        console.log('fora do bloco: ' + serie) // vai imprimir friends pois apos a interpertacao da instrucao console.log com a variavel serie dentro do bloco, ela eh destruida, e assim fora do bloco na interpretacao desse segundo console.log o js utiliza a variavel do contexto global. A nossa variavel ela nao sofreu sobreposicao por conta do roisting
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

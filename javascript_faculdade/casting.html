@@ -1,0 +1,27 @@
+<script>
+
+    //Em JavaScript, o termo "coerção de tipo" é frequentemente chamado de "casting" ou "conversão de tipo". Essa é uma operação que o JavaScript faz automaticamente em algumas situações, como quando você usa o operador == para comparar valores de tipos diferentes.
+
+    //No JavaScript, quando você usa o operador + para adicionar valores, ele não realiza um casting automático de tipos. Em vez disso, ele tenta realizar a concatenação de strings se pelo menos um dos operandos for uma string. Se ambos os operandos forem números, ele realizará uma adição matemática. Se um dos operandos for um número e o outro for uma string que não possa ser convertida em um número válido, ele converterá o número em uma string e concatenará as duas strings.
+
+    const n1 = 5
+    const n2 = '986'
+    const n3 = true
+
+    console.log(n1 + n2)
+    // por conta do operador + ele vai fazer uma concatenacao de strings nesse caso, pelo fato de temos string na operacao, em vez de fazer a operacao matematica, e por isso vai converter o n1 para string implicitamente
+    //O n1 é um número (5) e o n2 é uma string ('986'). Nesse caso, como pelo menos um dos operandos é uma string, o JavaScript realizará a concatenação de strings em vez de fazer a adição matemática. O resultado será uma string que contém "5986". Portanto, não há casting explícito aqui, mas há uma conversão implícita (converte 5 para string) para realizar a concatenação de strings.
+
+    // vai contecer uma concatenação pois como tem uma string, o que vai permanecer eh uma string e nao vai ter o casting dela nem nada
+    console.log('numero + boolean: '+ n1 + n3)
+
+    console.log('string + boolean: ' + n2 + n3)
+    //O JavaScript realizará a concatenação de valores como strings porque o operador + é usado com uma string como o primeiro operando.
+    //O JavaScript iniciará a concatenação com a string inicial e, em seguida, converterá n1 e n3 em strings para concatená-los à string inicial: 'numero + boolean: ' (string) + n1 (convertido para string) + n3 (convertido para string)
+
+    //converti explicitamente o n2 pra numero, fiz um casting explicito
+    console.log(n1 + Number(n2))
+    //O JavaScript realizará a adição matemática entre n1 e o resultado da conversão de n2 para um número usando a função Number(). 
+    //A função Number() é usada para converter a string '986' em um número. A conversão resultará em 986.
+    
+</script>

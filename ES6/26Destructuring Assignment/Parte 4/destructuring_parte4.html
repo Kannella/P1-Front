@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <!--aprender como podemos utilizar o destructing com o perador rest-->
+    <!--notacao do destructing: let {valores que eu quero desestruturar} = objeto que queremos extrair informacoes-->
+    <script>
+      //criando um array e atribuidno a variavel arr
+      /*  let arr = [10, 20, 30, 40]
+      
+      //digamos que eu queria extrair o valor 10 e os demais valores extraidos em apenas uma variaveis, como? Juntando esses valores do array dentro de uma unica variavel no momento em que for feito o destructing do nosso array
+
+      let [a, ... x] = arr
+      // ... x => operador rest: nesse caso, recebe o resto dos dados em uma unica variavel x
+ 
+      console.log(a) 
+      console.log(x) 
+     */
+
+      //varaivel obj que recebe um objeto literal 
+      let obj = {
+        a: 10, 
+        b: 20,
+        c: 30,
+        d: 40,
+      };
+      let { a, ...y } = obj; //vamos desetruturar o atributo 'a' e os demais atributos vao ser unificados dentro de uma unica variavel y, utilizando o operador rest => ...y
+
+      console.log(a);
+      console.log(y);
+
+      teste(obj);
+    </script>
+  </head>
+
+  <body></body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+
+            .conteudo{
+                background: blue;
+                border: 1px solid grey;
+                width: 200px;
+                height: 200px;
+                /* float: right; /*3 divs ambas com float e saem do fluxo padrão documento*/
+                margin: 10px; /*espaçamento entre divs*/
+                float: right;
+            }
+
+            /* .conteudo-zero{
+                background: red;
+                border: 1px solid grey;
+                width: 150px;
+                height: 150px;
+            } */
+
+            /* .conteudo1{
+                background: red;
+                border: 1px solid grey;
+                width: 150px;
+                height: 150px;
+                float: right; -> float faz com que o conteudo 1 saia do fluxo padrao de conteudos. Ele sai do fluxo normal do documento e flutua na pagina. Os outros conteudo se cokmportam como se o conteudo 1 não existisse */
+
+                .conteudo-zero2{
+                background: red;
+                border: 1px solid grey;
+                width: 150px;
+                height: 150px;
+                }
+
+                .clear{ /* clear obriga ordenar o texto na posição que vc quiser ignorado o conteudo flutuante evitando ficar ao redor dele o texto*/
+                    clear: both;
+                }
+
+                #principal{
+                    border: 5px solid red;
+                    background: green;
+                }
+
+                .conteudo-2 {
+                background: blue;
+                border: 1px solid grey;
+                width: 200px;
+                height: 200px;
+                float: left;
+                /* float: right; /*3 divs ambas com float e saem do fluxo padrão documento*/
+                margin: 10px; /*espaçamento entre divs*/
+              
+                }
+        </style>
+    </head>
+    <body>
+        <div id="principal">
+            <!-- <div class="conteudo-zero">conteudo 1</div> -->
+
+            <div class="conteudo">
+                conteudo 1
+            </div>
+            <div class="conteudo">
+                conteudo 2
+            </div>
+            <div class="conteudo">
+                conteudo 2
+            </div>
+
+            <div class="clear"></div>
+            
+            
+
+           
+
+
+            <!-- <p class="clear"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo ratione dicta numquam? Eum ullam beatae ipsam consequuntur hic quos ea tempora. Placeat saepe, perspiciatis tempora consectetur debitis quis nulla?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo ratione dicta numquam? Eum ullam beatae ipsam consequuntur hic quos ea tempora. Placeat saepe, perspiciatis tempora consectetur debitis quis nulla?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo ratione dicta numquam? Eum ullam beatae ipsam consequuntur hic quos ea tempora. Placeat saepe, perspiciatis tempora consectetur debitis quis nulla?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo illo ratione dicta numquam? Eum ullam beatae ipsam consequuntur hic quos ea tempora. Placeat saepe, perspiciatis tempora consectetur debitis quis nulla?
+            </p> -->
+    </div>
+
+    </body>
+    </html>

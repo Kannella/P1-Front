@@ -1,0 +1,69 @@
+<!--
+
+    var opcao = 2
+
+    switch (opcao) { -> como estamos passando uma variavel chamada opcao e ela faz rferencia para o valor numerico 2, o case que sera disparado sera o case 2
+        
+        case 1
+        // trecho de codigo que sera executado 
+        break -> responsavel por incicar pro switch que caso seja encontrado um caso, o codigo vai parar nesse break
+
+        case 2 -> case levam em conta o tipo da variavel, ele eh identico a variavel (igual em tipo e valor)
+        // trecho de codigo que sera executado 
+        break 
+
+        default: -> se senhum case for localizado, o default sera executado. Ele eh opcional, nao havendo uma opcao valida, nenhuma opcao sera executada. 
+        // trecho de codigo que sera executado
+        break
+
+        
+    }
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            var parametro = 2
+
+            switch (parametro) {
+                case 1:
+                    //se paramentro === 1
+                    document.write('parametro 1')
+                    break
+                
+                case 2:
+                    //se parametro === 2 -> vai ser esse que sera executado
+                    document.write('parametro 2')
+                    break 
+
+                default:
+                    //se parametro nao for encontrado
+                    document.write('default')
+            }
+
+            var parametro = prompt('digite 1 ou 2')
+
+            switch (parseInt(parametro)) {
+                case 1:
+                    //se paramentro === 1
+                    document.write('parametro 1')
+                    break
+                
+                case 2:
+                    //se parametro === 2 -> vai ser esse que sera executado
+                    document.write('parametro 2')
+                    break 
+
+                default:
+                    //se parametro nao for encontrado
+                    document.write('default')
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

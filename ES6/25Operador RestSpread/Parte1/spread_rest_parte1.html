@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+        <script>
+          /*
+
+
+          Falaremos sobre o operador rest spread  que é uma das features do ES6. Na verdade o operador em si é constituído por três pontos (...), tanto pra rest quanto para spread. O que define ser spread ou rest é o contexto onde ele está sendo utilizado. Nós chamamos esse operador de spread quando ele está sendo utilizado para espalhar estruturas de dados que chamamos de rest quando estamos fazendo a operação inversa, para juntar estruturas de dados.
+
+          */
+        </script>
+
+        <script>
+
+            //Uso do operador rest/spread no contexto spread
+
+            //Em strings
+            let tituloArtigo = 'Como utilizar o operador rest/spread'
+
+            console.log(tituloArtigo)
+            console.log(...tituloArtigo) // espalhei nossa string
+            console.log([...tituloArtigo]) // espalhei nossa string dentro de um arraym de tal modo a colocar cada letra em um indice
+
+            //Em arrays
+            let listaCursos1 = ['NodeJS e MongoDB', 'ES6', 'TypeScript e Angular 4'] //atribui a variavel listaCursos1 um array
+            let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux']
+            // atribui a variavel listaCursos2 um array
+            let listaCursosCompleto = [
+                'Web Completo', 'Android Completo', ...listaCursos1,
+                ...listaCursos2
+            ]
+            // ...listaCursos1 -> espalhamos os valores conteudo do array listaCursos1 dentro do array listaCursosCompleto
+            // ...listaCursos2 -> espalhamos os valores conteudo do array listaCursos2 dentro do array listaCursosCompleto tambem
+            // atribui a variavel listaCursosCompleto em apenas um array
+            // podemos espalhar os arrays dentro de outros arrays em qualquer lugar que quisermos
+
+            console.log(listaCursosCompleto)
+
+            //Em objetos
+            let pessoa = {
+                nome: 'João',
+                idade: 27
+            }
+            let clone = {
+                endereco: 'Rua Abc',
+                ...pessoa // espalhei os atributos do objeto pessoa dentro do objeto clone
+            }
+
+            console.log(clone)
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

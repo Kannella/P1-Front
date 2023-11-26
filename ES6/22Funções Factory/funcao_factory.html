@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+
+    <script>
+      // atraves do padrao de projeto factory nos podemos implementar uma 'fabrica' para criacao dos nossos objetos em tempo de execução
+
+      // funcoes factory combinam a chamada de funcoes com o retorno de objetos literais, que podem ser criados com base em parametros passados pra essas respectivas funcoes
+
+      //Por isso falamos que a funções Factory servem para a criação de objetos de forma dinâmica ou em tempo de execução porque basta chamar a função passando ou não parâmetros para termos o retorno de um objeto.
+
+
+      // Digamos que as informações para prenchimento desses atributos e metodos dos objetos sejam originas de um banco de dados, teriamos que fazer uma requisição http para algum servidor, o servidor recebe a solicitação, processa os dados necessários, faz consultas ao banco de dados, e prepara uma resposta via http com json anexado que seria convertido dentro da nossa aplicação para um objeto literal e a partir dai nos iamos custmoziando esses parametros e etc
+  
+      let Bicicleta1 = {
+        cor: 'Branca',
+        marcha: 'única',
+        aro: 12,
+        pedalar() { console.log('Método pedalar executado') }
+      }
+
+      // requisição http
+      // resposta http
+      let Bicicleta2 = {
+        cor: 'Vermelha',
+        marcha: '18',
+        aro: 26,
+        pedalar() { console.log('Método pedalar executado') }
+      }
+
+      console.log(Bicicleta1)
+      console.log(Bicicleta2)
+
+
+      //---------------------------------------
+      // variavel que recebe uma funcao (que sera nossa funcao factory, pois retorna um objeto) que retorna um objeto
+      let BicicletaFactory = function(cor, marcha, aro) {
+        // lógica para prenchimento desses parametros via:
+        //  -> requisição http
+        //  -> resposta http
+        return { //retorna um objeto literal que represente nossa bicicleta
+          cor: cor, // ou so cor, pois o nome do parametro eh o mesmo do atributo
+          marcha: marcha, // ou so marcha, pois o nome do parametro eh o mesmo do atributo
+          aro: aro, // ou so aro, pois o nome do parametro eh o mesmo do atributo
+          tipoPedal,
+
+          pedalar() { console.log('Método pedalar executado') }
+        }
+      }
+
+      // Ao inves de declarar nossos objetos literais, simplesmente chama o metodo contido dentro de bicicletaFactory
+      let Bicicleta3 = BicicletaFactory('Vermelha', '18', 26)
+      console.log(Bicicleta3)
+
+      //poderiamos chamar as caracteristicas do objeto (metodos e atributos) pela varivel que foi atribuida a funcao factory:
+          //console.log(`Cor: ${Bicicleta3.cor}`) 
+          //Bicicleta3.pedalar()
+
+      let Bicicleta4 = BicicletaFactory('Preta', '21', 29)
+      console.log(Bicicleta4)
+
+      
+
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>

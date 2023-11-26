@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            // var media = 7 //variaveis sao referencias dee memorias pra valores  que eu atribuo a elas
+            // var nota = 5 //variaveis sao referencias dee memorias pra valores  que eu atribuo a elas
+
+            var nota = prompt('Digite a nota do aluno') //nota recebe o valor digitado no prompt (que o usuario insere) que sao na verdade strings. Por esse motivo, o que nosso if faz eh comparar uma string que representa um valor numerico com um numero (o js tem uma inteligencia que transforma uma string (dentro de contexto de comparacoes com numeros) em uma informacao numerica)
+            
+            // So que se fosse  if ('7' === 7) retornaria falso pois o 7 esta associado a uma string e portanto nao antende a condicao (identico, que leva em consideracao o tipo da variavel).
+            //Entretanto o resto de comparadores funciona normalmente
+
+
+            var media = 7
+
+
+            if (nota >= media) { // comparando o numero 5 com 7
+                document.write('Aprovado')
+            }
+            else {
+                document.write('Reprovado')
+            }
+
+        </script>
+    </head>
+    <body></body>
+</html>

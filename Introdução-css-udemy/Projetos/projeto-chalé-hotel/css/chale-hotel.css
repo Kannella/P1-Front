@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    background: url(../imagens/bg.png);
+    margin: 15px;
+}
+
+#container {
+
+    background: #ede9cc url(../imagens/bg-container.png) top center repeat-y;
+    margin: 0 auto; /*conteiner centralizado*/
+    min-width: 740px;
+    max-width: 1180px;
+
+}
+
+#topo {
+    background: #dbcd87;
+    height: 15.4em; /*coloca na unidade em pois caso aumente o tamanho do texto, a altura se ajuste*/
+    min-height: 250px; /*altura minima fixa do topo para que o usuario não reduza ao ponto de aparecer nossas imagens*/
+    position: relative;
+}
+
+#area-logo {
+    position: absolute;
+    background: url(../imagens/topo-imagem-principal.png) no-repeat;
+    width: 100%; /*ocupa toda area*/
+    height: 250px; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.logo a {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    background: url(../imagens/logo.png) no-repeat;
+    width: 151px;
+    height: 66px;
+    text-indent: -3000px;
+}
+
+#area-menu {
+    background: url(../imagens/topo-imagem-lateral.png) no-repeat;
+    width: 450px; /*vai ter um tamanho fixo*/
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#conteudo-menu {
+    margin-left: 90px;
+
+    margin-right: 15px;
+    padding-top: 15px;
+}
+
+#menu-locais {
+    border-bottom: 1px solid #b5ab56;
+    border-top: 1px solid #b5ab56;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.7em;
+    color: #8b8448;
+}
+
+#menu-locais .locais {
+    float: left;
+    line-height: 2.1em;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a.reserva {
+    text-transform: uppercase; /*maiusculo*/
+    background: #a29750;
+    color: #fff5b0;
+    padding: 5px 10px;
+    float: right;
+
+}
+
+#menu {
+    margin-top: 15px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul#navegacao{ /*ul acessando o id navegacao*/
+    float: left;
+}
+
+ul#navegacao a{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px;
+    color: #6e672c;
+    line-height: 30px; /*espacamento entre cada um dos itens*/
+    /* display: block; se comporta como elemento de bloco */
+    
+}
+
+ul#navegacao a:hover {
+    background: #fdf6be;
+}
+
+.depoimento {
+    width: 226px;
+    height: 164px;
+    float: right;
+}
+
+/****************************************************
+ Area de conteudos
+*****************************************************/
+#area-principal {
+    
+    float: left; /*vai flutuar na esquerda*/
+    width: 50% /*% pois eu quero um layout liquido ocupando 50% do browser*/;
+    background: url(../imagens/bg-area-principal.png) top left repeat-x;
+    padding: 15px 0px;
+}
+
+#area-lateral {
+   
+    float: right; /*vai flutuar na direita*/
+    width: 50% /*% pois eu quero um layout liquido ocupando 50% do browser*/;
+    background: url(../imagens/bg-area-lateral.png) top left repeat-x;
+    padding: 20px 0px;
+
+}
+
+.conteudo { /*como eu vou usar na index essa classe conteudo dentor da area principal e dentro da area lateral eu vou colocar uma class*/
+    margin: 0 auto; /*centralziado*/
+    width: 90%; /*ocupa sempre 90% do espaço disponivel do browser vai tirar 5% de um lado da div pai e 5% do outro lado da div pai*/
+}
+
+#rodape {
+    clear: both;
+    padding: 16px;
+    background: #fff url(../imagens/bg-rodape.png) repeat-x top;
+    color: #767640;
+}
+
+
+/*************************************************************
+formatacoes de textos
+**************************************************************/
+h2 {
+    color: #7d7640;
+    font-size: 1.1em;
+    padding: 5px 0px;
+}
+
+p{
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/**********************************************
+formatação area lateral***********************/
+
+
+#beneficios li {
+    padding: 8px;
+    border-bottom: 1px solid #f3efcb;
+    height: 6em;
+}
+
+#beneficios li a img {
+    float: left;
+    margin-right: 8px;
+}
+
+#beneficios li a p{
+    color: #000;
+    font-size: 0.8em;
+}
+
+#beneficios li a h3{
+    font-size: 1em;
+    color: #615b2d;
+    padding: 5px 0px;
+    background: url(../imagens/ornamento.png) no-repeat center right;
+}
+
+#beneficios li:hover{
+    background: #f6f3d6;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+

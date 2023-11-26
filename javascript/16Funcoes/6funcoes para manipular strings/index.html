@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+        // metodo eh uma funcao e precisamos ter o () e pode incluir ou nao parametros
+        
+      //propriedade length -> metodo lenght retorna a quantidade de carcteres de uma string
+      //comeca com 0 e conta o espaco sem nada eh contado tbm como um caracter
+      document.write("Jorge Sant Ana".length);
+
+      //metodo charAt retorna o caractere que pertence a este indice (nesse caso, 7)
+      document.write("Jorge Sant Ana".charAt(7)); // o caracter no indice 7 eh o caracter a
+
+      //metodo indexOf retorna a posicao de um caracter especifico na sua primeira ocorrencia
+      // ele diferencia caracteres maiusculos e minusculos
+      // quando nao tiver nenhum caracter especificado ele retorna -1
+      var nome = "Jorge Sant Ana";
+      document.write(nome.indexOf("g"));
+
+      // metodo replace substitui textos dentro de uma string
+      // o primeiro ve se existe e o segundo, se existir, ele substitui pelo segundio
+      document.write(nome.replace("Sant Ana", "Silva"));
+
+      // recorta parte de uma string com base de uma posicao inicial e a partir dela quantos caracteres eu quero pegar na sequencia para recortar e ele mostra o que ele pegou depois
+      document.write(nome.substr(6, 4));
+      document.write(nome.substr(6));  // recorta parte de uma string com base de uma posicao 
+
+      nome.Split('b') // -> recorta uma string com base em um caracter
+
+  
+      document.write(nome.toLocaleLowerCase()); // converte todos oscaracteres de uma strigng e coloca para maiusculo
+      document.write(nome.toLocaleUpperCase()); //converte todos oscaracteres de uma strigng e coloca para minusculos
+
+      var original = 'abcde FGHIJ ABC abc DEFG'
+      String.IsNullOrEmpty(original); // testa se o conteudo da variavel é nulo ou vazio ("")
+      var b2 = String.IsNullOrWhiteSpace(original); // testa se o conteudo da variavel é nulo ou é um monte de espaço em branco
+      
+      // trim remove os espacos das extremidades dos caracteres da string
+      document.write("-" + nome.trim() + "-");
+    </script>
+  </head>
+  <body>
+    14a3Jorge SilvaSantjorge sant anaJORGE SANT ANA-Jorge Sant Ana-
+  </body>
+</html>

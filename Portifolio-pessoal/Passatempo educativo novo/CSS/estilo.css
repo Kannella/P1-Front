@@ -1,0 +1,162 @@
+/* limpar formatações padrões */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: white
+}
+
+/*
+**** layout ****
+*/
+#area-menu{
+    padding: 12px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Largura desejada da caixa */
+
+    margin-top: px;
+    margin-left: 20px;
+}
+
+#imagem-fundo{
+    width: 270px;
+    margin-left: 10px;
+}
+
+.sobre-passatempo{
+
+    background: white;
+    width: 700px;
+    height: 270px;
+    position: absolute;
+    z-index: 10;
+    margin-left: 450px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+#texto2{
+    background: white;
+    width: 554px;
+    height: 700px;
+    position: absolute;
+    margin-left: 300PX;
+    margin-top: 400px;
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+#texto3{
+    background: white;
+    width: 554px;
+    height: 700px;
+    position: absolute;
+    margin-left: 900PX;
+    margin-top: 400px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+#certificacao-ifco{
+    text-align: left;
+    width: 300px;
+
+}
+
+
+
+
+
+
+/*
+**** Formatações do menu ****
+*/
+a{
+    text-decoration: none;
+
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    height: 25px;
+
+
+
+    text-align: center;
+
+
+
+}
+
+
+a:link, a:visited { /*formatacao padrao para todos os links*/
+    color: black    
+}
+a:hover{ /*formatacao padrao para todos os links*/
+    background: yellow;
+    border-radius: 15px
+
+}
+
+#area-cabecalho a:link, #area-cabecalho a:visited { 
+    color: black;
+
+}
+#area-cabecalho a:hover {
+    background: yellow;
+    text-decoration: none;
+
+}
+
+
+/* formatacoes imagens */
+
+#logo{
+    width: 250px;
+    float: none;
+}
+
+#selo{
+    width: 180px; 
+    position: absolute;
+    margin-left: 60PX;
+    margin-bottom: 100px;
+    margin-top: -550px;
+
+}
+
+
+#ongs{
+
+    width: 180px; 
+    position: absolute;
+    margin-left: -300PX;
+    margin-bottom: 1000px;
+    margin-top: 60px;
+
+}
+
+#ongs2{
+
+    width: 180px; 
+    position: absolute;
+    margin-left: -50PX;
+    margin-bottom: 1000px;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+

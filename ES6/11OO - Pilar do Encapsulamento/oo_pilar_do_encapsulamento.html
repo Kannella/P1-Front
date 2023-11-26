@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    
+    <script>
+        //encapsulamento eh encapsular um objeto de tal modo a tornar esse objeto seguro. O objeto vai ter condicoes de dizer o que dentro dele esta disponivel para o sistema. Podemos dizer que um metodo ou atributo eh privado ou publico
+        //Se for privado, so pode ser acessado atraves do proprio objeto
+        //So que o es6 nao tem o private, public, protect -> Por isso, foi estabelecido, por uma convencao, uma forma de se escrever o codigo que indica nossa intencao por convecao, utilizando o _ para atributos js, isso indica que eh necessario acessar esse atributo ou atraves de um get (quando a necessidade for recuperar esse atributo) ou atraves de um set (quando a necessidade for modificar o valor desse atributo, e caso necessario estabelecer alguma logica para modificar o valor desse atributo, evitando um comporatmento inesperado na logica da aplicacao)
+        class Tv {
+            constructor() {
+                this._relacaoCanais = Array(2, 4, 5, 7, 10) //colocar o _ sugere que o se o programador ver um atributo com um underline, ele nao tente acessar ele de forma direta, que ele acesse pelo metodo get
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            //getters e setters sao metodos 
+            get canalAtivo() { 
+                return this._canalAtivo
+            }
+
+            //explicacao do codigo acima:
+
+            // atraves de um metodo get indicamos qual atributo queremos recuperar e ele funciona como se fosse uma funcao, ai sim essa funcao eh publica e a partir dela eu retorno meu atributo que supostamente seria private. Entao ao inves de acessar meu atributo diretamente, eu vou acessar o METODO em que O ATRIBUTO DO OBJETO esta DENTRO, porem atraves de uma notacao de pseudo-variavel (canalAtivo), isso pq ao usar o metodo get o js sabe que ele tem que procurar uma funcao com uma descricao especifica (nome do atributo que voce quer) -> console.log(tv.canalAtivo) -> esse atributo 'canalAtivo' nao existe dentro da nossa classe Tv mas por ser um metodo estabelecido como get o interpretador do js tem a inteligencia de executar o metodo get canalAtivo para nos e recuperar um atributo do objeto.
+
+            // a mas pq que eu colocaria uma funcao (no caso um metodo, chamado canalAtivo) no meio do camiinho apenas para recuperar um atributo do objeto? -> seguranca
+
+            //o mais comun eh colocar uma logica no set pra ver se pode ou nao mostrar um atributo
+            //
+
+            set canalAtivo(canal) { //define uma funcao com o mesmo nome do atributo
+                if (this._relacaoCanais.indexOf(canal) !== -1) { // controle se o canal esta ou nao disponivel nas relacoes de canais da tv. IndexOf retorna o indice do array (estabelecido pelo parametro da funcao) onde esse valor for encontrado, e verifica se eh diferente de -1 (pois se for igual a -1, nos array, quer dizer que o valor nao foi encontrado). Caso encontrar, entra no if
+
+                    this._canalAtivo = canal // entao ai ele vai atribuir o parametro da dado a funcao no atributo do objeto. So que ao inves de acessar diretamente o atributo do objeto nos estamos indicanto que esse atributo eh privado com o _ no comeco e a regra de acesso desse atributo deve ser respeitada. Entao, nos vamos acessar e modificar esse atributo do objeto por meio de uma pseudo variavel canalAtivo (nome da funcao em que o atributo do objeto esta dentro) e o proprio js compreende essa pseudo variavel como sendo os metodos get/set e que assim quando acessar a funcao/metodo por essa pseudo-variavel o js vai procurar o metodo set caso seja uma atribuicao e o metodo get caso so seja para mostrar e eu nao esteja atribuindo nenhum valor
+
+                    // se eu estou atribuindo um valor a uma pseudo variavel que tem o mesmo nome da funcao ( ex:             tv.canalAtivo = 7), o js vai procurar uma funcao que seja do tipo set
+                    // caso eu nao esteja atribuindo nenhum valor (ex: console.log(tv.canalAtivo) ), o interpretador do js vai procurar pelo metodo get
+                }
+
+            }
+        }
+        let tv = new Tv() // criei uma instacia de um objeto Tv, instanciando uma classe TV -> 
+        // O objeto Tv eh criado a partir de uma instacia da classe Tv.
+
+        //tv.canalAtivo(7) //teoricamente seria asssim para aatribuir um parametro a um metodo, so que estamos utilizando pseudo-variaveis get/set
+        tv.canalAtivo = 7 // pseudo variavel chama e acessa o metodo set  canalAtivo (pois estamos atribuindo)e o paramentro sera 10 do metodo. Se ele achar um indice com o valor 10 ele entra no if e atribui o parametro dado a funcao no atributo do objeto.
+       
+        tv.canalAtivo = 3 // o 3 nao existe, portanto se eu passar o canal 3 e imprimir a funcao contida no canal, o atributo do objeto vai continar sendo 5 pois o canal 3 nao foi localizado
+
+        console.log(tv.canalAtivo) // pseudo variavel chama e acessa o metodo get e ele retorna o atributo ._canalAtivo do objeto, ele mostra qual o valor contido no atributo do objeto, ja atualizado
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

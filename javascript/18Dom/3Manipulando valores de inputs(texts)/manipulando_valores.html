@@ -1,0 +1,65 @@
+<!--
+    
+    selecionar os elementos do tipo text a partir do objeto document utilizando alguns metodos de selecao disponiveis na api e posteriormente afetar os valores desses campos
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+
+    <script>
+      function distribuiCaracter() {
+        //selecionar o valor digitado
+        var caracter = document // recupera o caracter e guarda na variavel caracter
+          .getElementById("entrada").value; //value recupera o valor contido dentro do elemento com id entrada
+
+        //limpar o campo de digitação apos guardar na variavel caracter
+        document.getElementById("entrada").value = ""; //valor = vazio
+
+        //limpar espaços em branco nas extremidades da string
+        caracter.trim();
+
+        //TESTA O CARACTER
+        switch (caracter) {
+          case "0":
+          case "1":
+          case "2":
+          case "3":
+          case "4":
+          case "5":
+          case "6":
+          case "7":
+          case "8":
+          case "9":
+            //adicionar o caracter no campo referente a números
+            document.getElementById("apenas_numeros").value = //FAZ UMA SELECAO DE UM ELEMENTO PELO ID (NO CASO O INPUT DISBLED) E SETA/ATRIBUI O VALOR DELE COMO O VALOR QUE EU DIGITEI. VALOR CONTIDO NO CAMPO EH SOBREPOSTO PELO VALOR ATRIBUIDO. CASO EU NAO QUEIRA ISSO, EU POSSO COLOCAR += PARA CONCATENAR OS VALORES
+              caracter;
+            break;
+          default:
+            //adicionar o caracter no campo referente a letras
+            document.getElementById("apenas_letras").value = //FAZ UMA SELECAO DE UM ELEMENTO PELO ID (NO CASO O INPUT DISBLED) E SETA/ATRIBUI O VALOR DELE COMO O VALOR QUE EU DIGITEI. O VALOR CONTIDO NO CAMPO EH SOBREPOSTO PELO VALOR ATRIBUIDO. CASO EU NAO QUEIRA ISSO, EU POSSO COLOCAR += PARA CONCATENAR OS VALORES
+              caracter;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <input
+      type="text"
+      placeholder="Digite um caracter aqui"
+      onkeyup="distribuiCaracter()"
+      id="entrada"
+    />
+    <!--metodo onkeyup é ativado apenas depois de colocar o caracter-->
+    <hr />
+    <span>Letras:</span>
+    <input type="text" disabled="disabled" id="apenas_letras" />
+
+    <span>Números:</span>
+    <input type="text" disabled="disabled" id="apenas_numeros" />
+  </body>
+</html>

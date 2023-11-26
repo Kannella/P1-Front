@@ -1,0 +1,57 @@
+body {
+    background-image: url('../imagens/bolha1.svg'),
+                      linear-gradient(50deg, #ff4169, #7626f8);
+    background-attachment: fixed;
+
+}
+
+nav.navbar-transparente { /*Este seletor especifica que um elemento que tem ambas as classes "nav" e "navbar-transparente" deve ser selecionado.*/
+    padding: 10px 0px;
+    background: rgba(0, 0, 0, 10);
+}
+
+.navbar-light .navbar-nav .nav-link { /* Este seletor especifica que o elemento com a classe "nav-link" dentro de um elemento com a classe "navbar-nav" dentro de um elemento com a classe "nav-light" deve ser selecionado.*/
+    color: white;
+    font-weight: 700;
+    padding: 19px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover { /* Este seletor especifica que o elemento com a classe "nav-link" dentro de um elemento com a classe "navbar-nav" dentro de um elemento com a classe "nav-light" deve ser selecionado ao passar o mouse em cima e vai aplicar a cor verde.*/
+    color: #1bd162;
+}
+
+.divisor {
+    width: 1px; 
+    background: white;
+    margin: 23px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link.cinza {
+    color:#cbcbcb ;
+}
+
+.navbar-light .navbar-nav .nav-link.cinza:hover {
+    color: #1bd162;
+
+}
+
+.capa {
+    text-align: center;
+    margin-bottom: 800px;
+}
+
+html,
+body,
+#Home {
+    /*defii a altura o body e html como 100%*/
+
+    height: 100%;
+
+}
+
+.imagem-ajustada {
+    max-width: 50%; /* Defina a largura máxima desejada, em porcentagem ou em pixels */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 2em;
+    justify-content: center;
+  }

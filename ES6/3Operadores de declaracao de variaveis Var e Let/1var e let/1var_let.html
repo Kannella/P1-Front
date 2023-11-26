@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+        <script>
+            //Resumo
+            // -> Escopo de funcao e de bloco tem acesso a variaveis declaradas no escopo global
+
+            // -> Escopo global nao tem acesso a variaveis declaradas no escopo da funcao e nem nos blocos dentro do escopo da funcao, pois escopo da funcao eh isolado do escopo global
+
+            // -> Escopo de bloco dentro do escopo da funcao, tem acesso a variaveis declaradas fora desse escopo de bloco pois sofrem roisting e sao elevadas pro escopo da funcao. Entretanto essas variaveis que sao elevadas para o escopo da funcao, mesmo assim, nao podem ser acessadas pelo escopo global
+
+            // -> variaveis declaradas dentro de escopo de bloco dentro do escopo global (window), sofrem roisting e sao elevadas para o escopo global, podendo assim serem acessadas por qualquer escopo
+
+            // -> escopo de funcao e escopo de bloco -> visualizam variaveis do escopo global
+
+            // -> No escopo de bloco eu tenho acesso a variaveis do escopo global
+
+            // -> O escopo global tem acesso a variaveis declaradas no escopo de bloco (caso o escopo de bloco tenha sido declarado no escopo global) por conta que essas variaveis sofrem roisting
+
+            // -> Variáveis declaradas no escopo global não têm acesso direto às variáveis declaradas em escopos de bloco
+
+            // -> No escopo da funcao eu tenho acesso ao escopo global, ENTRETANTO, o escopo global nao tem acesso a variaveis declaradas do escopo da funcao
+
+            // -> Os unicos escopos que sofrem elevacao, sao os escopos de bloco. Se eu declarar dentro do escopo de bloc uma variavel utilizando o var, automaticamente ela sofre o roisting. Caso ela seja declarada dentro de um escopo de bloc usando o let, o roisting nao acontece, logo a variavel se mantem dentro do escopo de bloco e fica inacessivel para os escopos superiores. Isso evita que variaveis (com o mesmo nome) globais ou de funcoes sejam sobrepostas por variaveis dentro de escopo de bloco. Pois eh muito comum criar variaveis dentro do escopo de funcao ou global e alterar os valores dessas variaveis dentro do escopo de bloco e essas variaveis que estao dentro do escopo de bloco ou da funcao sofrerem alteracao por conta do roisting que a variavel var sofre ao ser declarada dentro de um escopo de bloco.
+
+            // -> so sofre roisting variaveis var dentro do escopo de bloco
+                
+             
+
+            // 3 escopos: global, funções e bloco
+
+            // ---------------------------------------------------------------------------
+
+            // global 
+
+             var serie = "Friends" 
+             // -> essa variavel no escopo global esta disponivel dentro do escopo da funcao, dentro de escopo de bloco que esta dentro ou no mesmo nivel de uma funcao. O escopo global eh o nosso objeto window
+
+            function x() { // dentro desse escopo da funcao, a nossa variavel serie game of thrones vai ser impressa como game of thrones dentro da funcao e dentro dos blocos da funcao
+
+                var serie = "Game Of Thrones"
+                console.log('função: ' + serie) //vai imprimir game of thrones
+                if (true) { 
+                    console.log('bloco dentro da função: ' + serie) //vai imprimir game of thrones
+                }
+            }
+
+            x()
+
+            if (true) {
+                console.log('global: ' + serie) // vai imprimir friends, pois o escopo global nao tem acesso ao escopo da funcao. Mas o escopo da funcao tem acesso ao escopo global. Caso nao tivesse no escopo da funcao, a var serie = game of thrones, o que seria imprimido nas variaveis serie seria 'Friends'
+            }
+            // ---------------------------------------------------------------------------
+
+            //funcao
+
+
+            function x() {
+
+                console.log('bloco dentro da função: ' + serie) //a funcao foi chamada logo apos a criacao da variavel 'serie' dentro de um escopo de bloco, em que essa variavel que sofreu roisting e passa a fazer parte do escopo global, podendo ser acessada por qualquer escopo
+
+                if (true) {
+                    
+                    var serie = 'The Walking Dead' // se tentarmos utilizar essa variavel no nosso escopo global ou no escopo de bloco dentro do escopo global, nao ira funcionar pois ela sofrera roisting e passara a fazer parte do escopo da funcao o escopo global nao tem acesso a variaveis declaradas do escopo da funcao. Essa variavel serie que sofre roisting so consegue ser acessada dentro do escopo da funcao
+                }
+            }
+
+            //x() -> chamei a variavel dentro do escopo da funcao e chamei a funcao antes de ter criado essa variavel serie, Nao vai dar certo, tem que chamar a funcao depois de criar a variavel pra depois chamar a funcao e imprimir ela no console
+            if (true) {
+                var serie = 'The Walking Dead' //eh elevada para o escopo global e pode ser acessada por qualquer escopo
+                x() // Agora sim, ja criada a variavel que sofreu roisting (sofreu elevacao, no caso para o escopo global), pode ser acessada pela chamada da funcao x().
+               
+                console.log(serie)
+            }
+
+            console.log(serie)
+            // ---------------------------------------------------------------------------
+
+            if (true) { //escopo de bloco
+                let serie = "Friends"; // o let faz com que a variiavel preserve o escopo quando foi criada, ou seja se colocar o let, ela nao vai sofrer roisting e vai permanecer no escopo que foi criada.
+                console.log(serie) // se eu tentar usar essa variavel dentro do prorpio escopo de bloco que ela foii criada, vai dar certo.
+            }
+            console.log(serie) // agora se eu tentar acessar essa variavel fora do escopo de bloco, nao vai dar certo, poois o let preservou o escopo onde a variavel foi criada. Essa eh a grande diferenca de let e var. O var sofre roisiting o let permanece com o determinado escopo que a variavel foi criada
+        </script>
+    </head>
+
+    <body></body>
+
+</html>

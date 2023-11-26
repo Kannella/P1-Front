@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            var nome = prompt('Digite o seu nome: ') // o prompt serve para o usuario introduzir somente strings
+            var idade = prompt('Digite a sua idade: ') // o prompt serve para o usuario introduzir somente strings, (esse valor numero é recebido como uma string)
+            var idade2 = 50
+
+            console.log(idade) //da pra ver aqui que é uma string a variavel
+            console.log(idade2) //da pra ver aqui que é um numero a varivel
+
+            // document -> objeto document acessa os conteudos do body
+
+            // document.write ('<h1>Olá José, tudo bem!</h1>') -> acessa os conteudos do body a partir do metodo write do objeto document e escreve algo ali dentro do body, no caso um h1 com o texto Olá José, tudo bem!
+
+            document.write ('<h1>Olá ' + nome + ', tudo bem! Estou vendo aqui que voce possui ' + idade + ' anos</h1>') // entre as strings eu estou concatenando uma variavel chamada nome a partir do operador "+"
+
+
+        </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>

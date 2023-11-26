@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    font: 16px, "Lato", sans-serif;
+    color: #777;
+    height: 100%;
+}
+
+
+
+.caixa1 {
+    background-image: url('../imagens/capa.jpg');
+}
+.conteudo-titulo{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.caixa1, .caixa2, .caixa3,.caixa4 {
+    position: relative; /*coloca position relative pois nos queremos usar uma posição absoluta nos elementos dentro dessas caixas*/
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.custom-height-card{
+    width: 170px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+<!-- 
+    
+    Funcoes anonimas sao funcoes que nao possuem nome
+    tem as mesmas propriedades de uma funcao normal so que eh anonima (sem nome)
+    function() {
+
+    } 
+
+-->
+    <script>
+    // arrow function -> forma mais simplificada de escrita de funcoes anonimas: lembre da flecha => ; arrow function sempre tem a flecha
+
+
+
+    // chamando uma funcao anonima contida dentro de uma variavel
+    //   let quadrado = function(x){ // funcao com parametro default
+    //       return x * x
+    //   }
+    // document.write ( quadrado('algum parametro aqui dentro') ) -> para indicar que eu quero executar  a funcao contida dentro da variavel
+
+
+
+    //   let quadrado = (x) => {
+    //       return x * x
+    //   }
+    // document.write ( quadrado('algum parametro aqui dentro') )
+
+    
+
+    //   let quadrado = x => x * x //recurso de return implicito
+    //   document.write(quadrado(3))
+    
+    //   let quadrado = (x, y) => x * y //recurso de return implicito
+    //   document.write(quadrado(3, 4))
+
+    
+
+
+    // Chamando uma funcao anonima contida dentro de uma variavel    
+    // let parOuImpar = function (numero) {
+    //     if(numero % 2 === 0){ // primeiro o calculo sera feito para depois o operador de comparacao ===
+    //         return 'par'
+    //     } else {
+    //         return 'impar'
+    //     }
+    // }
+    // document.write(parOuImpar(4))
+
+
+
+    // let parOuImpar =  numero => {
+    //     if(numero % 2 === 0){
+    //         return 'par'
+    //     } else {
+    //         return 'impar'
+    //     }
+    // }
+    // document.write(parOuImpar(4))
+
+
+
+    let parOuImpar =  numero =>  numero % 2 === 0 ? 'par' : 'ímpar' // Recurso de return implicito com o recurso de if ternario
+    // Recurso de if ternario: ( condicao ? 'se for vdd' : 'se for falso' )
+    document.write(parOuImpar(7))
+
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

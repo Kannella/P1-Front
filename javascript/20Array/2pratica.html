@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            var lista_frutas = Array()
+            var lista_frutas = [] // -> mesma coisa que var lista_frutas = Array()
+
+            lista_frutas[1] = 'Banana'
+            lista_frutas[2] = true //passei um valor booleano, e tudo bem
+            lista_frutas['x'] = 'Morango'
+            lista_frutas[4] = 100 //passei um valor numerico, e tudo bem
+
+            var lista_frutas = Array('Banana', 'Maçã', 'Morango', 'Uva') // -> eu passo os paraemtros do objeto do array na declaracao do array sem os indices e o js tem a inteligencia de associar cada elemento do array um indice que eh numerico e parte da posicao 0
+
+            console.log(lista_frutas[0]) // aqui ele daria como resultado a banana
+
+            var lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'] // tambem podemos fazer dessa forma, e da mesma forma o js tem a inteligencia de associar cada elemento do array um indice que eh numerico e parte da posicao 0
+
+            console.log(lista_frutas)
+            console.log(lista_frutas[2]) //recupera o conteudo contido dentro do indice numerico 2
+            console.log(lista_frutas['x']) //recupera o conteudo contido dentro do indice string 'x'
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Flexbox - Flexible Box Layout</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        #conteudo {
+            background: #dcdcdc;
+            height: 600px;
+            display: flex;
+            /* ao utilizar o display flex automaticamente nos ja temos o nosso container com o display flex aplicado e dentro vamos ter os flexitens (EM QUE PODEMOS APLICAR DIVERSAS FORMATACOES NELES, entre elas: flex direction, flex wrap, justify content, align itens )*/
+            /*felx container e um container flexivel mesmo, ele  ajusta automaticamente o tamanho e a posição de seus elementos filhos para preencher o espaço disponível em relação a outros elementos filhos no mesmo contêiner. Isso permite criar layouts flexíveis e responsivos. Pode-se controlar o alinhamento vertical e horizontal dos elementos filhos dentro do contêiner flex, permitindo que eles se alinhem de várias maneiras, como no início, no centro ou no final. O espaço disponível no contêiner flex pode ser distribuído de maneira flexível entre os elementos filhos, permitindo que alguns elementos ocupem mais espaço do que outros com base em suas configurações e requisitos. É  possível inverter a ordem dos elementos filhos em relação ao eixo principal (normalmente, o eixo horizontal) usando propriedades como flex-direction. Isso é útil para criar layouts reversos. Redimensionamento automático: Os elementos filhos dentro do contêiner flex podem ser dimensionados automaticamente para se ajustarem ao espaço disponível, tornando o layout responsivo a diferentes tamanhos de tela e dispositivos. 
+            Espaçamento e alinhamento: Você pode controlar o espaçamento entre os elementos filhos usando propriedades como justify-content e align-items. Isso permite alinhar e distribuir os elementos filhos de maneira personalizada. Ordem personalizável: Você pode controlar a ordem visual dos elementos filhos usando a propriedade order, que permite reorganizar elementos independentemente de sua ordem no código HTML. Encolhimento e expansão: Os elementos filhos podem encolher ou expandir de acordo com as regras definidas, o que é útil para criar layouts que se ajustam a diferentes cenários de conteúdo.
+
+            Em resumo, um contêiner flex é um elemento que aproveita as propriedades e recursos do modelo flexbox para criar layouts altamente flexíveis e responsivos em páginas da web. Ele oferece controle completo sobre a posição, dimensionamento e alinhamento de elementos filhos, permitindo que você crie layouts complexos com facilidade.
+
+            /*propriedades de um container:
+            
+            Container Fixo (container): O container fixo tem uma largura máxima predefinida, que varia e se adapta de acordo com o tamanho do dispositivo. Em telas grandes (desktops), a largura máxima típica é de 1140 pixels, mas pode variar dependendo do tema Bootstrap ou de qualquer personalização que você faça.
+            
+            Container Fluido (container-fluid): O container fluido preenche a largura total do contêiner pai, o que significa que não tem uma largura máxima definida. Ele se estende por toda a largura da tela, adaptando-se ao tamanho do dispositivo.
+
+             o "container" Bootstrap, seja ele fixo ou fluido, é projetado para centralizar o conteúdo horizontalmente na página. Isso ocorre graças às margens automáticas aplicadas pela classe "container" no Bootstrap. Essa centralização ajuda a melhorar a legibilidade e a aparência do conteúdo, especialmente em telas maiores.
+             
+             Portanto, quando você utiliza um "container" Bootstrap, o conteúdo dentro dele será centralizado horizontalmente na página, independentemente do tamanho da tela. Isso é uma das características úteis do sistema de grid do Bootstrap, que facilita a criação de layouts consistentes e visualmente agradáveis.
+           
+             */
+
+
+
+
+            /*VALORES DA PROPRIEDADE FLEX DIRECTION  (direção que eu quero alinhar meus elementos)*/
+
+            /* -> row|row-reverse|column|column-reverse 
+            
+            /*row: direção padrao ; row-reverse: contrario do row ; colums: um item abaixo do outro ; column reverse: contrario do column  */
+
+            flex-direction: row;
+
+            /*flex-direction: row; é a direção padrao que um conteineer flex tem, ou seja, o padrao é que definir o eixo principal de um contêiner flex para ser horizontal, ou seja, ao longo da linha horizontal. Isso significa que os elementos dentro da classe "row" (linha) serão organizados em uma única linha horizontal.
+
+
+
+
+
+            /*
+            -> nowrap|wrap|wrap-reverse
+            */
+
+            /* flex-wrap define se os itens de um container vao quebrar para a proxima linha ou não */
+
+            /* nowrap: quebra padrao de layout (sem quebra, ou seja, mesmo que diminua o tamanho do container, os itens nao vao ser quebrados, eles vao ser apertados para que caibam dentro do container ); wrap: a ordem dos itens vai ser quebrada e eles vao se ajustar caso o container diminua de tamanho, eles se ajustam com base na area do container ; wrap-reverse: exibe a ordem inversa dos itens*/
+            flex-wrap: nowrap;
+
+
+
+            /*
+            flex-start|flex-end|center|space-between|space-around
+            */
+
+            /*flex-start: padrao ; flex-end: fica colado no canto superior direito ;  center: centraliza os itens ; space-between: distribui os itens adicionando um espaçamento entre eles, sendo que os das pontas ficam colados ; space-around: ele distribiu os itens de maneira com que os itens da extremidades nao fiquem colados e fiquei mais espaçados tambem */
+            justify-content: space-around;
+
+
+
+            /*stretch: padra0 -> estica os itens do container (eles vao preencher toda area ate completar a sua altura) ; center: agora os itens ficam centralizados bem no meio tanto na hor quanto na vertical ; flexstart: ficam colados na parte superior ; flexend: ficam colados na parte inferior ; baseline: alinha o item baseado pela parte superior da linha do texto */
+
+            /*stretch|center|flex-start|flex-end|baseline
+            */
+
+            align-items: baseline;
+
+        }
+
+        .item {
+            margin: 10px;
+            background: white;
+            border: 1px solid gray;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Flexbox</h1>
+    <div id="conteudo">
+        <!--esse conteudo chamamos de container pois ele contem elementos que são os filhos dele. Quando vc usa o flexbox vc passa a ter um conteiner e dentro dele temos flexitens (itens dentro desse container que vc usa o flexbox)-->
+        <div class="item" style="padding-top: 60px;">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+        <div class="item">05 <br> mais conteúdo</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript</title>
+        <script>
+            var data = new Date(); //criando uma instancia do objeto date e atribindo ela a variavel data que passar a ser referencia para esse objeto date
+
+            // Portanto, a expressão  var data = new Date(); Cria uma instância do objeto
+            // Date ( ou seja, criar um objeto específico de uma classe Date.), e a variável
+            // x passa a fazer referência a essa instância (ou seja, a essa criacao de um
+            // objeto específico de uma classe ou tipo. ) permitindo que você acesse seus
+            // atributos e métodos por essa variavel, pois ela contem o endereco do objeto
+            // que vc instanciou.. Criar uma instância significa criar um objeto específico
+            // de uma classe ou tipo. Esse objeto date eh uma instacia da classe date
+            // -------------------------------------------------------------------------------------------------------------------------------
+
+            // 15/02/2017
+            var data1 = new Date(2017, 0, 15)
+
+
+            // 23/02/2017
+            var data2 = new Date(2017, 1, 23)
+
+            document.write(data1.toString())
+            document.write('<hr />')
+            document.write(data1.toString())
+
+            document.write(' <br /> <br /> <hr />')
+
+            //converter datas para algum valor que possamos calcular
+            document.write(data1.getTime()) //recupera os milisegundos do instante de 1 janeiro de 1970 ate a data1
+            document.write('<hr />') //recupera os milisegundos do instante de 1 janeiro de 1970 ate a data2
+            document.write(data2.getTime())
+
+            document.write(' <br /> <br /> <hr />')
+
+            //descobrindo quandos milisegundos tem entre uma data e outra
+            // biblioteca math tem o metodo abs que  converte para um numero positivo
+            document.write(Math.abs(data1.getTime() - data2.getTime()))
+
+
+            var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+
+
+            document.write(' <br /> <br /> <hr />')
+
+            // 1 dia tem 24 horas, cada hora tem 60 minutos, cada minuto tem 60 segudnos e cada segundo tem 1000 mili segundos
+            // quantos milisegundos existem em 1 dia?
+
+            var milisegundos_por_dia = (1 * 24 * 60 * 60 * 1000 )
+            document.write('1 dia tem: ' + (1 * 24 * 60 * 60 * 1000 ) + 'milisegundos ' )
+
+            document.write(' <br /> <br /> <hr />')
+
+            document.write(Math.ceil(milisegundos_entre_datas / milisegundos_por_dia))
+            
+            
+        </script>
+    </head>
+    <body></body>
+</html>

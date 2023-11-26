@@ -1,0 +1,34 @@
+<!--
+    onkeydown -> acionado no momento que uma tecla eh presisionada
+    onkeyup -> eh acionado no momento que a tecla eh liberada
+    onkeypress -> instante que eu mantenho a tecla pressionada, eh acionado somente quando a tecla pressionada representa um caracter, se eu pressionar o cntr por ex, o evento nao vai acontecer
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+
+            function acao1() {
+                alert('evento disparado')
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <input onkeydown="acao1()" type="text">
+
+        <br>
+
+        <input onkeyup="acao1()" type="text">
+
+        <br>
+
+        <input onkeypress="acao1()" type="text">
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+    </head>
+    <body>
+    
+        <h2>Login</h2> <!-- cria um formulario e envia para o processa.php os inputs do formulario e por exemplo, salvar em um banco de dados, verificar se o usario esta autenticado ou nao, etc -->
+        
+        <form action="processa.php"> <!-- criamos um formulario e vamos criar os dados dentor desse formulario -->
+            Login: <br>
+            <input type="text" name="LoginTeste"> <br> <!--input é uma entrada de dados, type define o tipo desse componente e o name define uma forma de recuperar os dados que o usuario digitar -->
+            Senha: <br>
+            <input type="password" name="SenhaTeste"> <br>
+            <br>
+            <input type="submit" value="Logar"> <!-- envia esses dados do formulario -->
+        </form>    
+        
+        <h2>Cadastre-se</h2>
+        
+        <form action="processa.php">       
+            Login: <br>
+                <input type="text" name="LoginTeste"> <br> <br>
+            Sexo: <br> <!-- radio escolhe alguma opção que vc definir -->
+                <input type="radio" name="sexo" value="M"> Masculino <br> <!-- mesmo name (mesmo tipo de dados, no caso name), deixam eles agupados e faz com que apenas uma opção possa ser marcada impede de selecionar as duas caxinhas ; para diofernciar o que foi passado em realçao ao mesmo tipo de dados colocamos o value diferente  -->
+                <input type="radio" name="sexo" value=" F"> Feminino <br> <br>
+            Interesses <br>
+                <input type="checkbox" name="Interesses"> Futebol <br> <!-- checkbox deixa marcar mais de uma caixinha -->
+                <input type="checkbox" name="Interesses"> Cursos <br>
+                <input type="checkbox" name="Interesses"> Moda <br><br>
+            Estado <br>
+                <!-- <input type="radio" name="" id=""> podia colocar input tbm -->
+                <select name="estado" id=""> <!--pelo name vc pega o estado e dentro do name temos as opções dos values-->
+                    <option value="sp">SP</option> <!-- opção para o select-->
+                    <option value="rj">RJ</option> <!-- opção para o select-->
+                    <option value="mg">MG</option> <!-- opção para o select-->
+                    <option value="ba">BA</option> <!-- opção para o select-->
+                    <option value="to">TO</option> <!-- opção para o select-->
+                    <option value="ce">CE</option> <!-- opção para o select-->
+
+                </select> <br><br> <!-- select permite que o usuario consiga escolher dentre uma lista de itens apenas uma opção baseado em uma lista -->
+            Observações <br> 
+            <textarea name="" id="" cols="30" rows="10"></textarea> <!-- area de texto -->
+            <input type="submit" value="Cadastre-se">                    
+        </form>     
+    </body>
+</html>

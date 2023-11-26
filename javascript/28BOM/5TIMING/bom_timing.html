@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            // setTimeout(function(){document.write('Teste')}, 3000)
+            // -> uma funcao que sera executada uma vez apos 3000 mili segundos (3 segundos). Aqui eh um metodo que recebe uma funcao como atributo
+            
+            // setTimeout(<acao>, <tempo em milissegundos>); clearTimeout()   -> podemos usar esse metodo para executar uma acao que sera executadas somente uma vez apos algum tempo pre estabelecido informado para execucao daquela acao. 
+            // -> clearTimeout() elimina o setTimeout
+            var i = 5
+            var x = setInterval(function () { document.write(i + '<br />'); i = i - 1
+          
+              if(i === 0) {
+                window.location.reload() //se o i for igual a 0 atualiza a pagina
+                //clearInterval(x) se colocar isso ao inves de window.location.reload(), na hora que acabar a contagem e o i for igua a 0 ele limpa a contagem armazenada na variavel x
+              }
+            }, 1000) // para cada execucao dessa funcao a cada 1s eu vou descrementar 1 unidade (i = i - 1 ou i -= i ou i--)
+            // utilizo o ; pq sao duas acoes diferentes dentro da funcao
+            
+
+            // setInterval(function(){document.write('Teste' + '<br />')}, 2000)
+            // -> uma funcao que sera executada constantemente em 2000 mili segundos (2 segundos) em 2000 mili segundos (2 segundos).  Aqui eh um metodo que recebe uma funcao como atributo que executa uma funcao como atributo que executa uma logica
+
+            // setInterval(<acao>, <tempo em milissegundos>); clearInterval()
+            // podemos usar esse metodo para executar uma acao de forma constante (continua) apos o intervalo de tempo informado para cada execucao dessa acao.
+            // -> clearInterval() elimina o setInterval
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

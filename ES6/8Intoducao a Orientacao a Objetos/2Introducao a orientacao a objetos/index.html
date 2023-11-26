@@ -1,0 +1,70 @@
+<!--
+
+    Introducao a orientacao a objetos
+
+    
+
+    Paradigma procedural
+        - Faz a chamada de procedimentos (rotinas, subrotinas, metodos ou funcoes) para manipulacao de dados (que podem ser globais ou associados a um contexto) e a partir desse procedimento nos afetamos o estado da aplicacao como um todo
+        - Exemplo abaixo:
+-->
+<!--em termos de pilares da programcao procedural, nos temos a questao sequencial e uma decisao.
+Com esse padrao de programcao procedural nos podemos contruir um suboprograma capaz de calcular algo
+-->
+
+    <script>
+        //3 variaveis
+        let a = 10
+        let b = 7
+        let operador = 'mult'
+
+        function calcular(a, b, operador) {
+            if(operador == 'mult') { //temos uma decisao
+                console.log(a * b) //quando os paraemtros sao recebidos implantamos esse procedimento console.log(a * b)
+            }
+        }
+
+        //chamamos essa funcao (Esse procedimento) enchaminhando os parametros da nossa aplicacao (as variavieis, que constituem o estado da aplicacao)
+
+        calcular(a, b, operador)
+        // temos aqui uma questao sequencial, onde nos temos uma chamada de funcao
+    </script>
+
+
+<!--       
+    Paradigma de Orientacao a Objetos
+        - Estruturas de dados possuem seus respectivos comportamentos
+        - Ao inves de eu submeter sados para um procedimento, na programacao orientada ao paradigma procedural, para que ele afete esses dados, na programacao baseada no paradigma orientada a objetos nos vamos criar nosso proprios dados e dentro desses dados nos vamos incluir nossos comportamentos desejados
+        -Pilares da programacao orientada a objetos: abstracao, encapsulamento, heranca e polimorfismo
+            -Ao atender esses pilares nos temos condicao de criar plicacoes oo
+            -nada impede de que essa aplicao tenha alguns trechos que sejam procedurais, ainda mais em js em que os dois paradigmas sao suportados
+
+-->
+
+    <script>
+        class Calculadora {
+
+            constructor() {
+                this.a = 10
+                this.b = 7
+                this.operador = 'mult'
+            }
+
+            calcular() {
+                if(this.operador === 'mult') {
+                    console.log(this.a + this.b)
+                }
+            }
+        }
+
+        Calculadora = new Calculadora() //criamos um objeto calculadora que no caso representa uma calculadora
+        calculadora.calcular
+    </script>
+
+
+
+
+<!--
+    (Um paradigma eh uma forma de se fazer alguma coisa)
+    (O js suporta tanto a programcao procedural quanto a programcao orintada a objetos, quanto ao paradigma reativo)
+-->

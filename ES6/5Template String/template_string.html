@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+
+        <script>
+
+        // template string eh um recurso que permite dentro de uma string, abrir uma janela/espaço para o processador js interpretar toda a codificacao inserida entre as chaves e ser interpolado essa codificacao com as demais strings do determinado contexto
+        
+        //exemplos:
+            let nome = 'Jorge'
+
+            console.log('Oi ' + nome + ', tudo bem?')
+            // concatenamos com o operador '+'
+            
+            console.log(`Oi ${nome}, tudo bem?`)
+            // template string deve ser colocado entre sinais de crase, e entre as crases coloca-se a string que queremos concatenar com as variaveis, que no caso, as variaveis dentro das crases devem ser colocadas dessa forma:
+            // ${nome} 
+
+            console.log(`7 + 7 = ${ 7 + 7}`)
+            //concatenei com uma soma 
+
+            function calcular(x, y) {
+                return x * y
+            }
+            console.log(`A multiplicação de 8 * 8 é: ${calcular(8, 8)}`)
+            //podemos concatenar com funcoes tambem! 
+            // => ${funcao} 
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>

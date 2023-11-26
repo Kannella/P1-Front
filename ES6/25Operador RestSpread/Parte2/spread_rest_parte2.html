@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+        <script>
+
+            //contexto rest
+            //operador rest junta as estruturas de dados
+
+            function soma(...param) { //..param vai receber todos os parametros de uma vez so e vai juntar todos eles em uma estrutura de array, vamos receber um unico parametro em formato de array -> function soma([3, 8, 5, 7, 8, 10]) -> e podemos percorrer cada um dos indices do array de forma dinamica
+                let resultado = 0
+
+                console.log(param) // vai exibir todos os parametros encaminhados para a funcao ocmo um array
+                param.forEach(v => resultado += v) // recupera o array param e usa o forEach que eh um metodo (funcao) nativo de array que percorre cada um dos elementos do array que recupera o valor contido em cada um dos indices desse array. No caso, a funcao vai pegar cada indice v do array e vai somar com a varaivel resultado do escopo da funcao o valor contido em cada um dos indices do array
+
+                return resultado
+            }
+
+            console.log(soma(3, 8, 5, 7, 8, 10))
+
+            function multiplicacao(m, ...p) { //...p vai receber todos os parametros de uma vez so e vai juntar todos eles em uma estrutura de array, vamos receber =um unico parametro em formato de array -> function soma([7, 12, 3, 49]) e alem disso vamos ter um numero m como parametro tambem
+                console.log(m)
+                let resultado = 0
+                console.log(p)
+
+                p.forEach(v => resultado += m * v) // A funcao foreach vai pegar cada indice v do array e vai somar com a multiplicacao do m com cada valor contido em cada indice v
+
+                return resultado
+            }
+
+            console.log(multiplicacao(5, 7, 12, 3, 49)) // o numero 5 eh o primeiro parametro m da funcao e os demais serao recebidos e unificados em um unico parametro que sera um array. 
+
+            console.log(soma)
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

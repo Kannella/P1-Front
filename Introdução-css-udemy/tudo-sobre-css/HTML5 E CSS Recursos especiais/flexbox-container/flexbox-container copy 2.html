@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Flexbox - Flexible Box Layout</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        #conteudo {
+            background: #dcdcdc;
+            height: 600px;
+
+            display: flex;
+
+
+            /* flex-direction: row; 
+
+
+            flex-wrap: nowrap;
+
+
+            justify-content: space-around;
+
+
+            align-items: baseline; */
+
+        }
+
+        .item {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            background: white;
+            border: 1px solid gray;
+             flex-grow: 0; /*define a capacidade, com base no numero, de proporção de aumento de tamanho do item, preciso de dois elementos com flex grow para poder aplicar a propoorção */
+            /*conforme eu vou aumentando a tela, quanto maior o flex-grow, vai ficando bem maior o espaço o ocupado dentro do container desse item com flex grow maior, do que os outros itens, o item3 vai aumnetar proporcionalmente mais doq os outros itens com flex grow menores, quanto maior for a tela.*/
+
+            flex-shrink: 1; 
+            /*define a capacidade, com base no numero, de proporção de diminuição de tamanho do item*/ /*1 é o tamanho padrao*/
+
+            flex-basis: auto; 
+
+            /*flex basis indica o tamanho (width) inicial do flex item antes da distribuição do espaço restante*/
+            
+            /*auto é o padrao e ele define que o tamanho incial de cada um dos itens é automatico, é o tamanho que definirmos no width ; 200px por ex: define que o tamanho inicial antes da distribuição do espaço restante eh 200px ; 100px por ex: define que o tamanho inicial antes da distribuição do espaço restante eh 100px ;
+        }
+
+        .item1{
+            /* flex-shrink: 1; */
+        }
+        .item2{
+            /* flex-shrink: 2; */
+        }
+        .item3{
+            /* flex-shrink: 5; conforme eu vou reduzindo a tela o ite3 vai ficando bem menor do que os outros itens, e menor vai ser o espaço ocupado desse item no container. O item3 vai encolher mais doq os outros itens que definimos. Quanto maior o flex-shrink menor é o espaço que ele vai ocupar no container quando vc encolhe o layout. */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Flexbox</h1>
+    <div id="conteudo">
+        <div class="item item1">01</div>
+        <div class="item item2">02</div>
+        <div class="item item3">03</div>
+        <div class="item">04</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Posicionamentos</title>
+        <style type="text/css">
+            
+            body{
+                background: #007FC7;
+            }
+            #container {
+                background: #FFF;
+                width: 800px;
+                /* margin: 10px 80px; sup e inf de 10px e 80px na lat esq e dir*/
+                margin: 10px auto; /* sup e inf de 10px e auto na lat esq e dir, sempre vai ficar centralizado */
+                padding: 10px; /*espaçamento interno de 10px*/
+                position: relative;
+            }
+            
+            p{
+                width: 300px;
+                
+            }
+
+            .relative{
+                border: 1px solid red;
+                position: relative; /*top, right, bottom e left -> propriedades de deslocamento*/
+                top: -110px;
+                right: 500px;
+            }
+
+            .absolute{
+                position: absolute;
+                border: 1px solid red;
+                top: 80px; 
+                background: #F2F2F2;
+                right: 80px;
+            }
+
+            .fixed{
+                position: fixed;
+                border: 1px solid red; 
+                background: #F2F2F2;
+                bottom: 0px;
+                right: 0px;
+                margin: 0px; /*remove todos os espaçamentos do paragrafo*/
+                
+            }
+        </style>
+    </head>
+    <body>
+
+            <div id="container">
+                <h1>Posicionamentos</h1>
+                <p>
+                    P1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p class="absolute">
+                    P2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p class="fixed">
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p><p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+                <p>
+                    P3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nam a sint fuga assumenda necessitatibus saepe accusantium. Expedita asperiores sint, consectetur, animi facere aliquam nobis, nam quod at amet odio?
+                </p>
+
+                <!--elementos do tipo bloco aparecem um embaixo do outro-->
+                
+            </div>
+        
+    </body>
+    </html>
+    
+    <!--posicionamento absoluto, o elemento sai do fluxo normal do documento e não afeta a posição dos outros elementos da pagina-->
+    <!-- se voce aplicar POSITION ABSOLUTE no ELEMENTO, por PADRAO ele vai se alinhar com base no BODY, mas se vc colocar no CONTAINER POSITION ALGUMA COISA, agora o elemento vai ser alinhado baseado no CONTAINER como REFERENCIA e não mais no BODY do nosso documento -->
+    <!--O container precisa ter uma posição(Seja realtiva, absoluta ou fixa) para que nós consigamos alinhar um elemento absoluto baseado nele -->
+
+<!--top: 0px e left: 0px; fica no topo e na lateral esquerda da pagina-->
+<!--posicionamento fixo voce pode rolar a pagina e o elemento vai permanecer fixo em rel a janela do navegador e vai rolar junto-->
+
+
+
+
+<!--
+    RESUMO
+
+        STATIC
+        -> É o posicionamento padrao aplicado a cada tipo de elemento
+        -> Por exemplo, elementos em bloco sempre aparecem um abaixo do outro, independenete se houver espaço    para clocar do lado ou nao
+        
+        RELATIVE
+        -> tem o seu alinhamento baseado na posição inicial do elemento
+        
+        ABSOLUTE
+        -> Permite que voce defina uma caixa que é removida do fluxo do documento e voce consegue alinhar essa caixa baseado no seu container que tenha uma posição
+        
+        FIXED
+        -> É alinhado baseado na janela (view port) do seu navegador
+
+-->

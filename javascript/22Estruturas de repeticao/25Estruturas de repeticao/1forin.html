@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            // var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+            var listaConvidados = Array()
+
+                lista,
+                Convidados['a'] = 'Jorge'
+                listaConvidados[10] = 'Jamilton'
+                listaConvidados['zebra'] = 'José'
+                listaConvidados[-1] = 'Ana'
+                listaConvidados[true] = 'Maria'
+                console.log(listaConvidados)
+
+                //forin retorna o indice das posicoes do array que ele percorre e a partir desse indice nos podemos recuperar o valor contido em uma determinada posicao do array
+                for (var x in listaConvidados) { // para cada var x no array listaConvidados executa esse bloco de codigo abaixo ate que a proxima posicao do array seja undefined. Usando o forin a variavel x recebe o valor do indice a cada interacao que ela faz dentro de um array e a partir dela estamos acesando os valores contidos no array. O bom eh que o forin ele tem a inteligencia de nao precisar com que as chaves do array esteja em ordem
+                    console.log('Índice ' + x + ' valor ' + listaConvidados[x])
+                }
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

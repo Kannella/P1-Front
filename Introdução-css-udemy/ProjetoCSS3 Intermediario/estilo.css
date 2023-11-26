@@ -1,0 +1,34 @@
+.conteudo{
+    border: 1px solid red;
+    
+    /* padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px; */
+
+    /* padding: 20px 20px 20px 20px; */
+
+    padding: 20px; /*20px em todos os lados*/
+
+    /* margin-top: 20px; espaçamento superior de 20px
+    margin-right: 20px; espaçamento na direita
+    margin-left: 20px; espaçamento na esquerda
+    margin-bottom: 20px; espaçamento inferior */
+
+    margin: 10px; /*10px em todos os lados (tanto top e bottom) */
+   
+    width: 150px;
+}
+/* margin colapse: quando nos temos dois elementos e ambos estao um embaixo do outro com margens diferentes, sera aplicada a maior margem entre eles*/
+
+#noticia{
+    background-color: #f9f9f9;
+    border: 1px solid gray ;
+    padding: 20px;
+
+}
+
+h2 {
+    margin: 0px; /* Temos 10px na margem lateral e na parte superior pois o h2 ja tem uma margem padrao.*/
+}
+

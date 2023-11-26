@@ -1,0 +1,42 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px;
+    background: #159cb0 url(../imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li{
+
+    /* display: inline; coloca horizontal tbm*/
+    float: left;
+}
+
+ul a{
+    display: block;
+    padding: 0px 2em;
+    line-height: 2.2em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../imagens/divisor.png) repeat-y; 
+}
+
+ul .primeiro a{
+    background: none;
+}
+
+ul a:hover{
+    color: #085662;
+    background: #44cad4;
+
+}
+
+#home #navegacao .home a, 
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a,
+#noticias #navegacao .noticias a { /* uso a class home para formatar o link*/
+    background-position: right bottom;
+    color: #085662;
+    background: #44cad4;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+
+    <title>Bootstrap - Sistema de grids</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    
+    <style type="text/css">
+        .marcador {
+            background: #fe9d9d;
+            border: 1px solid #f94646;
+        }
+        .marcador-container {
+            background: #5bf946;
+            border: 1px solid #36ae26;
+        }
+    </style>
+
+
+  </head>
+
+  <body>
+
+
+    <!--
+        separar todo o espaçamento em 12 unidades e a partir delas, conseguimos criar espaçamentos que quisermos: aplicamos uma classe que define que o meu conteudo tem o total de 6 colunas ou 4 colunas ou 3 colunas ou etc, quanto quiser, entretanto o maximo é 12 ou tem que somar 12 nossas areas.
+    -->
+
+    <div class="container marcador-container">
+
+        <div class="row"> <!--row = linha--> <!--quando nos criamos uma row, nos automaticamente estamos criando um flex container e dentro do flex container nos temos os flex items (itens que poercentem a esse conteiner que é flex e que vão ser dipostos horizontalmente na mesma linha por padrão, pois a classe row aplica uma direção flexivel padrao do flexbox que é horizontal) A row ocupa todo espacamento do container -->
+            <div class="marcador col-6 col-sm-2 col-md-10 col-lg-2 col-xl-10">area 1</div>
+            <!--para dispositivos extra small nos apliamos uma area com 6 grids-->
+            <!--col-sm-2 vai ocupar 2 grids do containerr-->
+            <!--para dispositivos small nos aplicamos uma area com 2 grids-->
+            <!--para dispositivos medium vai ocupar 10 grids na area 1 -->
+            <!--para dispositivos larges device vai ocupar 2 grids na area 1 -->
+            <!--para dispositivos extra large device vai ocupar 10 grids na area 2-->
+            
+            <div class="marcador col-6 col-sm-10 col-md-2 col-lg-10 col-xl-2">area 2</div>
+            <!--para dispositivos extra small nos aplicamos uma coluna com 6 grids-->
+            <!--col-sm-10 vai oxupar 10 colunas do contair e somando com as outras 2 vamos ter 12 colunas ocupadas e nenhum espaço faltante-->
+            <!--para dispositivos small nos aplicamos uma area com 10 grids-->
+            <!--para dispositivos medium vai ocupar 2 grids na area 1 -->
+            <!--para dispositivos larges device vai ocupar 2 grids na area 2 -->
+            <!--para dispositivos extra large device vai ocupar 2 grids na area 2-->
+            
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+</body></html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            var x = 1 // atribui o valor de 1 a x
+
+            document.write('inicio <br />')
+            //true
+            while (x <= 10) { //while (enquanto) o x for menor ou igual a 10
+                document.write(x + '<br />') //ele vai imprimir o proprio x
+
+
+                x++ // dentro do laco, fazemos um incremento de 1 unidade na variavel x e testa novamente ate o retorno dar false e ai sim parar e sair do laco de repeticao. Se tiver esse if abaixo ele teste se x eh identico a 5 e continua o loop e vai incrementando o incremento ate nao seguir mais a condicao do while ou do if
+
+                if (x === 5) { // se x for identicamente igual a 5
+                    // break // eu vou parar o laco de repeticao
+                    continue // dentro de um laco de repeticao no momento que o continue eh encontrado o laco interrompe o processsamento e passa para a instrucao seguinte para ver se vai executar ou nao o bloco, essa condicao gera um loop infinito no caso de x = 5 caso o incremento esteja depois do continue
+                }
+                // x++ incremento depois do continue, ai se tiver o if vai ficar em um loop infinito
+            }
+
+            document.write('fim <br />')
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

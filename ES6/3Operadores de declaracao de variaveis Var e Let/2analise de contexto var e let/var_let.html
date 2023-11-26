@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+        <script>
+            var serie = 'Friends' // varaivel declarada no escopo global
+            
+            {
+                var serie = "The Walking Dead" // criei uma outra variavel tambem chamada serie no escopo de bloco -> essa variavel sofre roisting e sobrescreve o valor da variavel que tem Friends atribuido, fazendo com que os consoles apresentem a variavel que sobrescreveu a outra -> isso eh um bug que pode ser ocasionado que o var pode ocasionar e o let tem como proposta solucionar 
+                console.log('dentro do bloco: ' + serie) // mostra no console  a varaivel serie dentro do bloco -> vai mostrar The walking dead pois a variavel que sofreu roisting para o escopo global vai sobrescrever a variave com valor friends, e as variaveis do escopo da funcao tem acesso a variaveis do escopo global
+            }
+            console.log('fora do bloco: ' + serie) // mostra no console a varaivel serie no escopo global -> vai mostrar the walking dead pois a variavel declarada no escopo de bloco sofreu roisting e sobrepos a variavel serie com o valor Friends. Assim entao, esse consiole fora do bloco mostre The walking dead e nao Friend -> isso eh um bug que pode ser ocasionado que o var pode ocasionar e o let tem como proposta solucionar  -> aqui deveria ser mostrado friends, mas como a variavel que contem o valor the walking dead sobrescreveu a que tem o valor friends, ela acaba mostrando The walking dead
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>

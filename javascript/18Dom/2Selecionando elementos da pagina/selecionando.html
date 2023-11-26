@@ -1,0 +1,38 @@
+<!--
+    metodos da API do DOM são acessiveis a partir do objeto document
+
+    podemos a partir do objeto document utilizando a API do DOM podemos utilizar metodos para acessar esses elementos no DOM
+
+    todos os nossos elementos html estao contidos dentro do DOM em uma estrutura de arvore. Podemos, a partir dos atributos desses elementos (type, placeholder, id, class, name, etc)fazer sua respectiva seleção
+
+    id eh uma identificacao unica para o elemento, em uma mesma pagina nao podemos ter repeticao de um id
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script></script>
+
+    </head>
+
+    <body>
+        <input
+            type="text"
+            placeholder="Digite seu nome"
+            id="nome_usuario" 
+            class="campo_texto"
+            name="nome">
+
+        <script>
+            console.log(document.getElementById('nome_usuario'))
+            console.log(document.getElementsByTagName('input'))
+            console.log(document.getElementsByClassName('campo_texto'))
+            console.log(document.getElementsByName('nome'))
+        </script>
+
+    </body>
+</html>

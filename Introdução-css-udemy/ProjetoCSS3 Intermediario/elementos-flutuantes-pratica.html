@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Elementos flutuantes pratica</title>
+
+        <style type="text/css">
+            /* #principal {
+                    width: 920px;
+                    border: 1px solid red;
+                } */
+            body{
+                background-color: #f2f2f2;
+            }
+            #principal {
+                width: 920px;
+                border: 1px solid red;
+            }
+
+
+
+            .noticia {
+                background-color: blue;
+                padding: 5px;
+                width: 280px;
+                margin: 7px;
+                float: left;
+            }
+
+            .clear {
+                clear: both;
+            }
+            .imagem-galeria{
+                background-color: white;
+                width: 265px;
+                padding: 5px;
+                float: left;
+                margin: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <div id="principal"> -->
+
+        <div id="principal">
+
+            <div>
+
+                <div class="noticia">
+                    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 1</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum et magnam repellendus? Voluptatibus,
+                        sunt quidem.
+                    </p>
+                    <a href="">Veja mais</a>
+                </div>
+
+                <div class="noticia">
+                    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum et magnam repellendus? Voluptatibus,
+                        sunt quidem.
+                    </p>
+                    <a href="">Veja mais</a>
+                </div>
+
+                <div class="noticia">
+                    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 3</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum et magnam repellendus? Voluptatibus,
+                        sunt quidem.
+                    </p>
+                    <a href="">Veja mais</a>
+                </div>
+
+                <!-- <hr class="clear"> -> o conteudo principal nao expande ate englobar todos os conteudos, aplicando o clear no hr ele engloba tudo ai o conteudo ada classe expande
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore vitae maxime laboriosam velit quas. Excepturi consequatur amet error enim reprehenderit alias nulla incidunt, dignissimos quod voluptatibus hic vero? Quasi. -> ai o conteudo principal engloba todos os conteudos flutuantes e o hr separa esse texto lorem dos conteudos flutuantes-->
+
+            </div>
+
+            <div>
+
+                <div class="imagem-galeria">
+                    <img src="imagens/imagem1.png">
+                    <p>Resumo</p>
+                </div>
+
+                <div class="imagem-galeria">
+                    <img src="imagens/imagem2.png">
+                    <p>Resumo</p>
+                </div>
+                
+                <div class="imagem-galeria">
+                    <img src="imagens/imagem3.png">
+                    <p>Resumo</p>
+                </div>
+
+                <div class="imagem-galeria">
+                    <img src="imagens/imagem4.png">
+                    <p>Resumo</p>
+                </div>
+
+                <div class="imagem-galeria">
+                    <img src="imagens/imagem5.png">
+                    <p>Resumo</p>
+                </div>
+
+            </div>
+
+        </div> <!-- fim da noticia-->
+
+        <div class="clear"></div> <!-- limapmos fluxo flutuante-->
+
+    </body>
+
+</html>

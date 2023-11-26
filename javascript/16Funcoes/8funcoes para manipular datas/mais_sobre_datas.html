@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>JavaScript</title>
+        <script>
+            var data = new Date(); //criando uma instancia do objeto date e atribindo ela a variavel data que passar a ser referencia para esse objeto date
+
+            // Portanto, a expressão  var data = new Date(); Cria uma instância do objeto
+            // Date ( ou seja, criar um objeto específico de uma classe Date.), e a variável
+            // x passa a fazer referência a essa instância (ou seja, a essa criacao de um
+            // objeto específico de uma classe ou tipo. ) permitindo que você acesse seus
+            // atributos e métodos por essa variavel, pois ela contem o endereco do objeto
+            // que vc instanciou.. 
+
+            // Criar uma instância significa criar um objeto específico
+            // de uma classe ou tipo. Esse objeto date eh uma instacia da classe date
+// -------------------------------------------------------------------------------------------------------------------------------
+
+            // adicionar ou remover dias da data
+
+            // converter para uma representacao textual da data com tostring
+            document.write(data.toString())
+
+            // data.setDate(); acessa um metodo (no caso setDate) especifico da instancia do objeto date (criacao de um objeto específico de uma classe Date, que possui seus devidos atributos e metodos) por meio da variavel data 
+
+            // metodo get recuperam valores no objeto data
+            // metodo set setam valores no objeto data(no caso no dia), no caso adicionamos 1 ao metodo getDate (que recupera o dia atual)
+         
+            document.write('<hr />')
+            data.setDate(data.getDate() + 1)
+            document.write(data.toString())
+
+
+            document.write('<hr />')
+            document.write('<hr />')
+
+            // adicionar ou remover meses da data
+            document.write(data.toString()) // como estamos atuando em um mesmo objeto, vamos ter aqui a data ja atualizada no exemplo anterior
+            document.write('<hr />')
+            data.setMonth(data.getMonth() + 1)  // metodo set setam valores no objeto data (no caso no mes), no caso adicionamos 1 ao metodo getMonth (que recupera o mes atual)
+            document.write(data.toString())
+
+            document.write('<hr />')
+            document.write('<hr />')
+
+            // adicionar ou remover anos da data
+            document.write(data.toString()) // como estamos atuando em um mesmo objeto, vamos ter aqui a data ja atualizada no exemplo anterior
+            document.write('<hr />')
+            data.setFullYear(data.getFullYear() - 1) // metodo set setam valores no objeto data (no caso no ano), no caso subtraindo 1 ao metodo getFullYear (que recupera o ano atual)
+            document.write(data.toString())
+
+
+            // entao estamos dessa forma, atuando sobre um mesmo objeto de data, modificando seus valores para ajusta-los corretamente recuperando os metodos de dia mes e ano, atualizando a informacao dentro do proprio objeto.
+        </script>
+    </head>
+    <body></body>
+</html>

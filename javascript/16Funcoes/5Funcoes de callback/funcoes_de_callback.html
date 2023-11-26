@@ -1,0 +1,37 @@
+<!--
+    funcoes de callback
+    -> sao funcoes que sao parametros para outras funcoes
+    -> objetivo: apos a finalizacao da funcao ter condicoes de chamar a funcao encamiunhada por parametro dando continuidade no processamento da logica da aplicacao
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcoes de callback</title>
+    <script>
+      function exibirArtigo(id, callbackSucesso, callbackErro) {
+        // logica: recuperar um artigo com base no id via requisicao http
+        if (true) {
+          //se recuperou certinho
+          callbackSucesso("Funcoes de callback em js, blablabal"); // executa a funcao callbackSucesso passsando o titulo(Funcoes de callback em j) e a descricao(blablabla)
+        } else {
+          callbackErro("Erro ao recuperar os dados"); // caso desse erro executa a funcao callbackErro
+        }
+      }
+
+      var callbackSucesso = function (titulo, descricao) {
+        document.write("<h1>" + titulo + "</h1>");
+        document.write("<hr />");
+        document.write("<h1>" + descricao + "</h1>");
+      }; //atribui a uma variavel uma funcao anonima
+
+      var callbackErro = function (erro) {
+        document.write("<h1>" + erro + "</h1>");
+      };
+
+      exibirArtigo(1, callbackSucesso, callbackErro);
+    </script>
+  </head>
+  <body></body>
+</html>

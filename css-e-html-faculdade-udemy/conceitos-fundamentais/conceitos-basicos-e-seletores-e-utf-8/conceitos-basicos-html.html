@@ -1,0 +1,83 @@
+<!--
+
+-> Os elementos HTML semânticos são aqueles que têm significado estrutural e ajudam a descrever o conteúdo da página de forma mais precisa para os mecanismos de busca, leitores de tela e outros agentes que interpretam a página. Exemplos de elementos semânticos incluem <header>, <nav>, <article>, <section>, <aside>, <footer>, entre outros.
+
+HTML Semântico: HTML semântico refere-se à prática de usar tags HTML de uma forma que reflete o significado ou a estrutura semântica do conteúdo da página da web. Isso ajuda a tornar o código mais legível para os desenvolvedores e mais compreensível para os mecanismos de busca, navegadores e outros agentes que interpretam a página. 
+
+Exemplos de elementos semânticos incluem <header>, <nav>, <article>, <section>, <aside>, <footer>, <table>, <form>, entre outros
+
+<header>: cabecalho
+
+<nav>: barra de navegação
+
+<article>: É usado para encapsular um conteúdo independente e autossuficiente dentro de uma página.
+Pode representar um artigo, post de blog, notícia, comentário ou qualquer outra unidade de conteúdo independente. Deve ser capaz de ser distribuído e reutilizado de forma independente, por exemplo, em feeds de notícias.
+
+<section>: É usado para dividir o conteúdo de uma página em seções temáticas ou de tópicos.
+Ajuda a organizar o conteúdo em partes distintas, tornando-o mais semântico.
+
+<aside>: É usado para conteúdo relacionado, mas que é considerado secundário ou não essencial para o conteúdo principal.
+Pode conter informações como barras laterais, anúncios, links relacionados ou outros elementos que complementam o conteúdo principal.
+Pode estar dentro de um elemento <article> para conteúdo relacionado a esse artigo específico.
+
+<footer>: é usado para definir o rodapé de uma seção ou de toda a página.
+
+<table>: É usado para criar tabelas de dados em uma página da web.
+Ele consiste em várias tags, incluindo <tr> para linhas, <th> para cabeçalhos de coluna e <td> para células de dados. As tabelas devem ser usadas para representar informações tabulares e não para criar layouts complexos, pois isso deve ser feito com CSS.
+
+<form>: É usado para criar formulários interativos em uma página da web.
+Pode conter campos de entrada, botões de envio, caixas de seleção, botões de rádio e outros elementos de formulário.
+Quando os usuários preenchem um formulário e o enviam, os dados geralmente são enviados para um servidor para processamento.
+
+------------------------------------------------------------------------------------------
+
+-> Tags HTML: As tags HTML são os elementos individuais usados para marcar e estruturar o conteúdo em uma página da web. Cada tag HTML tem um propósito específico. Exemplos de tags HTML incluem <div>, <p>, <h1>, <a>, <img>, entre muitas outras.
+
+
+-> Alguns exemplos de elementos HTML não semânticos incluem:
+
+<div>: O elemento <div> é uma tag genérica usada para criar contêineres sem um significado semântico específico. É frequentemente usado para agrupar e estilizar elementos, mas por si só não fornece informações sobre a estrutura ou significado do conteúdo.
+
+<span>: O elemento <span> é semelhante ao <div> em termos de falta de significado semântico. Ele é usado para aplicar estilos ou scripts a partes de texto em uma página, mas não contribui para a estrutura ou semântica do conteúdo.
+
+<b> e <i>: As tags <b> e <i> costumavam ser usadas para estilizar o texto como "negrito" e "itálico", mas não fornecem informações semânticas sobre o significado do texto. Em vez disso, é recomendável usar CSS para estilizar o texto, e elementos semânticos como <strong> e <em> para dar ênfase ao texto.
+
+<font> e <center> que não sao usados mais tbm nao sao semanticos (nao tem um papel de ajudar a estruturar e descrever o conteúdo da página de uma maneira mais compreensível para os agentes que interpretam a página)
+
+A tag <meta> TBM NÃO É SEMANTICO
+
+
+Em contraste, elementos semânticos como <header>, <nav>, <article>, <section>, <aside>, <footer>, <table>, <form>, entre outros, têm um significado semântico específico e ajudam a estruturar e descrever o conteúdo da página de uma maneira mais compreensível para os agentes que interpretam a página. Portanto, esses elementos são considerados elementos HTML semânticos.
+
+
+-> lang
+
+O atributo lang é usado para especificar o idioma predominante do conteúdo da página, mas não instrui o navegador a traduzir o conteúdo. O navegador não realizará a tradução automática com base no valor desse atributo.
+
+O atributo lang é aplicado ao elemento <html> para indicar o idioma predominante da página. Não faz parte do DOCTYPE.
+
+O atributo lang em HTML é usado para especificar o idioma predominante do conteúdo de uma página da web. Ele não instrui o navegador a traduzir o conteúdo, mas sim fornece informações sobre o idioma do conteúdo para ajudar na correta interpretação por parte dos leitores, mecanismos de busca e agentes de acessibilidade.
+
+->Aqui estão alguns dos principais usos do atributo lang:
+
+- Acessibilidade: O atributo lang é fundamental para tornar o conteúdo acessível a pessoas com deficiência visual ou auditiva, pois ajuda os leitores de tela a pronunciarem corretamente o texto e a selecionarem as regras gramaticais corretas.
+
+- Mecanismos de Busca: Os motores de busca usam o atributo lang para entender o idioma predominante do conteúdo da página, o que pode influenciar os resultados de pesquisa.
+
+- Localização: Em páginas multilíngues, o atributo lang ajuda a distinguir o idioma de diferentes partes do conteúdo, o que é importante para a localização e adaptação da página para diferentes regiões ou públicos.
+
+- Estilo CSS: O atributo lang pode ser usado como um seletor CSS para aplicar estilos específicos a partes do conteúdo em diferentes idiomas.
+
+- Validação: É uma prática recomendada para criar documentos HTML válidos, conforme as especificações do W3C.
+
+
+-> meta charset: UTF8
+
+A tag <meta> com o atributo charset é usada para especificar o conjunto de caracteres (encoding) usado para codificar o conteúdo de uma página da web. O valor mais comum para o atributo charset é "UTF-8", que representa o Unicode Transformation Format 8-bit. UTF-8 é um formato de codificação que suporta uma ampla gama de caracteres, incluindo caracteres de diferentes idiomas e símbolos especiais.
+
+A inclusão da tag <meta charset="UTF-8"> no cabeçalho de uma página HTML informa ao navegador que o conteúdo da página está codificado em UTF-8. Isso é importante para garantir que o navegador interprete corretamente os caracteres especiais e os caracteres de diferentes idiomas presentes na página.
+
+inclusão da tag <meta charset="UTF-8"> no cabeçalho de um documento HTML garante que o documento tenha sido armazenado e deve ser interpretado usando o encoding UTF-8. Isso é uma prática comum e correta para garantir a correta exibição de caracteres especiais e suporte a vários idiomas em uma página da web. 
+
+
+-->

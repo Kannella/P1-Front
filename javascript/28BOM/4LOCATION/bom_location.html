@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            // window.location.href="https://www.google.com" //o js interpretou a atribuicao dessa url como valor do atributo href do objeto location, o browser forcou a partir do objeto window a renderizacao do conteudo que retorna essa requisicao http
+
+            //window é um objeto global que representa a janela do navegador.
+
+            //location é uma propriedade do objeto window que tambem eh um objeto, que nesse caso representa a URL atual do documento carregado na janela do navegador.
+
+            //href é um atributo do objeto location que contém a URL completa da página atual, incluindo o protocolo (como "https://") e o caminho.
+
+            // atraves do objeto location podemos controlar os atributos relativos a url atual, bem com forcar um redirecionamento e tambem executar alguns metodos, como o metodo reload() que permite recarregar a pagina
+
+        </script>
+
+    </head>
+
+    <body>
+        <button onclick="window.location.href='https://www.google.com' ">Acessar Google</button>
+        <button onclick="window.location.href='https://www.faus.com.br' ">Acessar Faus</button>
+        <button onclick="window.location.reload">Reload</button>
+    </body>
+
+</html>

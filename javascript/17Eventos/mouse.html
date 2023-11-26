@@ -1,0 +1,58 @@
+<!--
+    oneclick -> quando clica
+    ondblclick -> quando o elemento eh clicado duas vezes
+    onmouseup -> quando o clique eh liberado
+    onmouseover -> quando o cursor sobrepor o elemento
+    onmouseout -> quando o curso do mouse sai da regiao da pagina ocupada pelo elemetno
+
+    nem todos os eventos estao disponiveis para todos os elementos html, para saber com segurança se aquele evento esta disponivel para um elemtno html, consulte https://www.w3schools.com/js/js_htmldom_events.asp
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+
+            //  function acao(){ alert('Evento disparado')  }
+            function acao1() {
+                alert('Elemento foi cliclado')
+            }
+            function acao2() {
+                alert('O cursor do mouse deixou a região do elemento')
+            }
+        </script>
+
+    </head>
+
+    <body>
+        
+        <div onclick="acao1()" style="background-color: #ccc; height: 150px; width:
+        150px;"></div> 
+
+        <div ondblclick="acao1()" style="background-color: #ccc; height: 150px;
+        width: 150px;
+        margin-left: 50%;"></div>
+
+        <div onmouseup="acao1()" style="background-color: #ccc; height: 150px;
+        width: 150px;
+        margin-top: 20%;"></div>
+
+        <div onmouseover="acao1()" style="background-color: #ccc; height: 150px;
+        width: 150px;
+        margin-left: 50px;"></div>
+
+        <div onmouseout="acao1()" style="background-color: #ccc; height: 150px;
+        width: 150px;"></div>
+
+
+        <div
+            onclick="acao1()"
+            onmouseout="acao2()"
+            style="background-color: #ccc; height: 150px; width: 150px; margin-left: 450px;">
+        </div>
+
+    </body>
+</html>

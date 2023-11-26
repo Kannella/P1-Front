@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var v1 = Array()
+        //ou coloca v1 = []
+    
+        v1[0] = 45
+        v1[5] = 6.87
+        v1[9] = 'oi'
+        console.log(' o tamanho do vetor é: ' + v1.length)
+        console.log(' o vetor: ' + v1)
+    
+        v1[200000] = 1
+        console.log(v1.length)
+        console.log(v1)
+
+        banana = [1, 'chocolate', true];
+        //console.log(banana)
+
+        //o let faz com que aquela variavel exista somente dentro do for, no caso
+        for (let i = 0; i < banana.length; i++) {
+            console.log('posição = ' + i + ' valor do vetor na posição ' + i + ': ' + banana[i])
+        }
+        console.log('oi');
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

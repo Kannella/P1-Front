@@ -1,0 +1,55 @@
+<!--
+    
+    casting eh converter um tipo de dado em outro tipo de dado
+
+    o js eh uma linguagem fracamente tipada, ou seja, a inferencia do tipo da variavel eh feita no momento de atribuicao
+
+    operador + tem a funcao de concatenacao
+
+    prompt recebe uma string
+
+
+    parse int() eh um metodo que retorna a representacao numerica de uma string
+
+    .Tostring() eh um metodo que converte number para string
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            // var variavel1 = prompt('Digite algum numero: ')
+            // var variavel2 = prompt('Digite outro numero: ')
+
+            // variavel1 = parseInt(variavel1) // parse int (parse int: extrai a parte inteira do valor numerico contido naquela string e remove a fracao) converte para o tipo numerico -> CASTING DE TIPO
+
+            // variavel2 = parseInt(variavel2) //parse int (parse int: extrai a parte inteira do valor numerico contido naquela string e remove a fracao) converte para o tipo numerico -> CASTING DE TIPO
+
+            // variavel1 = parseInt(variavel1) //parse int (parse int: extrai a parte inteira do valor numerico contido naquela string e remove a fracao) converte para o tipo numerico -> CASTING DE TIPO
+
+            // variavel2 = parseFloat(variavel2) //parse flot (parse flot: preserva a fracao de um numero) converte para o tipo numerico -> CASTING DE TIPO
+
+            // document.write(variavel1 + variavel2) //ele concatena os valores colocando esse + ao invez de somar os numeros, eh nesse momento que entra o casting de dados. Pois se quisermos que some os valores, temos que converter esses valores para valores numericos, para que o interpretador entenda o + como soma e nao concatenacao de strings
+
+            var variavel1 = 10
+            var variavel2 = 20
+
+            console.log(variavel1) 
+            console.log(variavel2)
+
+            // document.write(variavel1 + variavel2) // pelas variaveis serem valores numericos esse + vai somar os valores
+
+            document.write(variavel1.toString() + variavel2.toString())  //to string converte uma varivel number em string, O METODO TOSTRING ELE EXTRAI A REPRESETNACAO TEXTUAL DESSE VALOR NUMERICO. Nesse caso, fizemos a concatencao de duas strings
+            
+
+
+
+
+        </script>
+    </head>
+    <body></body>
+</html>

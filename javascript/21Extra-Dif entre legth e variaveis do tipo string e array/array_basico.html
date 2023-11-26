@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <!--em objetos do tipo array, o atributo lenght retorna a quantidade de
+        elementos dentro do array desde que esses elemntos sejam indexados por valores
+        numericos sequencias sem intervalos que iniciem em 0-->
+
+        <script>
+            var lista_frutas = Array()
+
+            /* var lista_frutas = [] */
+            lista_frutas[5] = 'Banana'
+            lista_frutas[6] = 'Maçã'
+            lista_frutas[7] = 'Morango'
+            lista_frutas[8] = 'Uva'
+
+            // aqui nao daria certo pois o array nao comeca em 0 e ai o lenght resultaria em
+            // 9, nao refletindo a quantidade de elementos de fato existentes dentro do
+            // nosso array. Pq ele conta que os 4 primeiros estao vazios var lista_frutas =
+            // Array('Banana', 'Maçã', 'Morango', 'Uva') indice gerado de forma automatica e
+            // partindo de 0 -> daria certo var lista_frutas = ['Banana', 'Maçã', 'Morango',
+            // 'Uva'] indice gerado de forma automatica e partindo de 0 -> daria certo
+
+            console.log(lista_frutas)
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

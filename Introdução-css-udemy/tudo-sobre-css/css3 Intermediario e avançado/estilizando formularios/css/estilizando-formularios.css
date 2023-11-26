@@ -1,0 +1,41 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+fieldset{
+    padding: 1em;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    margin: 1em 0; /*1 em  inferior e superior e 0 laterais*/
+}
+
+legend {
+    font-weight: bold;
+}
+
+label { /* elemento do tipo inline */
+    display: block; /*alterei para elemento block*/
+    cursor: pointer; /*usuarui pode clicar o nome*/
+}
+
+input { /*[type="text"]*/ /*{seletor de atributo selecionando apenas o input que o atributo type é o text e não o radio*/
+    width: 20em; /*por padrao todos os input vao ter essa largura*/
+}
+
+textarea {
+    /* width: 100%; os elementos derntro estao com uma largura de porcentagem pois se adaptam conforme a pagina */
+    width: 20em;
+    height: 10em;
+}
+
+input.radio, input.checkbox, input.submit {
+    width: auto; /*usa a alrgura padrao*/
+}
+
+.radio{ /*espaco maior entre a bolinha e o texto*/
+    margin-right: 1em;
+}
+
+
+

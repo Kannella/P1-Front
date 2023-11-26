@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <script>
+            /*
+              Polimosrfismo
+              -> Eh a sobrescrita de metodos
+              -> Isso acontece quando trabalhamos com herenca, em que o objeto filho herda os atributos e metodos do objeto pai, mas nao necessariamente o objeto filho tem que se comportar da mesma forma que o objeto pai. Nos corrigimos esses comportamentos atraves da sobrescrita de metodos
+              -> o polimorsfismo permite sobrescrita de metodos especificamente no objeto filho. Entao nao tem necessidade de no objeto pai, criar um metodo especifico pra um dos filhos dele, ate pq esse metodo seria herdado por todos os objetos filhos.
+
+              -> codigo abaixo: o avestruz tbm eh um pasaro e tambem eh um animal, entao, cor, tamanho e bico podemos manter pois sao atributos de um avestruz tambem, mas diferentes da maioria dos passaros o avestruz nao sabe voar. Entao se eu simplesmente criar um objeto avestruz que herde as caracteristicas e metodos de passaro, nos teremos o resultado de que o avestruz voa, mas na verdade o avestruz nao tem esse comportamento, entao nos precisamos sobrescrever esse metodo, eh ai que acontece o polimorfismo. Eh a sobrescrita de metodos no metodo filho
+            */
+        </script>
+
+        <script>
+
+            class Animal {
+                constructor(cor, tamanho, peso) {
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir() {
+                    console.log('Dormir')
+                }
+            }
+
+            class Passaro extends Animal {
+                constructor(bico, cor, tamanho, peso) {
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar() {
+                    console.log('Voar')
+                }
+
+            }
+
+            class Papagaio extends Passaro {
+                constructor(sabeFalar, cor, tamanho, peso) {
+                    super('Médio', cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar() {
+                    console.log('Falar')
+                }
+            }
+
+            class Avestruz extends Passaro { //herda atributos e metodos de passaro
+                constructor(enterrarCabeca, voar, bico, cor, tamanho, peso) {
+                    super(bico, cor, tamanho, peso)
+                    
+                    // this.enterrarCabeca = enterrarCabeca
+                    // this.voar = voar
+                    //enterrarCabeca e voar nao sao atributos do objeto Avestruz, portanto na hora de mostrar os atributos do objeto no console ele so vai mostrar os atributos do objeto Passaro que foram herdados e agora sao atributos do oibjeto Avestruz. Se quisermos mostrar o enterrarCabeca e voar, temos que atribuir esses parametros como atrubutos do objeto avestruz para ai sim mostrar, sendo que na hora de instanciar o objeto avestruz, coloca-se os respectivos novos valores dos novos atributos em ordem para serem passados para os parametros do construtor enterrarCabeca e voar e ai sim no console esses novos atriutos do objeto Avestruz vao ser mostrados
+                    
+                }
+
+                enterrarCabeca() { //acao especifica do avestruz
+                    console.log('Enterrar a cabeça')
+                }
+
+                voar() { //metodo voar ja esta sendo herdado da class passaro
+                    console.log('Não sabe voar')
+                }
+            }
+
+            let papagaio = new Papagaio(true, 'Verde', 25, 350)
+            console.log(papagaio)
+
+            papagaio.voar() 
+
+            let avestruz = new Avestruz(true, false, 'grande', 'preto', 250, 15000) 
+            console.log(avestruz)
+
+            //constructor(enterrarCabeca, voar, bico, cor, tamanho, peso)
+            //super(bico, cor, tamanho, peso)
+            //let avestruz = new Avestruz(true, false, 'grande', 'preto', 250, 15000) 
+            avestruz.enterrarCabeca()
+            avestruz.voar()
+        </script>
+
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

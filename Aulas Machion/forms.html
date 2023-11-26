@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Login:</label>
+      <input type="text" name="LoginTeste" />
+
+      <br />
+
+      <label for="">
+        Sobrenome
+        <input type="text" name="SenhaTeste" />
+      </label>
+      <!--da pra escrever dessa forma mas as outras formas sao melhores-->
+
+      <br />
+
+      <label for="id-email">Digite seu e-mail</label>
+      <input type="email" id="id-email" />
+
+      <br />
+
+      <label for="telefone">Digite seu telefone</label>
+      <input type="tel" name="" id="" />
+
+      <br />
+
+      <p>
+        <label for="arquivo">Escolha seu arquivo</label>
+        <input type="file" id="arquivo" />
+      </p>
+
+      <p>
+        <label for="arquivo">Escolha sua cor preferida</label>
+        <input type="color" id="cores" />
+      </p>
+
+      <p>
+        <label for="cidade"
+          >Escolha seu destino
+          <select id="cidades">
+            <option>Fortaleza</option>
+            <option>Gramado</option>
+            <option>Parati</option>
+          </select>
+        </label>
+      </p>
+      <fieldset>
+        <legend>Escolha seu veiculo</legend>
+        <input type="radio" name="carro" id="polo" />
+        <label for="polo">Polo</label>
+        <input type="radio" name="carro" id="Buggy" />
+        <label for="polo">Buggy</label>
+        <input type="radio" name="carro" id="Onix" />
+        <label for="polo">Onix</label>
+      </fieldset>
+      <fieldset>
+        <legend>Escolha seu menu</legend>
+        <input type="checkbox" name="comida" id="veg" />
+        <label for="veg">Vegana</label>
+        <input type="checkbox" name="comida" id="frutos-do-mar" />
+        <label for="veg">Frutos do mar</label>
+        <input type="checkbox" name="comida" id="carnes" />
+        <label for="veg">Carnes</label>
+      </fieldset>
+      <p>
+        <input type="submit" value="Enviar" />
+      </p>
+    </form>
+  </body>
+</html>

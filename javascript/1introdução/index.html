@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <!-- <script src="meu_script.js"></script> js vai ser processado antes do body, se eu quiser interagir o js e o elemento html input, TEREMOS UM PROBLEMA, pois o meu codigo js vai ser executado antes mesmo do elemento html input estar montado no DOM, temos ai um proiblema de precedencia, o nosso js ta sendo executado antes mesmo do nosso elemento html ser executado -->
+        <!--Por isso, -->
+
+
+        <!-- <script>
+            alert('Olá, seja bem vindo ao curso!!!')
+        </script> -->
+
+
+    </head>
+    <body>
+        <h1>Curso de JavaScript</h1>
+        <input 
+            type="text" 
+            placeholder="Teste de precedencia" 
+            id="nome" 
+            disabled="disabled">
+
+
+        <script src="meu_script.js"></script>
+    </body>
+</html>

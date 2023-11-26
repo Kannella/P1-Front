@@ -1,0 +1,71 @@
+<!-- Elementos html:
+
+    Inline
+    Block
+    Inline-block
+
+Block ou Bloco:
+- h1, paragrafo e table, div
+- ocupa todo espaço da tela
+- fica um abaixo do outro
+- display: inline -> elemento do tipo bloco tem o comportamento de um elemento inline (um a frente do outro)
+
+- Ocupa 100% da largura do elemento pai
+- Ocupa sempre a sua própria linha e é posicionado abaixo do elemento anterior
+- A altura é definida de acordo com o conteúdo interno
+- É possível definir Width e Height
+- Você pode definir valores de margin-top e margin-bottom
+
+Elemento Inline:
+- link, span, img, etc
+- fica um elemnto a frente do outro
+- a largura da caixa do elemento é de acordo com o conteudo -> padding deixaria com mais espaço, display: block faria com que ficasse com o comportamente de um elemento do tipo bloco, ou seja ocupa toodo espaço possivel
+
+- Ocupa a largura total do seu proprio conteúdo apenas
+- Um elemento inline após outro elemento inline ocupam a mesma linha
+- Não é possível definir Width e Height
+- Não é possível definir valores de margin-top e margin-bottom
+- Ao aplicar o float, automaticamente eles assumem características de display block
+- Se aplicado dentro de um texto, irá seguir o fluxo do conteúdo
+
+Elemento inline-block
+- A largura baseada no seu conteudo mas os itens ficam um abaixo do outro
+- display: inline block deixaria com o comprtamento igual a de um elemento do tipo inline
+- só quebra para outra linha um elemento inline quando ele nao cabe mais na memsma linha
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+        <style type="text/css">
+
+            .borda{
+                border: 1px solid red;
+               /* display: inline -> elemento do tipo bloco tem o comportamento de um elemento inline (um a frente do outro)*/
+               display: inline-block;
+            }
+
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1 class="borda">bloco 1</h1>
+        <h1 class="borda">bloco 2</h1>
+<!-- 
+        <div class="borda">bloco 1</div>
+        <div class="borda">bloco 2</div>
+
+        <span class="borda">bloco 1</span>
+        <span class="borda">bloco 2</span> -->
+
+
+    </body>
+
+    </html>

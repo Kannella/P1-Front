@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script>
+      /* Heranca
+            -> Codigo mais reutilizavel
+            -> Melhor manutencao posterior dos codigos
+            -> Extensao dos atributos e metodos comuns da classe pai (superclasse) para as classes filhas (subclasse)
+
+            -> Super classe: a classe que contem metodos e atributos que sao herdados por subclasses.
+
+            */
+    </script>
+
+    <script>
+      class Animal {
+        //Classe animal que concentra os atributos e metodos comuns entre os objetos Cachorro e Passaro. E com a hernanca nos vamos fazer com que os objetos Cachorro e Passaro herdem (extender) esses atributos e metodos que sao comum para os dois e estao definidos na classe animal.
+
+        constructor() {
+          //construtor com atributos (cor, tamanho e peso) e metododos (dormir) ; que sao comuns para alguns objetos do nosso programa
+          this.cor = "";
+          this.tamanho = null;
+          this.peso = null;
+        }
+
+        dormir() {
+          console.log("Dormir");
+        }
+      }
+
+      class Cachorro extends Animal { //extends + classe que queremos herdar os atributos e metodos da classe pai
+        constructor() {
+          super();
+          this.orelhas = "Grandes e caídas";
+        }
+
+        correr() {
+          console.log("Correr");
+        }
+
+        rosnar() {
+          console.log("Rosnar");
+        }
+      }
+
+      class Passaro extends Animal { //extends + classe que queremos herdar os atributos e metodos da classe pai
+        constructor() {
+          super();
+          this.bico = "Curto";
+        }
+
+        voar() {
+          console.log("Voar");
+        }
+      }
+
+      class Papagaio extends Passaro { //extends + classe que queremos herdar os atributos e metodos da classe pai, no caso vai herdar os atributos e metodos do Passaro e como a classe passaro herda os atributos e metodos da classe animal, a classe papagaio vai herdar os atributos e metodos das duas classes, passaro e animal, a heranca c=vai cprogredindo conforme a heranca das classes, um eeito cascata
+        constructor() {
+          super();
+          this.sabeFalar = true;
+        }
+
+        falar() {
+          console.log("Falar");
+        }
+      }
+
+      //criando tres objetos (entidades: cachorro, passaro e papagaio) com base na instanciacao das suas respectivas classes (modelo) e atribuimos ela a tres variaveis diferentes, cachorro, passaro e papagaio, que vao ser referencias diferentes para objetos difetentes que sao instaciados a partir da memsa classe (modelo)
+
+      let cachorro = new Cachorro();
+      let passaro = new Passaro();
+      let papagaio = new Papagaio();
+
+      /*
+      cachorro.dormir()
+      passaro.dormir()
+      papagaio.falar()
+      papagaio.dormir()
+      papagaio.voar()
+      */
+
+      console.log(cachorro);
+      console.log(passaro);
+      console.log(papagaio);
+    </script>
+  </head>
+  <body></body>
+</html>

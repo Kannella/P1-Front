@@ -1,0 +1,31 @@
+<!--
+  
+    Funcoes anonimas sao funcoes que nao possuem nome
+    tem as mesmas propriedades de uma funcao normal so que eh anonima (sem nome)
+    function() {
+
+    }
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcoes Anonimas</title>
+    <script>
+
+        var exibirSaudacao = function(nome) { //podemos atribuir a variavel uma funcao de tal modo que a chamada dessa funcao pode ser feita a partir da utilizacao do nome da variavel com () -> tecnica de wraper
+
+        // nossa variavel esta embrulhando a funcao de tal modo que a fucao ela eh anonima e internamente ela faz alguma coisa, no caso dar saudacao para alguem
+            document.write('Ola ' + nome + ', tudo bem?')
+        }
+
+        exibirSaudacao('jorge')
+
+    </script>
+  </head>
+  <body></body>
+</html>

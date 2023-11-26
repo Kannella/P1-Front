@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <!--
+        COMO UTILIZAR O OBJETO WINDOW
+          Em geral window eh a janela do browser onde todo o conteudo eh renderizado
+
+
+          NO DOM
+          
+            Window eh um objeto formado pelo browser que encorpora a arvore de elementos HTML da pagina e serve por meio da API do DOM para ter acesso dentro do window o objeto document que forncece acesso aos elementos html da pagina (window.document)
+
+          NO BOM
+            Window eh um objeto que permite alem da navegacao ate os elemetnos html, se comunica com os recursos do browser
+
+            Atraves da API do BOM estamos encaminhando via alert uma mensagem que sera apresentada pro usuario atraves de um recurso do browser -> O metodo Alert, por exemplo
+
+            O BOM (Browser Object Model) é um conjunto de objetos e APIs que permite que você interaja com recursos do navegador, além de manipular a janela do navegador e a página web carregada. O método alert() é um exemplo de como você pode usar o BOM para interagir com o navegador.
+
+            Quando você chama window.alert() ou simplesmente alert() no seu código JavaScript, você está usando o objeto window (que é uma referência à janela do navegador) para chamar o método alert(). Esse método exibe uma caixa de diálogo de alerta no navegador com a mensagem que você especificar. Isso é uma forma de comunicação com o usuário através de um recurso do navegador.
+
+            podemos consultar propriedades e metodos do BOM na w3schools https://www.w3schools.com/jsref/obj_window.asp
+            
+      -->
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+
+            
+            var janela
+
+            
+            function abrirPopUp() {
+                
+                janela = window.open( //atribui dentro da variavel o objeto window acessando o metodo open. Ou seja atribui uma janela ao a variavel janela. Ou seja vai abrir um pop up com uma janela. Esse metodo tem varios parametros que sao opcionais, no nosso caso sao eles: (URL, name, specs)
+                    'http://www.google.com.br', // posso atraves do protocolo http fazer uma consulta de alguma outra pagina, como o google nesse caso
+                    'nova_janela',
+                    'width=1000, height=1000'
+                )
+            }
+            function fecharPopUp() {
+                janela.close()
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <button onclick="abrirPopUp()">Abrir janela</button>
+        <button onclick="fecharPopUp()">Fechar janela</button>
+        <button onclick="window.print()">Imprimir página</button> <!--carrega o drive de impressao do browser-->
+    </body>
+
+</html>

@@ -1,0 +1,97 @@
+/* arquivo styles.css */
+
+/* selecionamos os elementos h1 aqui */
+
+h1 {
+    color: green;
+}
+    /* aqui selecionamos os elementos p */
+
+p{
+    /* color: blue; */
+}
+
+strong {
+    color: red;
+}
+
+/* vai procurar o id titulo e vai aplicar a todos os titulos quando estiver na pagina */
+
+#titulo {
+    text-align: center;
+}
+
+/* vai procurar o id descricao e aplicar a todos os descricao quando estiver na pagina */
+
+p#descricao {
+    color: blue;
+}
+
+p.promocao {
+    text-align: center;
+    background-color: lightgreen;
+}
+
+h1.promocao {
+    color: yellow;
+}
+
+.nova{
+    color: white;
+}
+
+/* todo p que tenha a classe final-pagina e cujo id seja rodape */
+
+p.final-pagina#rodape{
+    background-color: lightgray;
+    text-align: center;
+    
+}
+    
+/* todo curso tem essa cor de fundo */
+.curso {
+    background-color: aliceblue;
+}
+
+/* veja a cor de fundo repetida para que possamos especificar uma regra não aplicável aos demais cursos*/
+    
+.novo-curso{
+    background-color: aliceblue;
+    color:red;
+}
+
+/* separamos os seletores usando uma vírgula. Ela faz um papel de "ou' lógico */
+
+.curso , .novo-curso {
+    background-color: aliceblue;
+}
+
+/* agora não precisamos mais repetir a cor de fundo background-color */
+
+.novo-curso{
+    color: blue;
+}
+
+.curso, .novo-curso, #contato {
+
+/* padding: espaço entre o conteúdo e a borda. Veremos mais sobre isso adiante */
+    padding: 12px;
+/* estudaremos mais sobre bordas também */
+    border: 1px solid black;
+}
+
+article p{ /* quando vc estiver na minha pagina e encontrar a tag article e a tag p vc faz isso so que a precedencia desse tipo "tipo" + o "p" é menor do que a do tipo classe */
+    padding: 12px;
+    background-color: lightgray;
+}
+
+
+
+
+
+
+
+    
+    
+
+        

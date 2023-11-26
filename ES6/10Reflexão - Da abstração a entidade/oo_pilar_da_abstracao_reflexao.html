@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+<!--
+    Da abstracao (trazer coisa do mundo real para o nosso mundo virtual) a entidade -> Abstrair um objeto ate a Transformacao desse objeto para dentro da nossa aplicacao com entidade identidade caracteristicas e acoes
+
+    mesmo no paradigma procedural nos temos condicoes de abstrair e implementar entidade identidade caracteristicas e acoes. Porem, conforme as regras de negocio vao sendo criadas na nossa aplicacao o nosso script acaba ficando bastante complexo
+-->
+    <script>
+        //um software de marcenaria
+        //fabrica cadeira e sofá
+
+        //utilizando o paradigma procedural
+
+        //abstracao de uma cadeira
+        let qtde_pernas = 4
+        let giratoria = false
+        let cor = 'azul'
+
+        //array de cadeiras
+        let cadeiras = Array()
+
+        cadeiras[0] = Array()
+        cadeiras[0]['qtde_pernas'] = 4
+        cadeiras[0]['giratoria'] = false
+        cadeiras[0]['cor'] = 'azul'
+
+        cadeiras[1] = Array()
+        cadeiras[1]['qtde_pernas'] = 1
+        cadeiras[1]['giratoria'] = true
+        cadeiras[1]['cor'] = 'vermelha'
+
+        cadeiras[2] = Array()
+        cadeiras[2]['qtde_pernas'] = 4
+        cadeiras[2]['giratoria'] = false
+        cadeiras[2]['cor'] = 'preta'
+
+        cadeiras[3] = Array()
+        cadeiras[3]['qtde_pernas'] = 2
+        cadeiras[3]['giratoria'] = false
+        cadeiras[3]['cor'] = 'marrom'
+
+        function girar_cadeira(indice) {
+            if (cadeiras[indice]['giratoria'] === true) {
+                console.log('girou')
+            } else {
+                console.log('cadeira não é giratória')
+            }
+        }
+
+        function adicionar_cadeira(qtde_pernas, giratoria, cor) { //funcao de incluir cadeira dentro do array
+            let cadeira = Array() //criei um array e atribui a variavel cadeira
+
+            cadeira['qtde_pernas'] = qtde_pernas // atribui o parametro qtde_pernas no indice qtde_pernas no array cadeira 
+            cadeira['giratoria'] = giratoria // atribui o parametro giratoria no indice giratoria no array cadeira 
+            cadeira['cor'] = cor // atribui o parametro cor no no indice cor no array cadeira 
+ 
+            cadeiras.push(cadeira) // joga pro array cadeiras dentro de um novo indice o array cadeira
+        }
+
+        adicionar_cadeira(3, false, 'verde')
+        console.log(cadeiras)
+        girar_cadeira(2) //vai dar false pois no indice 2 tem uma cadeira com o indice giratoria com false
+
+        //girar_cadeira(1)
+
+        //paradigma de OO */
+
+        class Cadeira { //criamos nosso modelo (classe) Cadeira do objeto que queremos ter dentro da nossa aplicacao 
+        // aqui dentro do modelo temos os atributos e os metodos
+            constructor(qtde_pernas, giratoria, cor){ //metodo que eh chamado quando a classse eh instanciada e assim se transforma em objeto, e esse metodo eh automaticamente executado, e ele pode receber parametros (que no caso temos 3 parametros)
+
+                this.qtde_pernas =  qtde_pernas // dentro do constructor criamos as variaveis especificos do objeto, indicadas com o this. O this faz referencia a um atributo do PROPRIO objeto em si
+                this.giratoria = giratoria
+                this.cor = cor
+
+                // vamos atribuir a esses atributos do objeto os parametros recebidos no metodo construtor
+
+                // apesar de terem o mesmo nome, os parametros recebidos no metodo construtor e os atributos do objeto, as variaveis com this fazem referencia ao proprio objeto e as variaveis sem this, sao variaveis do escopo da funcao/metodo constructor
+            }
+        
+            girarCadeira() { //metodo girar cadeira verifica se o atributo giratoria do objeto (this.giratoria) eh true ou false
+                if(this.giratoria === true){
+                    console.log('girou')
+                } else {
+                    console.log('Cadeira não é giratória')
+                }
+            }
+        }
+
+         let cadeira = new Cadeira(4, false, 'azul') // -> O objeto cadeira eh uma instacia de uma classe Cadeira. Criei um objeto especifico de uma classe Cadeira a partir da instanciacao dessa classe Cadeira com a palavra new para criar um objeto Cadeira dessa especifica classe instanciada. Temos uma classe que quando instanciada se transforma em um objeto.
+         // Esses parametros serao recebidos no construtor e essa funcao vai pegar os parametros recebidos e atribuir aos atrbutos do objeto cadeira
+
+         // criei uma nova cadeira
+
+         let cadeira2 = new Cadeira(1, true, 'vermelha') // -> O objeto cadeira eh uma instacia de uma classe Cadeira. Criei um objeto especifico de uma classe Cadeira a partir da instanciacao dessa classe Cadeira com a palavra new para criar um objeto Cadeira dessa especifica classe instanciada. Temos uma classe que quando instanciada se transforma em um objeto
+         // Esses parametros serao recebidos no construtor e essa funcao vai pegar os parametros recebidos e atribuir aos atrbutos do objeto cadeira
+
+        // Alem disso, cada variável recebe uma referência para uma instância separada da classe Cadeira. Portanto, cadeira e cadeira2 são duas referências (identidades) diferentes que apontam para objetos diferentes da mesma classe Cadeira [ou seja, com os memso metodos e atributos].
+
+        let cadeiras = Array()
+        cadeiras.push(new Cadeira(4, false, 'azul')) // -> Adicionei ao array cadeiras a instaciacao da classe Cadeira e, portanto, o array recebe o OBJETO cadeira com parametros que serao recebidos no construtor e essa funcao vai pegar os parametros recebidos e atribuir aos atrbutos do objeto cadeira
+        cadeiras.push(new Cadeira(1, true, 'vermelha')) // -> Adicionei ao array cadeiras a instaciacao da classe Cadeira e, portanto, o array recebe o OBJETO cadeira com parametros que serao recebidos no construtor e essa funcao vai pegar os parametros recebidos e atribuir aos atrbutos do objeto cadeira
+        
+
+        console.log(cadeira)
+        cadeira2.girarCadeira() // vai dar true pois o atributo giratoria do objeto cadeira eh true e quando faz o teste logico vai entrar no if e vai dar que 'girou'
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>div e span</title>
+        <style type="text/css">
+            #topo {
+                background-color: blue;
+            }
+            #conteudo{
+                background-color: red;
+            }
+            .produto{
+                background-color: gray;
+                margin: 10px; /* realemente temos a div vermelha e a cor grey ao mesmop tempo */
+            }
+            #rodape{
+                background-color: green;
+            }
+            #assinatura{
+                background-color: pink;
+            }
+            .azul{
+                color: blue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!--div ocupa todo espaço da tela, com sse tivessse uma largura de 100%-->
+        <div id="topo">
+
+            <img src="imagens/amazon-logo.png" width="200">
+            <ul>
+                <li>home</li>
+                <li>produtos</li>
+                <li>contatos</li>
+            </ul>
+
+        </div>
+        <div id="conteudo">
+            <div class="produto">
+                Produto 1
+            </div>
+            <div class="produto">
+                Produto 2
+            </div>
+            <div class="produto">
+                Produto 3
+            </div>
+        </div>
+        <div id="rodape">
+            Todos os <span class="azul">direitos</span> reservados
+        </div>
+        <span id="assinatura">
+            Jamilton
+        </span> <!--span é o elemento do tipo inline (dif do inline style = quando a gente aplica uma formatação css direto na tag )
+        o span ele agrupa os elementos linha a linha, um na frente do outro-->
+        <span>
+            damasceno <!-- na frente do damasceno -->
+        </span>
+        <div id="assinatura">
+            Jamilton <!-- como div é do tipo block, os conteudos ficam um abaixo do outro-->
+        </div>
+        <div>
+            damasceno <!-- abaixo do span-->
+        </div>
+
+        <div id="rodape">
+            Todos os <p class="azul">direitos</p> reservados <!-- como paragrafo é um elemento de bloco quando vc
+            coloca o p, a frase fica com uma formatação com uma palavra abixo da outra-->
+        </div>
+
+        <!--para formatações especificas em textos recomendado usar o span-->
+<!-- na div vc vai fazer blocos e no span é linha apos linha, mas no final das contas é tudo para organizar o codigo, para dividir o seu site em partes (blocos ou usa o span para outra coisa que vc precisar em linha apos linha)-->
+    </body>
+    </html>

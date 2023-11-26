@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <script>
+            /*
+              Polimosrfismo
+              -> Eh a sobrescrita de metodos
+              -> Isso acontece quando trabalhamos com herenca, em que o objeto filho herda os atributos e metodos do objeto pai, mas nao necessariamente o objeto filho tem que se comportar da mesma forma que o objeto pai. Nos corrigimos esses comportamentos atraves da sobrescrita de metodos
+              -> o polimorsfismo permite sobrescrita de metodos especificamente no objeto filho. Entao nao tem necessidade de no objeto pai, criar um metodo especifico pra um dos filhos dele, ate pq esse metodo seria herdado por todos os objetos filhos.
+
+              -> codigo abaixo: o avestruz tbm eh um pasaro e tambem eh um animal, entao, cor, tamanho e bico podemos manter pois sao atributos de um avestruz tambem, mas diferentes da maioria dos passaros o avestruz nao sabe voar. Entao se eu simplesmente criar um objeto avestruz que herde as caracteristicas e metodos de passaro, nos teremos o resultado de que o avestruz voa, mas na verdade o avestruz nao tem esse comportamento, entao nos precisamos sobrescrever esse metodo, eh ai que acontece o polimorfismo. Eh a sobrescrita de metodos no metodo filho
+            */
+        </script>
+
+        <script>
+
+            class Animal {
+                constructor(cor, tamanho, peso) {
+                    this.cor = cor
+                    this.tamanho = tamanho
+                    this.peso = peso
+                }
+
+                dormir() {
+                    console.log('Dormir')
+                }
+            }
+
+            class Passaro extends Animal {
+                constructor(bico, cor, tamanho, peso) {
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+
+                voar() {
+                    console.log('Voar')
+                }
+
+            }
+
+            class Papagaio extends Passaro {
+                constructor(sabeFalar, cor, tamanho, peso) {
+                    super('Médio', cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                }
+
+                falar() {
+                    console.log('Falar')
+                }
+            }
+
+            class Avestruz extends Passaro { //herda atributos e metodos de passaro
+                constructor() {
+                    super('grande', 'preto', 250, 15000)
+                }
+
+                enterrarCabeca() { //acao especifica do avestruz
+                    console.log('Enterrar a cabeça')
+                }
+
+                voar() { //metodo voar ja esta sendo herdado da class passaro
+                    console.log('Não sabe voar')
+                }
+            }
+
+            let papagaio = new Papagaio(true, 'Verde', 25, 350)
+            console.log(papagaio)
+
+            papagaio.voar() // o metodo voar eh herdado da class passaro e portanto vai ocasionar na execucao do metodo voar do passaro coretamente e vai imprimir 'voar'
+
+            let avestruz = new Avestruz() // vou criar uma variavel avestruz que vai recebr uma instancia da class avestruz, portanto estamos criando um objeto. Nao vamos passar parametro nenhum, pois o construtor avestruz nao espera o rescebimento de parametros, so que como a classe avestruz herda os atributos de Passaro, nos precisamos nos atentar ao construtor da classe Passaro que recebe alguns parametros para aplicar nos seus devidos atributos que sao herdados pela classe Avestruz. Entao eu preciso chamar o metodo super que chama o construtor da classe Passaro, passando os valores bico, cor, tamanho, e peso que foram passados como argumentos para o construtor da classe Passaro. Isso significa que estamos encaminhando os parâmetros da subclasse Avestruz ('grande', 'preto', 250, 15000  ---> que se referem a os valores bico, cor, tamanho, e peso que foram passados como argumentos para o construtor da classe Passaro) para o construtor da superclasse (Passaro) usando super. Ou seja, enchaminhar os parametros da subclasse Avestruz ('grande', 'preto', 250, 15000 -> que se referem respectivamente aos valores dos argumentos do construtor Passaro -> bico, cor, tamanho, e peso) para a superclasse Passaro
+
+            // -> Esses parametros do super poderiam ser passados na instancia da classe tambem, em vez de colocar dentro do super os respectivos valores dos parametros do construtor da classe Passaro e colocar dentro do super, variaveis que se referem aos parametros do construtor do passaro 
+
+            //constructor(enterrarCabeca, voar, bico, cor, tamanho, peso)
+            //super(bico, cor, tamanho, peso)
+            //let avestruz = new Avestruz(true, false, 'grande', 'preto', 250, 15000) 
+            avestruz.enterrarCabeca()
+            avestruz.voar() // O metodo voar, teoricamente esta sendo herdado da calsse Passaro, entao em tese vai dar 'voar'. So que avestruz nao voa, entao vamos usar o recurso de polimorfismo para sobrescrever o metodo voar da classe pai.
+            //Entao na classe filha eu apenas escrevo o metodo voar e coloco o comportamento especifico desse metodo voar do objeto avestruz
+        </script>
+
+    </head>
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

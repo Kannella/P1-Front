@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script>
+      //operador destructuring: operador de desestruturacao -> ele tiara valores dentro de uma estrutura, que pode ser um array ou um objeto
+      //notacao de destructing:  let[valores que eu quero desestruturar] = array que queremos extrair informacoes
+    </script>
+
+    <script>
+      //destructuring
+      //Em arrays
+
+      let frutas = ["Abacaxi", "Uva", "Pera", "Mamão"];
+
+      //let [a, b, , c] = frutas -> abacaxi esta sendo extraida de dentro do array frutas e esta sendo atribuida para a variavel a ; Uva esta sendo extraida de dentro do array frutas e esta sendo atribuida para a variavel b ; 
+
+      //let [a, b, , c] = frutas //pular um indice e recupera o proximo apos o espaco entre virgulas que ta vazio
+
+      // let [a, b, c, d, e = "Banana"] = frutas; // Atribuindo um valor default no array caso o retorno seja undefined para o 'e', no caso Banana
+
+      let [a, b = "Abacate", c, d, e = "Banana"] = frutas; // Se eu colocar um valor padrao default onde na seja undefined, (no caso, onde o js consegue desetruturar e trazer esse valor apra uma varaivel) o valor default sera desconsiderado.
+
+      
+
+      //console.log(a,b,c,d,e)
+      let coisas = [["Abacaxi", "Uva", "Pera", "Mamão"], ["José", "Maria"]]; // array multidimensional -> array dentro de um array, no caso 2 arrays dentro de um array so, um em um indice 0 e o outro em outro indice 1
+      
+      let [, [, n2]] = coisas; 
+
+      let [a1, a2, a3, a4, [, a6]] = coisas; //pulei a primeira posicao do array de indice 1
+      console.log(a3);
+      console.log(a6);
+      console.log(a1);
+
+      // Pulei o primeiro indice do array com a virgula e coloquei outro colchetess pq eu quero o valor que de fato esteja dentro do array do segundo indice, e nao o array inteiro do indice 1. Ai eu pulei a primeira posicao do array no indice 1 e recuperei o valor maria
+
+      console.log(n2);
+    </script>
+  </head>
+
+  <body></body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title>Tamanho de textos</title>
+        <style type="text/css"> 
+
+            div{ /*definimos 60px para o tamanho padrao da div*/
+                font-size: 60px;
+            }
+
+            .texto {
+                /* px -> tamanho fixo
+                % -> tamanho relativo ao padrao do browser
+                em-> tamanho realtivo ao container pai */
+                /* font-size: 16px; ou 100% eh a memsa coisa*/
+                
+                font-size: 1em; /* 1em equivale ao tamanho padrao (60px) do container pai
+                (no caso a div do body é o container pai dos paragrafos, que tem
+                tamanho de 60px padarao. O pai dos paragrafos é quem esta logo 
+                acima do paragrafo no caso).E como em é o tamanho realtivo ao container pai (div) vai ter 60px de tamanho
+                Se fosse 2em seriam 120px, se fosse 3em seria
+                180px e assim se vai... Depende do tamanho do container pai sendo em */
+            }
+
+            .texto2 {
+                font-size: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p class="texto">Conteudo 1</p> <!--como a preferencia é sempre do filho
+            aplicamos sempre a unidade do filho, que nesse caso eh relativa ao pai-->
+            <p>Conteudo 2</p>
+            <p class="texto2">Conteudo 3</p> <!--A gente colocou uma unidade fixa (px)
+            logo, o texto vai ter 15px independente do seu pai--> <!-- se eu removesse
+            o font size da classe do filho, ele ia ter o tamanho da div (que é o pai)-->
+            <!--como a preferencia é sempre do filho
+            aplicamos sempre a unidade do filho, que nesse caso eh fixa e de 15px-->
+        </div>
+        
+    </body>
+    </html>

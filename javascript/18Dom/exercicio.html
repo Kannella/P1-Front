@@ -1,0 +1,57 @@
+<!--ideia dessa aula, selecionar o elemento desejado e atraves do atributo classname, aplicar uma classe que representa o estilo visual. O resultado disso eh a modificação visual de um elemento baseado no atributo class (que tbm possui a função de amarrar elementos html a classes css) -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio</title>
+
+        <style>
+            .estilo1 {
+                background: blue;
+                color: #FFF;
+            }
+
+            .estilo2 {
+                background: yellow;
+                color: #FFF;
+            }
+            .estilo3 {
+                background: red;
+            }
+            .estilo4 {
+                background: green;
+            }
+        </style>
+        <script>
+            function modificaCor() {
+                document
+                    .getElementById('mudaCor')//seleciona o elemento com id mensagem e altera o atributo class (com o classname) e eu passo a string que vai ser atribuida ao elemento html, nesse caso o estilo2
+                    .className = 'estilo2' // atribuo a string estilo2 ao classname (nome da classe)
+            }
+
+            function perdeuFoco() {
+                var caracter = document // recupera o caracter e guarda na variavel caracter
+                    .getElementById("valorDiv").value; //value recupera o valor contido dentro do elemento com id entrada
+                if (caracter.length < 3) {
+                    document.getElementById('mudaCor').className = 'estilo3'
+                } else {
+                    document.getElementById('mudaCor').className = 'estilo4'
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div id="mudaCor" class="estilo1">Modificando a classe do elemento</div>
+        <br>
+        <input 
+        type="text"
+        onfocus="modificaCor()"
+        onblur="perdeuFoco()"
+        id="valorDiv"
+        style="width: 500px;"
+        >
+
+    </body>
+</html>

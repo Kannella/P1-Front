@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+
+    <style>
+      p {
+        box-sizing: border-box; /*O p usa border-box. Então ele fica com 10(padding-left) + 10(padding-right) + 280 (conteudo) = 300px. */
+        /* o border box o valor da width é o valor que voce quer atingir, somando com o padding left e right, entoa se eu coloquei 300px, eu quero atingir 300, eu tenho 10 de left padding e 10 deright padding,m portanto o width do elemento seria 280, pois ai somando com os paddings daria 300*/
+        width: 300px;
+        padding: 10px;
+        background-color: green;
+      }
+
+      div p {
+        box-sizing: content-box; /*O p dentro de uma div usa content-box. Ou seja, a largura do conteudo é aquela que colocamos no width mesmo.!!!!!
+        /* o box-sizing: content-box é o padrao usado, ele faz com que a largura e a altura de um elemento HTML afetam apenas o proprio conteúdo do elemento e não incluem a largura das bordas (border) ou o preenchimento (padding). */
+        /* Quando você define a largura e a altura de um elemento com box-sizing: content-box, o navegador calcula o tamanho total do elemento, incluindo bordas e padding, como um valor ADICIONAL à largura e altura especificadas no CSS. Isso pode fazer com que o elemento pareça maior do que você espera, pois a largura e a altura especificadas não incluem essas partes adicionais. */
+        width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: green;
+
+      }
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <p>border-box</p>
+    <div>
+      <p>content-box</p>
+    </div>
+        
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+
+  </body>
+</html>

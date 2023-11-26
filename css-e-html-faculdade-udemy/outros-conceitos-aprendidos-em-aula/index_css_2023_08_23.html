@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="utf-8">
+      <title>Cursos</title>
+      <style>
+         /* esse é um seletor descentente, representado pelo espaço
+         em branco. pegamos todos os p's que sejam filhos diretos ou
+         indiretos de um article. */
+         article p{
+         padding: 12px;
+         background-color: lightgray;
+         }
+         /* todo p que tenha a classe promoção e que seja
+         descendente de um elemento cujo id seja principal */
+         #principal p.promocao {
+         padding: 12px;
+         background-color: aliceblue;
+         }
+         /* todo p que tenha a classe coordenadores, que seja
+         descendente de um section, que seja descendente de um
+         article, que seja descendente de um elemento de id igual a
+         principal, que seja descendente de body */
+         body #principal article section p.coordenadores {
+         text-align: center;
+         }
+         /* agora é seletor descendente. o p que é filho de section
+         também é selecionado. */
+         article p {
+         border: 1px solid black
+         }
+
+         /* todo p que tenha a classe coordenadores, que seja filho
+         direto de um section, que seja descendente de um article, que
+         seja filho direto de um main */
+         main > article section > p.coordenadores {
+         font-weight: bold;
+         }
+         
+      </style>
+             
+   </head>
+   <body>
+      <main id="principal">
+      <h1 id="titulo" class="promocao">Portal de cursos</h1>
+      <p id="descricao">Temos cursos nas mais diversas áreas.</p>
+      <p class="nova promocao">Venha conversar conosco e conhecer nossas ofertas de <strong>bolsas de estudos</strong>.</p>
+
+      <p>Cursos:</p>
+      <article class="outra">
+        <p class="outra novo-curso">Ciência da Computação</p>
+        <p class="outra curso">Engenharia de Computação</p>
+        <p class="outra curso">Farmácia</p>  
+        <section>
+         <!-- esse p não é filho direto de article mas é
+         descendente. as regras css o atingem também -->
+         <p class="coordenadores">
+         Saiba que nossos coordenadores estão à sua
+         disposição!
+         </p>
+         </section>
+
+      </article>
+      <!-- esse p tem somente classe -->
+      <p id="contato" class="final-pagina">Entre em contato: 11223344</p>
+      <!-- esse p tem id e classe. a ordem não importa -->
+      <p id="rodape" class="final-pagina">&copy; Todos os direitos reservados</p>
+      </main>
+    </body>
+</html>

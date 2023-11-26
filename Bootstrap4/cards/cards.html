@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Cartões</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+</head>
+
+<body style="margin-bottom: 200px;padding: 16px;">
+
+    <h3 class="border-bottom">Cartão simples</h3>
+    <div class="card"> <!-- faz uma formatacao-->
+        <div class="card-body"> <!-- faz uma formatacao no corpo do cartao-->
+            <h4 class="card-title">Título do cartão</h4> <!-- faz uma formatacao no titulo do cartao-->
+            <h6 class="card-subtitle">Subtítulo do cartão</h6> <!-- faz uma formatacao no subtitulo-->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <!-- faz uma formatacao no paragrafo-->
+            <a href="" class="btn btn-outline-primary">Leia mais</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com imagem</h3>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,
+                fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-primary">Leia mais</a>
+        </div>
+        <img class="card-img-bottom" src="https://source.unsplash.com/random/600x100" alt="">
+        <!--card-img-bottom imagem fica reta na parte superior e arredondada na parteinferior-->
+    </div>
+
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com imagem sobreposta</h3>
+    <div class="card text-white">
+        <img class="card-img" src="https://source.unsplash.com/random/600x250" alt="">
+        <!-- card-img aparece a imagem normal emcima do card-->
+        <div class="card-img-overlay"> <!--card-img-overlay sobrescreve todo conteudo do card -->
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,
+                fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-light">Leia mais</a>
+        </div>
+    </div>
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com cabecalho</h3>
+    <div class="card">
+        <div class="card-header">
+            Cabecalho do cartao
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-danger">Leia mais</a>
+        </div>
+    </div>
+
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com cabeçalho e rodapé / Alinhamento</h3>
+    <div class="card">
+        <div class="card-header text-right">
+            Cabecalho do cartao
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-danger">Leia mais</a>
+        </div>
+        <div class="card-footer"> <!-- card-footer rodape do cartao-->
+            Rodape cartao
+        </div>
+    </div>
+
+
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com navegação</h3>
+    <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <!--card-header-tabs vai aplicar form especificas p a navegacao dentro de um cabecalho de um card  -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">Link 3</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h4>Título do cartão</h4>
+            <h6>Subtítulo do cartão</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis,
+                fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a class="btn btn-outline-danger btn-block" href="">Leia mais</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com cores de fundo</h3>
+    <div class="card bg-primary text-white mb-2">
+        <div class="card-header">
+            Cabecalho do cartao
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-danger">Leia mais</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="card bg-danger text-white mb-2">
+        <div class="card-header">
+            Cabecalho do cartao
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-danger">Leia mais</a>
+        </div>
+    </div>
+
+    <h3 class="border-bottom">Cartão com bordas</h3>
+    <div class="card border-primary mb-2">
+        <div class="card-body">
+            <h4 class="card-title">Título do cartão</h4>
+            <h6 class="card-subtitle">Subtítulo do cartão</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+            <a href="" class="btn btn-outline-danger">Leia mais</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <h3 class="border-bottom">Cartão com colunas</h3>
+    <div class="card-columns">
+
+        <div class="card text-white">
+            <img class="card-img" src="https://source.unsplash.com/random/600x250" alt="">
+            <!-- card-img aparece a imagem normal emcima do card-->
+            <div class="card-img-overlay"> <!--card-img-overlay sobrescreve todo conteudo do card -->
+                <h4 class="card-title">Título do cartão</h4>
+                <h6 class="card-subtitle">Subtítulo do cartão</h6>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat
+                et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <a href="" class="btn btn-outline-light">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card"> <!-- faz uma formatacao-->
+            <div class="card-body"> <!-- faz uma formatacao no corpo do cartao-->
+                <h4 class="card-title">Título do cartão</h4> <!-- faz uma formatacao no titulo do cartao-->
+                <h6 class="card-subtitle">Subtítulo do cartão</h6> <!-- faz uma formatacao no subtitulo-->
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                    lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <!-- faz uma formatacao no paragrafo-->
+                <a href="" class="btn btn-outline-primary">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card bg-primary text-white mb-2">
+            <div class="card-header">
+                Cabecalho do cartao
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Título do cartão</h4>
+                <h6 class="card-subtitle">Subtítulo do cartão</h6>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                    lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <a href="" class="btn btn-outline-danger">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <!--card-header-tabs vai aplicar form especificas p a navegacao dentro de um cabecalho de um card  -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Link 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="">Link 3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4>Título do cartão</h4>
+                <h6>Subtítulo do cartão</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis,
+                    fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <a class="btn btn-outline-danger btn-block" href="">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card"> <!-- faz uma formatacao-->
+            <div class="card-body"> <!-- faz uma formatacao no corpo do cartao-->
+                <h4 class="card-title">Título do cartão</h4> <!-- faz uma formatacao no titulo do cartao-->
+                <h6 class="card-subtitle">Subtítulo do cartão</h6> <!-- faz uma formatacao no subtitulo-->
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                    lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <!-- faz uma form   atacao no paragrafo-->
+                <a href="" class="btn btn-outline-primary">Leia mais</a>
+            </div>
+        </div>
+
+        <div class="card"> <!-- faz uma formatacao-->
+            <div class="card-body"> <!-- faz uma formatacao no corpo do cartao-->
+                <h4 class="card-title">Título do cartão</h4> <!-- faz uma formatacao no titulo do cartao-->
+                <h6 class="card-subtitle">Subtítulo do cartão</h6> <!-- faz uma formatacao no subtitulo-->
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et
+                    lorem quis,fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                <!-- faz uma formatacao no paragrafo-->
+                <a href="" class="btn btn-outline-primary">Leia mais</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

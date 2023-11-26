@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+<!--
+    Pilares da abstracao: Habilidade intuitiva e de conhecimento das coisas
+        Entidade
+            -> Compreensao de que um objeto do mundo real deve passar pra dentro da nossa aplicacao
+            -> Eh a abstracao de um objeto do mundo real, que vai para dentro o nosso programa
+            -> Essa entidade possui caracteristicas que sao determinadas dentro de uma classe
+            -> Em termos tenicos uma entidade geralmente se refere a um objeto ou seja a instância de uma classe que representa um conceito específico dentro de sua aplicação.
+            -> Ex: Carro, contaBancaria
+
+        Identidade
+            -> Eh uma instanciacao da entidade de tal modo que conseguimnos criar a relacao das entidades que temos no nosso sistema
+
+            -> Para acessar essas entidades (objetos) de forma isolada, precisamos de alguma forma aplicar uma identidade (ou seja, precisamos instaciar) pra essa entidade (objeto). Ou seja, precismos de uma referencia para essa entidade. Dando pra linguagem a capacidade de identificar cada um dos objetos de forma indepentende. No caso, para se ter uma referencia para esse objeto, em termos tecnincos, precisamos criar uma instancia dessa entidade,nosso objeto, ou seja, precisamos instaciar nossa classe e atribuir essa instaciacao a uma variavel e assim essa variavel sera referencia para o objeto da classe carro.
+
+            Você instancia uma classe com a palavra new para criar um objeto dessa especifica classe instanciada. Portanto, você cria uma instância de um objeto a partir de uma classe, e esse objeto vai ser especifico da classe criada. Ou seja, o objeto eh uma instancia da classe
+            A instância é o objeto real que você cria com base na classe.
+
+            Em var carro = new Carro(); -> instanciamos uma classe e criamos um objeto da classe carro
+            Você está criando uma instância da classe Carro e atribuindo-a à variável carro. Agora, a variável carro é uma referência para um objeto da classe Carro, e você pode acessar e manipular os atributos e métodos desse objeto usando essa referência.
+
+            Nesse sentido, a expressão, por exemplo var carro = new Carro(); Cria uma instância da classe Carro. Carro: nossa abstracao de um objeto do mundo real (nosso objeto), ou seja, instanciar eh criar um objeto específico de uma classe, no caso a classe Carro [onde sao determinadas as caracteristicas e acoes do nosso objeto Carro].). E apos isso atribuir a variável carro (nossa identidade de nossa entidade) que faz REFERENCIA a essa instância (ou seja, a essa criacao de um objeto específico de uma classe ou tipo. ) permitindo que você acesse seus atributos e métodos dentro da classe Carro por essa variavel, pois ela contem o endereco do objeto que vc instanciou..
+
+            Portanto, a expressão  var carro = new Carro(); faz uma instância da classe Carro (ou seja, cria um objeto específico de uma classe Carro, que chamamos de objeto Carro.) , e a variável carro passa a fazer referência a essa instância (ou seja, instancia = essa criacao de um objeto específico de uma classe ou tipo. ), permitindo que você acesse seus atributos e métodos por essa variavel, pois ela contem o endereco do objeto que vc instanciou..
+
+            Entao, a partir do momento que eu instacio uma classe (no caso, Carro) com o new, a variavel que eh atribuida essa isntanciacao eh uma referencia (identidade) para o objeto (entidade) da classe Carro, mais conhecido como nosso objeto Carro
+
+            -> A classe possui atributos e metodos de um objeto, que se quisermos podemos criar e instacia-lo a partir dessa classe e acessar os metodos e atributos dessa classe. Portanto, criar uma instância de uma classe e atribuir à uma variável quer dizer que: agora, a variável que foi atribuida essa instaciacao é uma referência para um objeto da classe que voce criou,mais conhecido como objeto + nome da classe, e assim você pode acessar e manipular os atributos e métodos desse objeto usando essa referência.
+
+            var carro = new Carro(); -> Criamos um objeto da classe carro => Objeto Carro => que tem como referencia a variavel carro (identidade) para acessarmos seus devidos atributos (caracteristicas) e metodos (Acoes)
+
+            Se temos var x = new Carro(); e var y = new Carro(); Cada variável recebe uma referência para uma instância separada da classe Carro. Portanto, x e y são duas referências (identidades) diferentes que apontam para objetos diferentes da mesma classe Carro [ou seja, com os memso metodos e atributos].
+
+            O objeto eh uma instacia de uma classe. Voce cria um objeto especifico de uma classe a partir da instanciacao dessa classe com a palavra new para criar um objeto dessa especifica classe instanciada. Ou seja, o objeto eh uma instancia da classe
+            A instância é o objeto real que você cria com base na classe.
+
+            Temos uma classe que quando instanciada se transforma em um objeto (que pode ser usado dentro da nossa aplicacao)
+            Quando voce instancia uma classe (modelo) voce cria um objeto (especifico dessa classe instanciada)
+           
+            Quando você cria um objeto, voce está criando uma instância específica de uma classe, com seus próprios valores de atributos e a capacidade de executar os métodos definidos na classe. 
+
+            
+
+        Caracteristicas
+            -> Sao conhecidas como atributos
+            -> Abstraio apenas as caracteristicas apenas aquelas que fazem sentido pro negocio
+        Acoes
+            -> Sao conhecidas como metodos
+            -> Sao os comportamentos daquele objeto do mundo real que devem ser levados para programacao, que fazem sentido pras regras de negocio da aplicacao
+            -> O que dosa o nivel de abstracao das acoes eh a necessidade do negocio
+
+    Exemplos
+    ->  Entidade: carro
+        Identidade: x = new Carro()
+        Caracteristicas: marca, modelo, cor, qtdePortas
+        Acoes: Ligar, acelerar freiar, desligar
+
+    ->  Entidade: ContaBancaria
+        Identidade: z = new ContaBancaria()
+        Caracteristicas: agencia, numeroConta, saldo, limite
+        Acoes: depositar, sacar, ConsultarSaldo
+-->
+
+    <script>
+      //class define um MODELO de um objeto do mundo real => classe eh um modelo de um objeto do mundo real
+      //ex: receita de bolo e o bolo: a receita eh a classe e o bolo eh a entidade
+      //Nosso bolo eh o objeto criado a partir de uma instancia da classe receita de bolo. E nos podemos acessar os ingredientes desse bolo e o modo de preparo atribuindo essa instancia da classe receita de bolo (que da origem ao nosso objeto/entidade bolo) a uma variavel (identidade)
+
+      //o objeto eh uma instacia do modelo (classe) => o objeto eh uma instancia da classe
+      //Quando você cria um objeto, está criando uma instância específica dessa classe, com seus próprios valores de atributos e a capacidade de executar os métodos definidos na classe. 
+
+      class ContaBancaria { //criamos nosso modelo (classe) ContaBancaria -> //atributos camelcase so na primeira e segunda palavra
+
+        // a classe eh um modelo que serve para geracao de varios objetos (se necessarios) dentor dois nosso codigos
+
+        //agencia numeroConta saldo limite -> caracteristicas de uma conta bancaria
+
+        
+
+        constructor() { //metodo construtor -> eh o metodo automatico de instrucoes que serao realizadas nesse processo de construcao de um objeto com base em uma classe
+
+        //dentro do contrutor temos infinitos atributos (que sao definidos usando com o this)com as caracteristicas da conta bancaria
+
+          //atributos camelcase so na segunda palavra tercira,etc
+
+          this.agencia = 1075; 
+          // o operador this tem a inteligencia de fazer com que um atributo seja conectado ao contexto do objeto (da especifca classe criada) no momento de contrucao do objeto, vamos ter uma variavel que vai estar encapsulada dentro do objeto e assim portanto o valor passado ao this.agencia vai estar encapsulado dentro do atributo agencia do objeto
+          this.numeroConta = 8351125; 
+          this.saldo = 50;
+          this.limite = 450;
+
+          // todo objeto por default tera essa insformacoes do construtor
+          
+        }
+
+        //proximo passo eh identificar as acoes (metodos) -> acoes sao funcoes que quandio criadas dentro de uma classe sao conhecidaas como metodos
+        depositar(valorDeposito) {
+          this.saldo += valor; // ele atualiza o atributo saldo da classe (modelo) e atribui a ele a soma do saldo atual mais o valor do deposito -> pra ai atualizar o saldo com base no valor depositado
+          //this.saldo = saldo + valorDeposito
+        }
+        sacar(valorSaque) {
+          this.saldo -= valorSaque; // ele atualiza o atributo saldo da classe (modelo) e atribui a ele a substracao entre o saldo atual e o valor do deposito -> pra ai atualizar o saldo com base no valor sacado
+          //this.saldo = saldo - valorDeposito
+        }
+        consultarSaldo() {
+          return this.saldo; // retorna o saldo atual
+        }
+      }
+
+      //criando dois objetos (entidade) com base na instanciacao da classe ContaBancaria (modelo) e atribuimos ela a duas variaveis diferentes, x e y, que vao ser referencias diferentes para objetos difetentes que sao instaciados a partir da memsa classe (modelo)
+
+      let x = new ContaBancaria(); //contas diferentes -> o new eh o operador que indicapro interpretador que eu quero transformar a classe em um objeto qeu possa ser utilizado dentro do meu codigo. A partiur dessa instanciao da classe e assim a criacao de um objeto, nos podemos recuperar os atributos e metodos do objeto
+
+      // o operador new instancia um objeto com base em uma classe (modelo)
+
+      let y = new ContaBancaria(); //contas diferentes -> o new eh o operador que indica pro interpretador que eu quero transformar a classe em um objeto qeu possa ser utilizado dentro do meu codigo. A partiur dessa instanciao da classe com o new (e assim a criacao de um objeto (entidade) ) nos podemos recuperar os atributos e metodos do objeto
+
+      // o operador new instancia um objeto com base em uma classe (modelo)
+
+      console.log(x.consultarSaldo()); //vou acessar um metodo do objeto x (consultarSaldo) (objeto x => que eh uma instacnia da nossa classe)
+      x.depositar(450); //atribui 450 ao metodo depositar do objeto x 
+      console.log(x.consultarSaldo()); // agora mostara o saldo atualizado do objeto x
+      x.sacar(200); //atribui 200 ao metodo sacar do objeto x
+      console.log(x.consultarSaldo()); // agora mostara o saldo atualizado do objeto x
+
+      console.log(y.consultarSaldo()); // Temos a preservacao da identidade desse objeto y -> agora mostara o saldo atualizado do objeto y, como nao fizeomos nada nessa objeto os dados desse objeto permanecem inalterados
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>

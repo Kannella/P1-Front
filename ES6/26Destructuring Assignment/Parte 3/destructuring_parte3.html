@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!--
+      destructing agora no contexto de funcoes
+        -> Como nos podemos passar arrays e objetos nos parametros das funcoes e dentro das funcoes capturar apenas o que eh necessario desses arrays e objetos utilizando o recurso de destructing:
+    -->
+    <script>
+      /*
+      //Declarei um array que recebe alguns valores
+
+      let arr = [10, 20, 30, 40]
+
+      //criei uma funcao que recebe como parametro uma desustruracao do array
+
+      function teste([a, b, c, d = 100]){
+       console.log(a, b, c)
+     }
+ 
+     teste(arr) // ou teste(arr[0], arr[1], arr[2], arr[3])
+     */
+
+      //criando um objeto literal chamado obj
+      let obj = {
+        a: 10,
+        b: 20,
+        c: 30,
+        d: 40,
+      };
+      //funcao/metodo que recebe uma desustruracao do objeto como parametro
+      //o valor default do atributo z eh 10, como nao existe no objeto ele eh criado
+      function teste({ a: x, d, z = 10 }) {
+        console.log(x, d);
+      }
+
+      teste(obj);
+    </script>
+  </head>
+
+  <body></body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+
+          // podemos trabalhar com parametros variaaveis atraves da resucperacao do objeto arguments
+            function soma() { //funcao soma sem nenhum parametro 
+
+              
+              var resultado = 0 // atribui 0 a resultado
+              for(var i in arguments) { // para cada var i dentro do objeto arguments, eu vou percorrer cada uma das posicoes do meu objeto arguments, recuperando o valor do indice de cada uma delas ate que a proxima posicao do array seja undefined. Dessa forma, eu vou executar esse bloco de codigo abaixo. Assim, com a variavel i que recebeu o valor do indice a cada interacao que ela faz dentro do objeto arguments, estamos acesando os valores contidos no objeto arguments e mostramos no console. O bom eh que o forin ele tem a inteligencia de nao precisar com que as chaves do array esteja em ordem
+
+                // console.log(arguments[i])
+                
+                resultado += arguments[i] //vou somar todos os meus valores que estao contidos nos meus indices (chaves) com eles proprios
+
+              }
+
+              return resultado // 
+
+              console.log(arguments) //arguments eh um oibjeto que eh instrucao que retorna algo PARECIDO com um array, contendo a relacao de parametros passsados para a funcao
+                
+            }
+
+            console.log(soma(7, 5, 3.2, 0.8, 'Texto')) //console.log chamando essa funcao.
+            //no caso de texto ele vai concaternar esse resultado que ele foi armazenando juntamete com o texto contido na str
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

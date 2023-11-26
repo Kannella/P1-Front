@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      //Todo objeto literal eh um objeto unico e mesmo quando armazenamos esse mesmo objeto em dif variaveis, todas essas variaveis apontaram para o mesmo objeto
+
+      
+    </script>
+    <script>
+      
+      let assinatura = { //criei um objeto literal
+        idCliente: 1000,
+        descricao: 'Acesso a internet',
+        status() {
+          console.log('Ativo')
+        }
+      }
+
+      console.log(assinatura.descricao)
+
+      let y = assinatura // objeto literal associado a variavel pessoa
+      //o que teremos aqui temos uma copia da REFERENCIA pro mesmo objeto literal e nao a copia do objeto para a variavel y
+      // temos um unico objeto que esta sendo referenciado por variaveis diferentes, isso significa que eu posso acessar o mesmo objeto ou pela variavel y ou pela varaivel assinatura
+
+      console.log(y.descricao)
+
+      /// alterei um dos atributos do objeto
+      y.descricao = 'Internet + tv + telefone'
+
+      console.log(assinatura.descricao)
+      console.log(y.descricao)
+      // tambem atrualiza para as duas referencias do mesmo objeto
+
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>

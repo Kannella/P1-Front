@@ -1,0 +1,115 @@
+/* limpar formatações padrões */
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1em;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: #e6e6e6;
+}
+
+.fundo{
+    background: #fff200;
+    background-size: cover;
+    text-align: center;
+
+}
+#menu {
+    background: #82ce35; 
+    padding: 20px; /*aplica espaçamento interno em todos os lados pra dentro     da caixa*/
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+
+}
+
+
+a:hover {
+    color: red;
+    animation: a-animation 1s infinite;
+    background-color: yellow;
+    border-radius: 16px;
+}
+
+body{
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('imagens/capa2.webp');
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    
+    
+    
+
+}
+.logo{
+
+    text-align: center;
+    
+}
+    
+
+
+#borda{
+    border: 10px solid red;
+}
+
+
+.conteudo{
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    padding:20px;
+    text-align: center;
+    font-weight: 100;
+    background-color: white;
+    margin: 400px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    
+}
+/* 
+#img2{
+    height: 100vh;
+    background-image: url('imagens/sessionBKP.jpg');
+    background-position: center;
+    background-size: cover;
+} */
+
+
+#img2{
+    background: #FFF;
+}
+
+#pollo-loko{
+    width: 300px;
+    border: 2px solid red;
+}
+
+P{
+    text-align: center;
+}
+#cardapio{
+    width: 300px;
+    border: 2px solid red;
+}
+
+#area-postagens{
+    width: 660px;
+    float: left;
+    border: 3px solid red;
+}
+
+
+
+

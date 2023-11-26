@@ -1,0 +1,18 @@
+<script>
+
+    //Quando você usa o operador == para comparar valores em JavaScript, ele realiza uma comparação de valor após fazer uma coerção de tipo, se necessário. No caso de 0 == false, o JavaScript faz a coerção do valor false para 0 durante a comparação. Isso ocorre porque o JavaScript tenta igualar os valores após fazer as conversões de tipo para que eles tenham o mesmo tipo antes da comparação.
+
+    
+    //aqui valida so valor e se o casting funcionar, ta valendo
+    console.log(1 == 1)
+    console.log(1 == '1')
+    console.log(0 == false)
+    //O JavaScript tenta igualar os tipos para que possa realizar a comparação. Ele converte o número 1 em uma string para fazer a comparação, resultando em '1'. Agora, temos duas strings para comparar: '1' e '12'. Como essas duas strings são diferentes, a expressão é avaliada como false. O operador == realiza a coerção de tipos para tentar tornar os operandos comparáveis, mas, neste caso, eles ainda são diferentes após a conversão de tipos.
+    console.log(1 == '12')
+    console.log(1 == false)
+    console.log('-----------------')
+    //agora vai validar valor e TIPO
+    console.log(1 === 1)
+    console.log(1 === '1')
+    console.log(0 === false)
+</script>

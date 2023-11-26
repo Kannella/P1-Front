@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        //formas mais praticas de escrever os objetos literais (pares de nomes e valor)
+    </script>
+
+    <script>
+        let nome = 'Jorge' //document.getElementById('nome').value
+        let idade = 29
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        //fazendo o objeto literal de forma padrao
+
+        let objeto = {
+            //primeira palavra eh a chave do par: nome / valor e depois dos : eh o valor do par: nome / valor
+            nome: nome, //par: nome / valor
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function (){ //valor -> funcao (metodo, pois esta dentro de um objeto) ; nome -> exibirResumo
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+            }
+        }
+
+        //fazendo o objeto padrao de forma mais pratica
+        //ela torna o conjunto par / valor mais pratico e com menos codigo.
+        // No conjunto par / valor:
+        // nome = nome da variavel definida com o let  
+        // valor = valor da variavel definida com o let
+
+        let objeto2 = {
+            nome, // neeste caso, como a variavel nome tem o mesmo nome da chave (nome) do nosso par valor -> nessas situacoes podemos emitir a deifinicao do nome do par. E o js entende que o nome do conj par / valor vai ser igual ao nome da variavel  definida com o let e que o valor do conjunto par / valor vai ser igual ao valor da variavel definida com o let
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){ //combinamos o nome e o valor do par nome / valor do metodo
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        console.log(objeto2)
+        objeto2.exibirResumo()
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

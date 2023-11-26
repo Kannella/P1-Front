@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Bootstrap - Configurações do grid</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <style type="text/css">
+        .marcador {
+            background: #fe9d9d;
+            border: 1px solid #f94646;
+        }
+
+        .marcador-container {
+            background: #5bf946;
+            border: 1px solid #36ae26;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container marcador-container">
+
+        <h2>Largura fixa</h2>
+
+        <div class="row">
+            <!--é dentro da row que ficara o sistema de grid, ou seja, as 12 colunas. quem estiver dentro da row, ocupa os 12 espaçamentos por padrao caso não haja nenhuma formatação especifica ou uma formatação que não se aplica mais conforme o tamanho da tela -->
+            <!-- container fluido ocupa todo espaçamento da tela, e o fixo centraliza o conteudo-->
+            <!-- "col" cria uma largura fixa para todas as divs igualmente, sempre uma ao lado da outra-->
+            <div class="marcador col">
+                area 1
+            </div>
+            <div class="marcador col">
+                area 2
+            </div>
+            <div class="marcador col">
+                area 3
+            </div>
+            <div class="marcador col">
+                area 4
+            </div>
+
+        </div>
+
+        <h2>Largura automática (auto-layout)</h2>
+
+        <div class="row">
+            <!-- a area 2 vai ocupar 4 grids e a area 3 vai ocupar 6 grids e 2 grids para a area 1(que é o excedente)-->
+            <!--desvatagem, ele sempre vai ter esse tamanho de colunas, ele nao se ajusta de acordo com o tamahnho do dispositivo-->
+            <div class="marcador col">
+                area 1
+            </div>
+            <div class="marcador col-4">
+                area 2
+            </div>
+            <div class="marcador col-6">
+                area 3
+            </div>
+
+        </div>
+
+        <h2>Largura automática (auto-layout)</h2>
+
+        <div class="row">
+            <!-- a area 3 ocupa 6 colunas e a area 1 ocupam o excedente (3 grids cada uma automaticamente)-->
+            <!--desvatagem, ele sempre vai ter esse tamanho de colunas, ele nao se ajusta de acordo com o tamahnho do dispositivo-->
+            <div class="marcador col">
+                area 1
+            </div>
+            <div class="marcador col">
+                area 2
+            </div>
+            <div class="marcador col-6">
+                area 3
+            </div>
+
+        </div>
+
+        
+
+        <h2>Largura igual empilhada</h2>
+        <!-- col-sm ou col-md ou col-lg ou col-xl ele ficam dispostos igualmente quando chegar a resolução especificada-->
+        <!--dica, colocar col-sm para quando chegar nas resolucoes menores, aparece um empilhado do outro e acima de 576px ele ja coloca um do lado do outro -->
+        <div class="row">
+        
+            <div class="marcador col-sm">
+                area 1
+            </div>
+            <div class="marcador col-sm">
+                area 2
+            </div>
+            <div class="marcador col-sm">
+                area 3
+            </div>
+
+        </div>
+
+        <h2>Ordenando</h2>
+        <div class="row">
+            <!--quanto a tela for md ele vai ficar com 4 grids cada div, colocando col-md-4 em todas as divs-->
+            <!--para ordenar em boottrap utilizando flexbox, é só usar o order e definir a ordem que vc quer que apreça primeira-->
+            <div class="marcador order-2 col-md-4">
+                area 1
+            </div>
+            <div class="marcador order-1 col-md-4">
+                area 2
+            </div>
+            <div class="marcador order-3 col-md-4">
+                area 3
+            </div>
+
+        </div>
+
+        <h2>offset</h2>
+        <div class="row">
+            <!--col-md-6 quando a tela for md ele via ocupar apenas metade do espaçamento total do container (6 grids)-->
+            <!--offset-md-x centraliza a area que voce quer e o x é o valor que voce quer que vai pulando de grid em grid-->
+            <div class="marcador col-md-6 offset-md-3">
+                Login
+            </div>
+
+        </div>
+
+        <h2>offset múltiplos alinhamentos</h2>
+        <div class="row">
+
+            <div class="marcador col-md-3"> <!-- conteudo 1 colado na ponta e somente quando aumentar a tela para md ele vai ocupar 3 grids-->
+                conteudo 1
+            </div>
+
+            <div class="marcador col-md-3 offset-md-6"> <!--conteudo 2 ocupando 2 grids quando a tela for md e com um espaçamento de 6 grids-->
+                conteudo 2
+            </div>
+
+        </div>
+
+        <h2>Aninhamento</h2>
+
+        <!-- col-md-6: a partir do momento em que a tela for md, a div que fooi aplicada essa formatação vai ocupar 6 grids, caso a tela for menor que o tamanho md, ela vai ocupar os 12 grids do container (todo espaçamento dele)-->
+        <div class="row">
+            <div class="col-md-6" style="border: 1px solid blue; background: yellow;">
+                col-md-6
+
+                <!-- O QUE DEFINE UM SISTEMA DE GRIDS É A NOSSA ROW-->
+
+                <!-- dentro da row temos uma nova row, com um novo sistema de grid com 12 grids -->
+
+                <!-- essa row abaixo quando a tela for md, a div dentor dessa row especificamente vai ocupar 6 grids-->
+                <!-- a nossa row vai ocupar metade (6 grids) do espaçamento da row pai. Podemos perceber isso pois ela ocupa metade do espaçamento da div amarela que tem a borda azul (que ocupa 6 grids do container grandao)-->
+
+                <!--cada row define um grid de 12 colunas, cada vez que eu crio uma nova row, eu crio outro grid a parte com 12 colunas. Nesse caso acima eu criei uma row dentro da div "col-md-6" azul e assim eu criei um novo sistema de grid dentro da div azul (na div Conteudo 1) de outros 12 grids (QUE NO CASO, A DIV CONTEUDO 1 OCUPA 6 GRIDS) dentro dessa div azul (que ocupa 6 grids em realaçao ao containerzao )  -->
+
+                <div class="row">
+                    <div class="col-md-6 marcador">
+                        Conteudo 1
+                    </div>
+
+                    <div class="col-md-2 marcador">
+                        outro
+                    </div>
+
+                    <div class="col-md-2 marcador">
+                        outro
+                    </div>
+
+                    <div class="col-md-2 marcador">
+                        outro
+                    </div>
+
+                    <div class="col-md-2 marcador">
+                        outro
+                    </div> <!-- ele quebra aqui pois ja passou o limite de 12 grids da div azul-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

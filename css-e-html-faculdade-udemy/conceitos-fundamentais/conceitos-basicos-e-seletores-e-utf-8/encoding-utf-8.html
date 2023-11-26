@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes</title>
+
+
+
+
+</head>
+
+<body>
+    <p style="border: 1px solid red; width: 50px; padding-right: 60px; padding-left: 60px;">cores</p>
+    <p style="border: 1px solid red; width: 50px; padding: 60px; margin-top: 200px;">cores</p>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+A presença dessa tag informa ao navegador e aos agentes de processamento que o conteúdo do documento deve ser interpretado usando o encoding UTF-8.
+
+Quando você escreve a tag envolvendo UTF-8 no arquivo HTML, isso é uma dica que você está dando ao navegador, dizendo a ele que o arquivo está em UTF-8. Mas isso não altera o encoding utilizado pelo VS Code quando o arquivo foi salvo a princípio. Se ele não tiver sido salvo como UTF-8, o navegador vai tentar interpretá-lo como UTF-8 e o texto vai ficar incorreto mesmo assim.
+
+Alternativa II: Fazer esse ajuste no navegador também não altera o encoding original do arquivo. Quando você faz isso, só está dizendo para o navegador tentar abrir o arquivo usando aquele encoding.
+
+Alternativa III: Essa alternativa também não funciona pela mesmo razão. Mudar a tag no conteúdo do arquivo não muda o encoding usado pelo VS COde quando ele criou o arquivo.
+
+
+As medidas finais de cada elemento (p e div) são diferentes por conta do box-sizing. O p usa border-box. Então ele fica com 10(padding-left) + 10(padding-right) + 280 (conteudo) = 300px. 
+
+O div usa content-box. Então ele fica com 10(padding-left) + 10(padding-right) + 300 (conteudo) = 320px.

@@ -1,0 +1,54 @@
+<!--
+
+    ADICAO(+): SOMA DE VALORES
+    SUBTRACAO(-): DIFERENCA ENTRE VALORES
+    MULTIPLICCAO(*): PRODUTO DE VALORES
+    DIVISAO(/): QUOCIENTE DOS VALORES
+    MODULO (%): RESTO DE UMA DIVISAO
+    INCREMENTO(++): PRE/ POS INCREMENTO -> EX: EU TENHO O VALOR DE 10 E VOU FAZER UM INCREMENTO, AI ELE VAI FICAR 11. Caso a operacao de incremento vier antes, ela eh pre. Se vier a direita do numero sera pos
+    DECREMENTO(--): PRE/ POS DECREMENTO ->  EX: EU TENHO O VALOR DE 10 E VOU FAZER UM DECREMENTO, AI ELE VAI FICAR 9. Caso a operacao de incremento vier antes, ela eh pre. Se vier a direita do numero sera pos
+-->
+
+<!--
+    
+    casting eh converter um tipo de dado em outro tipo de dado
+
+    o js eh uma linguagem fracamente tipada, ou seja, a inferencia do tipo da variavel eh feita no momento de atribuicao
+
+    operador + tem a funcao de concatenacao
+
+    promt recebe uma string
+
+
+    parse int() eh um metodo que retorna a representacao numerica de uma string
+
+    .Tostring() eh um metodo que converte number para string
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            var num1 = prompt('Digite o primeiro numero: ')
+            var num2 = prompt('Digite o segundo numero: ')
+
+            num1 = parseInt(num1)
+            num2 = parseInt(num2)
+
+
+            document.write('A soma entre num1 e num2 eh: ' + (num1 + num2) + '<br />')
+            document.write('A subtracao entre num1 e num2 eh: ' + (num1 - num2) + '<br />')
+            document.write('A multiplicacao entre num1 e num2 eh: ' + (num1 * num2) + '<br />')
+            document.write('A divisao entre num1 e num2 eh: ' + (num1 / num2) + '<br />')
+            document.write('O modulo entre num1 e num2 eh: ' + (num1 % num2) + '<br />')
+            document.write('O incremento de num1 eh: ' + (num1++) + '<br />')
+            document.write('O decremento de num1 eh: ' + (num1--) + '<br />')
+
+        </script>
+    </head>
+    <body></body>
+</html>

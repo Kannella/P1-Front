@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Estilizando formularios</title>
+        <link rel="stylesheet" href="css/estilizando-formularios.css" type="text/css">
+    </head>
+
+    <body>
+
+        <h2>Estilizando formularios</h2>
+
+        <form> <!-- criei um fomrulario-->
+
+            <fieldset> <!-- agrupam dados semelhantes-->
+
+                <legend>Detalhes de contato</legend> <!-- legenda pra esses agrupamentos semelhantes-->
+                    
+                <div>
+                    <label for="nome">Nome:</label> <!--etiqueta/rotulo-->
+                    <input type="text" name="nome" id="nome">                
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label> <!--etiqueta/rotulo-->
+                    <input type="text" name="email" id="email">                
+                </div>
+
+                <div>
+                    <label for="url">URL:</label> <!--etiqueta/rotulo-->
+                    <input type="text" name="url" id="url">                
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios</legend>
+                
+                <div>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lembrar de mim</legend>
+
+                <div>
+                    <label for="">
+                        <input class="radio" type="radio" name="Lembrar" id="sim">Sim
+                    </label>
+                </div>
+
+                <div>
+                    <label for="">
+                        <input class="radio" type="radio" name="Lembrar" id="nao">Nao <!--imput do tipo radio-->
+                    </label>
+                </div>
+                
+
+            </fieldset>
+
+        </form>
+
+
+    </body>
+ 
+</html>

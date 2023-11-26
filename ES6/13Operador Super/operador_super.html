@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title></title>
+    <script>
+        // O operador super fornece acesso para a funcao construtor da classe pai
+        // O op super fica sempre dentro do construtor das classes filhas
+        // Ele deve ficar antes de qualquer op this
+        // Podemos ou nao passar parametros atraves do super para o construtor da classe pai
+        // Quando tiver o extends, precisa ter o op super, pq ai o op super daria acesso ao construtor da classe pai
+        // O operador super fornece acesso ao construtor da classe pai. A partir do super eu posso passar parmetros a ele (op super) que serao recebidos nos parametros existentes no construtor da classe pai e consequentemento nos atributos do construtor da classe pai.
+    </script>
+    <script>
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor  // O atributo cor do objeto receberá o parametro cor que for passado para a classe Animal (que no caso, quem esta passando esses parametros para o construtor da classe animal, eh o op super da classe Passaro. E quem esta passando os paramentros do super da classe passaro eh o operador Super da classe papagaio) quando você cria uma nova instância dessa classe. 
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+ 
+            dormir() {
+                console.log('Dormir')
+            }
+        }
+ 
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)  // O super aqui está chamando o construtor da classe Animal, passando os valores cor, tamanho e peso que foram passados como argumentos para o construtor da classe Passaro. Isso significa que estamos encaminhando os parâmetros da subclasse (Passaro) para o construtor da superclasse (Animal) usando super.
+                //O super fornece acesso ao construtor da classe pai. O op super me possibilita passar parametros (Que existem no construtor da classe Pai, no caso a classe Animal). Nesse caso, estou passando a cor, tamanho e peso ; E por isso, eu tenho que colocar esses parametros dentro do construtor da classe pai, para poder passar esses valores quando eu quiser. Dessa forma, toda estrutura de criacao de um papagaio fica dinamica.
+                this.bico = bico // O atributo bico do objeto receberá o parametro bico que for passado para a classe Passaro quando você cria uma nova instância dessa classe. 
+            }
+            voar() {
+                console.log('Voar')
+            }
+        }
+ 
+        class Papagaio extends Passaro {
+            constructor(sabeFalar, cor, tamanho, peso) {
+                super('Médio', cor, tamanho, peso)
+                // Como os atributos do objeto Passaro foram herdados, temos que passar os valores dos parametros para o objeto Passaro e como fazemos isso, com o metodo Super: O super aqui está chamando o construtor da classe Passaro, passando os valores 'Médio', cor, tamanho, peso que foram passados como argumentos para o construtor da classe Passaro. Isso significa que estamos encaminhando os parâmetros do construtror da subclasse (Papagaio) para os parâmetros do construtor da superclasse (Passaro) usando super e ai sim, os valores dos atributos do objeto Avestruz (tanto os que foram herdados - e por isso usamos o super para passar os valores dos atributos do objeto avestruz para a superclasse passaro - quanto os novos atributos que foram criados no construtor da classe papagaio e foram passados para os atributos do objeto papagaio) serem mostrados corretamente no console .
+                //O super fornece acesso ao construtor da classe pai. O op super me possibilita passar parametros (Que existem no construtor da classe Pai, no caso a classe Passaro). Nesse caso, estou passando 'Médio', cor, tamanho, peso ; E por isso, eu tenho que colocar esses parametros dentro do construtor da classe pai, para poder passar esses valores quando eu quiser. Dessa forma, toda estrutura de criacao de um papagaio fica dinamica.
+                this.sabeFalar = sabeFalar // O atributo sabeFalar eh um atributo adicional do objeto Papagaio e receberá o parametro sabeFalar que for passado para a classe Papagaio quando você cria uma nova instância dessa classe. 
+            }
+ 
+            falar(){
+                console.log('Falar')
+            }
+        }
+        
+
+
+        let papagaio = new Papagaio(true, 'verde', 25, 350)
+        console.log(papagaio)
+        
+        
+
+ 
+    </script>
+</head>
+ 
+<body>
+</body>
+ 
+</html>

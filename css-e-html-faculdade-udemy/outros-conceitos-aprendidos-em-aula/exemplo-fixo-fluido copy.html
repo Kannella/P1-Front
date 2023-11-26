@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Fixo versus Layout Fluido</title>
+    <style>
+      main {
+        border: solid 1px black;
+        width: 100%;
+
+        /* Definindo a largura do componente main usando a medida percentual também:
+        Para simplificar, digamos que main toma 100% de largura da tela. Conforme a largura da tela
+        diminui, o valor computado de main diminui e, por consequência, o valor de todos os seus
+        filhos (no caso, article) também. -> isso é um layout fluido
+        
+        
+        Os elementos da página são dimensionados em unidades relativas, como porcentagens, em vez de unidades fixas, como pixels.
+        O layout fluido não faz mudanças significativas no design com base em pontos de quebra específicos. Ele se ajusta continuamente à largura do navegador.
+        Não é estritamente responsivo, pois não necessariamente reorganiza ou oculta elementos em tamanhos de tela menores. Em vez disso, os elementos simplesmente se ajustam proporcionalmente à largura da tela.
+        
+        
+        
+        */
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      body {
+        margin: 0;
+        font-size: 32px;
+      }
+      .engenharia,
+      .farmacia,
+      .matematica {
+        display: inline-block;
+        border: solid 1px black;
+        padding: 12px;
+        width: 20%; /* a porcentagem da largura do meu elemnto article é referente ao elemento pai que é o mainn. Como main tem largura fixa em 1280 pixels, a largura de cada
+        article que tem essas clases aplicadas está dada e é fixa: 1280 * 0.2 = 256 pixels.
+        */
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="engenharia">Engenharia</article>
+      <article class="farmacia">Farmácia</article>
+      <article class="matematica">Matemática</article>
+    </main>
+  </body>
+</html>

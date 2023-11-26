@@ -1,0 +1,49 @@
+/* ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 5px 20px;
+    background: url(../imagens/seta.png) no-repeat left center;
+
+    
+} */
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+
+}
+
+ul a{ /* selecionar os links que estao dentro da ul*/
+    width: 200px; /* como os llinks nao sao elementos de bloco, são inline (que tem o tamanho do conteudo), eu vou colocar display: block para transformar ele em um elemento de bloco e ai sim funcionar o width e definir o tamanho*/
+    display: block;
+    height: 40px; /*altura do link é 40px*/
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px; /* a fonte tem um tamanho e o line height define a altura da linha que esta o texto */
+    background: #f7b600 url(../imagens/menu.png) no-repeat left bottom;
+}
+
+a:hover, .selecionado a{ /* sempre que tivermos a classe "selecionado" e em seguida um link ou o estado hover do link, aplicaremos essa formatação especifica */
+    background-position: left bottom ;
+    color: #FFF;
+    background-color: #f99200;
+
+}
+
+#home #navegacao .home a, 
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a,
+#noticias #navegacao .noticias a { /* uso a class home para formatar o link*/
+    background-position: right bottom;
+    color: #FFF;
+    background-color: #f99200;
+}
+

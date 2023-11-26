@@ -1,0 +1,29 @@
+<!--
+    onfocus -> acionado quando o elemento receber o foco do cursor do mouse
+    onblur -> acionado quando o elemento perde o foco
+    onchange -> acioonado quando o estado do elemento eh modificado 
+
+    o alert ele quando eh ativado ele perde o foco do elemento e vai para o ok do alert e depis devolve o foco pro elemento original ( o alert Ele perde o foco e ganha o foco novamente )
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventos formularios</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <input onfocus="console.log('teste')" type="text" onblur="console.log('perdeu o foco')">
+        <br>
+        <br>
+        <select onchange="console.log('Estado foi modificado')">
+            <option value="">-- Selecione --</option>
+            <option value="1">Primeira op</option>
+            <option value="2">Segunda op</option>
+        </select>
+
+    </body>
+</html>

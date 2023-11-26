@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Fixo versus Layout Fluido</title>
+    <style>
+        body {
+            margin: 0;
+            /* font-size: 32px; */
+        }
+ 
+
+        main {
+            /* a pagina vai faicar com tamanho fixo de 1280px se eu colocar width de 1280px*/
+            border: solid 1px black;
+            /* width: 1280px; */
+            width: 100%;
+            /*ocupa 100% da minha tela*/
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .engenharia,
+        .farmacia,
+        .matematica {
+            /*display: inline-block;*/
+            border: solid 1px black;
+            padding: 12px;
+            /* width: 300px; valor fixo */
+            height: 50px;
+            /* width: 20%; -> 20% de 1280*/
+        }
+
+        @media (min-width: 550px) {
+            /* SE A TELA TIVER NO MINIMO 550PX VAI COLOCAR O BACKGROUND ALICEBLUE*/
+            /* o media queries defiine o breakpoint Ele nos permite indicar, por
+            exemplo, uma quantidade de pixels mínima necessária para que determinados atributos sejam
+            aplicados.*/
+
+            /* Você pode definitivamente criar um projeto responsivo apenas com HTML e CSS, sem a necessidade de usar um framework como o Bootstrap. A utilização de consultas de mídia (media queries) é uma técnica fundamental para tornar um site responsivo e adaptável a diferentes tamanhos de tela.*/
+
+            /*  Layout Responsivo:
+
+            Em um layout responsivo, o design é adaptado especificamente para diferentes tamanhos de tela e dispositivos, usando pontos de quebra (@media) para reorganizar, ocultar ou ajustar elementos conforme necessário.
+            Um layout responsivo é projetado para fornecer a melhor experiência do usuário em cada ponto de quebra, otimizando o design para telas pequenas, médias e grandes.
+            Usa consultas de mídia (@media) para definir pontos de quebra onde as regras de estilo podem ser modificadas para se adequar ao tamanho da tela.
+            Geralmente, um layout responsivo inclui estratégias de reorganização de elementos, alteração de fontes, ocultação de elementos não essenciais e outras adaptações específicas para melhorar a experiência em telas menores.*/
+
+            .engenharia,
+            .farmacia,
+            .matematica {
+                background-color: aliceblue;
+            }
+        }
+
+        @media(min-width: 900px) {
+            /* SE A TELA TIVER NO MINIMO 900PX VAI FAZER COM O WIDTH DE 20% E VAI MOSTRAR UM DO LADO DO OUTRO*/
+
+            .engenharia,
+            .farmacia,
+            .matematica {
+                display: inline-block;
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <article class="engenharia">
+            Engenharia
+        </article>
+        <article class="farmacia">
+            Farmácia
+        </article>
+        <article class="matematica">
+            Matemática
+        </article>
+    </main>
+</body>
+
+</html>

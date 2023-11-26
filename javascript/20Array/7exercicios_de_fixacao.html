@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+
+    <style>
+      .meu-botao {
+        cursor: pointer;
+        /* Altera o cursor para uma mãozinha ao passar o mouse */
+      }
+    </style>
+
+    <script>
+      var objetos = ["Cadeira", "Impressora", "Garfo"];
+
+      function acao1() {
+        var caracter_escrito = document.getElementById("apenas_letras").value;
+
+        if (caracter_escrito === "") {
+          alert("Informe um valor válido");
+        } else if (objetos.indexOf(caracter_escrito) !== -1) {
+          alert("Objeto já foi adicionado");
+        } else {
+          objetos.push(caracter_escrito);
+          console.log(objetos);
+          document.getElementById("apenas_letras").value = "";
+        }
+      }
+
+      function acao2() {
+        objetos.sort();
+        console.log(objetos);
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="text" id="apenas_letras" />
+    <button id="botao1" onclick="acao1()" class="meu-botao">Adicionar</button>
+    <button id="botao2" onclick="acao2()" class="meu-botao">Ordenar</button>
+  </body>
+</html>

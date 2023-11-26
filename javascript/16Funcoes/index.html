@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+      var data = new Date(); //criando uma instancia do objeto date e atribindo ela a variavel data que passar a ser referencia para esse objeto date
+
+      // Portanto, a expressão  var data = new Date(); Cria uma instância do objeto Date( ou seja, criar um objeto específico de uma classe Date.), e a variável data passa a fazer referência a essa instância (ou seja, a essa criacao de um objeto específico de uma classe ou tipo. ) permitindo que você acesse seus atributos e métodos por essa variavel, pois ela contem o endereco do objeto que vc instanciou..
+
+      // Criar uma instância significa criar um objeto específico de uma classe ou tipo.
+
+      // Esse objeto date eh uma instacia da classe date
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Definicao principal e mais importantes
+
+      // Isso acima, cria e instancia (cria e instacia = criar uma instancia -> criar um objeto especifico da classe Date) usando a palavra-chave new e o chamamos de objeto Date (nome da classe que criamos). A variável data passa a fazer referência a essa instância. Você está INSTACIANDO O OBJETO / CRIANDO UMA INSTANCIA (ou seja, criando um objeto específico de uma classe, no caso a classe Date.) e atribuindo a referência desse objeto (que possui determinados atributos e métodos, vindos da classe date) à variável data. A variável data passa a ser uma referência para essa instância específica da classe Date, permitindo que você acesse seus atributos e métodos por meio dela.
+
+    
+      // Portanto, a expressão  var data = new Date(); Cria uma instância do objeto Date( ou seja, criar um objeto específico de uma classe Date.), e a variável x passa a fazer referência a essa instância (ou seja, a essa criacao de um objeto específico de uma classe ou tipo. ) permitindo que você acesse seus atributos e métodos por essa variavel, pois ela contem o endereco do objeto que vc instanciou..
+
+
+      //No JavaScript, não há uma divisão explícita entre "stack" e "heap" como em algumas outras linguagens de programação, como C++, C#. No JavaScript, a alocação e a gestão de memória são tratadas pelo mecanismo de coleta de lixo (garbage collection) da linguagem.
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      // Estou criando um objeto e instanciando ele da classe Date usando a palavra-chave new. A variável que você usa para fazer referência a essa instância (classe date) é a variavel data e ela eh apenas uma referência a um objeto da classe date, não o próprio objeto em si.
+
+      // var data = new Date(); Cria uma instância (cria e instacia o objeto date) do objeto Date (ou seja, cria um objeto específico da classe date, que contem seus devidos atributos.) e atribui esse objeto à variável data. Portanto, em var data = new Date();, a variável data é uma referência para o objeto Date que foi criado.
+
+      // O objeto em si é a instância da classe Date que foi criada usando new Date(). Portanto, o objeto em si é um objeto Date.
+      
+      // A variável data não armazena o objeto Date em si, mas sim eh uma referência a ele. Isso significa que data é uma referência ao objeto Date alocado na memória. Se você usar data para acessar as propriedades e métodos do objeto Date, estará acessando o objeto na memória com seus devidos atributos.
+
+      // Essa variável data é apenas um identificador que você escolheu para fazer referência a uma instância do objeto da classe Date que foi criada usando a palavra-chave new. Portanto, a variável 'data' não é o nome do objeto em si, mas sim um nome que você escolheu para fazer referência a essa instância específica do objeto Date. Você pode escolher qualquer nome válido em JavaScript para essa variável que faz referência a essa instância específica do objeto Date.
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// aula funcoes
+      // O date instanciado, com a palavra new, faz com que um novo objeto date seja criado e atribuido a uma variavel e a partir dessa varivael nos temos acesso a um objeto que tem todos os metodos e atribudtos da classe date.
+      
+      // todas essas informaceos de datas elas sao criadas com base na data do sistema operacional a onde o browser ta rodando -> o js solicita o parametro de data pro browsewr e o berowser solicita os parametros de data pro sistema operacional
+
+      // a variavel data vai ser a referencia para um objeto date que vai conter todos os atribuitos (todos os detalhes) de datas
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      // exemplo em c#:
+
+      // Criando uma classe com 3 atributos para representar melhor o triangulo, chamada Triangulo
+      // O trianuglo é UMA entidade/classe com 3 atributos (que sao os 3 lados no caso)
+      // Dentro da classe Triangulo temos os dados do triangulo (que sao os 3 atributos, que sao os 3 lados)
+      // Triangulo x, y; -> duas variaveis x e y do tipo triangulo (que eh a classe que criamos)
+      // var x = new Triangulo e var y = new triangulo
+      // A variavel x vai ser referencia para um objeto composto que vai conter os 3 atributos (a , b e c) que sao os dados do triangulo
+      // nesse caso então: x = new triangulo() e y = new triangulo ---> esse comando new é necessario para quando vamos trabalhar com classes, não basta apenas declarar as variaveis x e y do tipo triangulo (Triangulo x, y;), voce tem que instanciar o objeto fazendo --> a variavel receber um new e o nome da classe com ()
+      // esse processo acima é a instanciação de um objeto (a variavel receber um new e o nome da classe com () ) (ou alocação dinamica de memoria) --> quando vc cria as variaveis na memoria em uma area chamada stack e faz elas apontarem para o objeto (que tem o mesmo nome da variavel, no caso x) na area heap
+      // só que quando o tipo de variavel que vc cria é uma classe, voce vai ter que instaciar elas usando o comando new, pois: <--------->
+      // <------> esse comando new vai criar na memoria em uma area chamada Heap (area de alocação dinamica) um objeto composto contendo os dados a b e c (que sao os atributos da classe triangulo). Alem disso na variavel x vai ter o endereço desse objeto é como se a variavel x fosse uma referencia para o objeto em si e apontasse para esse objeto (o x é uma referencia pra o objeto em si)
+      // a variavel x na area stack é a referencia para um objeto x composto na area heap que vai conter os 3 atributos (a , b e c) que sao os dados do triangulo. (usamos a explicacao tecnica: instaciei o objeto x)
+      // a variavel y na area stack é a referencia para um objeto y composto na area heap que vai conter os 3 atributos (a , b e c) que sao os dados do triangulo tambem (usamos a explicacao tecnica: instaciei o objeto y)
+
+      // Triangulo x, y; -> criei as varaiveis do tipo x e y que sao do tipo da classe que eu criei
+      // x = new Triangulo(); -> por isso chama modelagem ORIENTADA a objetos, pois essa variavel x eh uma referencia em que seu endereco eh orientado pelo endereço desse objeto
+      // processo acima --> declarando uma variavel (x no caso) do tipo da classe que vc criou (Triangulo no caso) e depois usando o comando new + o nome dessa classe para de fato instaciar o objeto x e assim a alocar esse objeto na heap contendo os os atributos da classe triangulo (os dados a b e c que sao os lados) e assim, alem disso na area stack a variavel x = vai ter o endereço desse objeto é como se a variavel x fosse uma referencia para o objeto em si e apontasse para o objeto (o x é uma referencia pra o objeto em si)
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// tanto em js e c#:
+
+      // CLASSE é a definição de um tipo que estamos criando, nesse caso estamos criando um triangulo que é um cara que tem os dados A B e C que sao os atributos dessa classe, que vamos usar para calcular a area
+      // OBJETO são as instacias da classe (eh tudo que eu instanciei, usando o new, a partir de uma determinada classe (que eu criei ou ja existe) ), são casos particulares da minha classe, no caso temos um objeto triangulo que tem a variavel x que e uma referencia com um determinado endereco para o objeto triandulo (que possui os atributos da classe trinagulo) com tres lados e um outro objeto triangulo que tem a variavel y dessa vez que eh uma outra referencia com um determinado endereco para outro objeto triandulo (que possui os atributos da classe trinagulo)
+
+      // Se temos var x = new Triangulo(); e var y = new Triangulo(); Cada variável recebe uma referência para uma instância separada da classe Triangulo. Portanto, x e y são duas referências diferentes que apontam para objetos diferentes da mesma classe Triangulo.
+
+      // Quando você cria um objeto usando a palavra-chave new, você está instanciando um objeto da classe que vc criou (Esse objeto Triangulo date eh uma instacia da classe Triangulo) (ou ela ja existe). A variável que você usa para fazer referência a essa instância é apenas uma referência ao objeto, não o próprio objeto em si.
+
+      //Portanto, a expressão var x = new Triangulo(); Cria uma instância do objeto Triangulo( ou seja, criar um objeto específico de uma classe traingulo.), e a variável x passa a fazer referência a essa instância. Não é correto dizer que você está "instanciando a variável"; em vez disso, você está instanciando o objeto e atribuindo a referência a esse objeto à variável x.
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      document.write(
+        data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()
+    );
+        // coloca mais um no data.getMonth pra consifderar janeiro 1 e dezembro mes 12
+        // essas datas sao todas da maquina local do usuario
+        // get recupera dados
+        // set pode setar dados
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

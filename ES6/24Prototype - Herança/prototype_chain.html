@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <script>
+      /* Lembrando
+        // Qualquer objeto criado em js, eh filho (descende) de uma funcao object
+        // Essa aula, vamo ver prototypeChain. A ideia eh ver como que um determinado objeto pode ter o seu protótipo referenciado, não para o object, mas para outros objetos, de modo a estabelecer a relação de herança por baixo dos panos dentro do js.
+        //Então independente da forma como os objetos sejam criados, seja através de classes, funções construtoras ou objetos literais, nós temos condições de referenciar qual é o protótipo do objeto que estamos criando para estabelecer a relação de herança entre eles mesmos a partir da referencia do prototipo de cada objeto, podendo ser por defaulf a funcao object ou outro objeto.
+      */
+        </script>
+
+        <script>
+
+          // vamos criar 3 um objetos literais em que ambos tem uma relacao de heranca a partir do atributo prototype e alem disso portanto, ambos descendem de object (funcao object -> que descende de prototype. Portanto, como todos os objetos possuem o atributo prototype, todos os objetos descendem de object).
+          //Entao, temos que os nossos 3 objetos apontam para o nosso prototype de object, por default, entao todos sao filhos de Object.prototype. Entretanto podemos alterar isso:
+
+            Object.prototype.attr50 = 'Z' //Todos os objetos por default herdam, o atributo prototype que descende de object (Object.prototype), sendo que a partir do Object.prototype podemos estabelecer atributos e metodos que poderiam ser herdados por qualquer objeto da aplicacao. No caso, todos os objetos que tem o  prototipo como object, da aplicacao, vao herdar o atributo attr50 = 'Z'.
+
+            //cuidado, o método sera global, todo objeto criado, por default, tera essa informacao! 
+
+            let animal = { // variavel animal que receb um objeto
+                attr1: 'a'
+                // prototipode animal eh object, por conta de nao ter nenhuma referencia especifica de um prototipo, por default eh object. Entao animal herda o atributo attr50 = 'Z' de object
+            }
+            let vertebrado = { // variavel vertebrado que receb um objeto
+                __proto__: animal, // prototipo de vertebrado eh animal
+                attr2: 'b'
+            }
+            let ave = { //variavel ave que receb um objeto
+                __proto__: vertebrado, // prototipo de ave eh vertebrado
+                attr3: 'c',
+                attr2: 'x' //sorbrepomos o atributo de vertebrado, assim entao, o js vai procurar o atributo no escopo mais baixo, logo, se estamos utilizando o objeto ave e dentro de ave existir o attr2, havera uma soibreposicao do atributo attr2 e ele vai mostrar no console o 'x' em vez do 'b'
+            }
+
+            console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50)
+
+            // Todos os objetos apontam para o prototype de object, eu ajusto essa relacao em que por padrao o prototipo aponte para o Object.prototype, eu faco o protototipo do nosso objeto ave apontar para o objeto vertebrado assim, vamos ter em função do protótipo ( __proto__) associado ao objeto ave apontado para o objeto vertebrado, acesso ao atributo desse protótipo que é o attr2. Assim, criando uma relacao de heranca entre ave e vertebrado.
+
+            //Da mesma forma, eu faco o protototipo do nosso objeto vertebrado apontar para o objeto animal assim, vamos ter em função do protótipo ( __proto__) associado ao objeto vertebrado apontado para o objeto animal, acesso ao atributo desse protótipo animal, que no caso é o attr1. Assim, criando uma relacao de heranca entre ave e vertebrado e animal. Podendo acessar os atributos de vertebrado e animal a partir de ave
+
+            // Se o js nao encontrar o atributo attr2 no objeto ave, ele iria depois procurar no protitipo do objeto, no caso, vertebrado.
+        </script>
+
+    </head>
+    <body></body>
+</html>

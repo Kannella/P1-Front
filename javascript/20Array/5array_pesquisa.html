@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript</title>
+
+  
+  <script>
+    var lista_frutas = Array()
+
+    lista_frutas[0] = 'Banana'
+    lista_frutas[1] = 'Maça'
+    lista_frutas[2] = 'Morango'
+    lista_frutas[3] = 'Uva'
+
+   //METODO indexOf pesquisa algum eleemmnto no array .obs: ele diferencia maiusculo e minusculo
+   console.log(lista_frutas.indexOf('Morango')) 
+   console.log(lista_frutas.indexOf('Abacaxi')) //retorna -1 pois nao existe esse elemento no array
+
+   var auxiliar = lista_frutas.indexOf('Banana') //atribui o numero da posicao do elemento pesquisado a variavel auxiliar
+   if(auxiliar === -1) {
+     console.log('Elemento não existe')
+   } else {
+     console.log('Elemento existe e está na posição' + auxiliar)
+   }
+
+   //Lembre-se, a pesquisa é case sensitive!
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

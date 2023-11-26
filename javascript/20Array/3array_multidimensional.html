@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    array multimensionais sao arrays em arrays
+    atraves de uma variavel e um indice nos podemos acessar outro array
+    podemos encadear dentro dos indices dos nossos arrays outrs arrays
+  -->
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+
+        <script>
+            var lista_coisas = Array() //var lista coisas recebe um array
+            lista_coisas['frutas'] = Array('Banana', 'Maçã', 'Morango', 'Uva') // nossso array lista coisas tera um indice chamado frutas. Atribui essa posicao do array, com um indice chamado frutas, um outro array com determinados elementos
+
+            // lista_coisas['frutas'][1] = 'Banana' lista_coisas['frutas'][2] = 'Maçã'
+            // lista_coisas['frutas'][3] = 'Morango' lista_coisas['frutas'][4] = 'Uva'
+
+            lista_coisas['pessoas'] = []  //var lista coisas recebe um outro array com um indice chamado pessoas
+            lista_coisas['pessoas']['a'] = 'João' // o primerio elemento desse novo array eh a string joao
+            lista_coisas['pessoas']['b'] = 'José' // o primerio elemento desse novo array eh a string jose
+            lista_coisas['pessoas']['c'] = 'Maria' // o primerio elemento desse novo array eh a string maria
+            // o lenght daria 0 pois os indices nao sao numericos, nem sequencias e nem comecam com 0
+
+            console.log(lista_coisas) //recupera o array lista coisas
+            console.log(lista_coisas['frutas'][3]) //acessa o indice frutas na posicao 3
+            document.write(lista_coisas['frutas'][3]) //imprime o indice frutas na posicao 3
+            document.write('<br />')
+            document.write(lista_coisas['pessoas']['b']) //imprime o indice pessoas na posicao b
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

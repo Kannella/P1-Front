@@ -1,0 +1,134 @@
+/*                                          Aula Seletores
+
+Seletor universal 
+    -> Aplica-se em todos os
+elementos no documento
+    * {}
+    -> Seleciona todos os elementos da
+página
+
+
+Seletor de texto 
+    -> Seleciona elementos pelo
+tipo
+    -> H1, h2, h3 {}
+    Seleciona os elementos <h1>, <h2> e
+<h3>
+
+
+Seletor de classe 
+    -> Seleciona um elemento cujo
+atributo class tem o valor
+especificado depois do
+ponto
+    -> .verde {}
+    Seleciona qualquer elemento cujo
+atributo class tem o valor “verde”
+    -> p.verde {}
+    Seleciona somente elemento <p> cujo
+atributo class tem o valor “verde”
+
+
+Seletor de ID 
+    -> Seleciona um elemento cujo
+atributo id tem o valor
+especificado após o símbolo
+de cerquilha ou jogo da
+velha
+    -> #cabecalho {}
+    Seleciona o elemento cujo atributo id
+tem o valor “cabecalho”
+
+
+Seletor de filho 
+    -> Seleciona um elemento que
+é filho direto de outro
+    -> li>a {}
+    Seleciona quaisquer elementos <a> (geralmente links) que são filho diretamente de um elemento <li> (mas não outros elementos a na página)
+
+
+Seletor de descendente
+    -> Seleciona um elemento que
+é descendente de outro
+elemento especificado (e
+não apenas filho direto
+desse elemento)
+    -> p a {}
+    Seleciona quaisquer elementos <a>
+que residem dentro de um elemento
+<p>, mesmo e houver outros
+elementos aninhados entre eles
+
+
+Seletor de irmão adjacente
+    -> Seleciona um elemento que
+é o irmão próximo de outro
+h1+p {}
+    -> Seleciona o primeiro elemento <p>
+depois de qualquer elemento <h1>
+(mas não outros elementos <p>)
+
+
+Seletor de irmão geral
+    -> Seleciona um elemento que
+é um irmão de outro,
+embora ele não precise ser o
+elemento diretamente
+precedente
+    ->h1~p {}
+    Se houvesse dois elementos <p> que
+fossem irmãos de um elemento <h1>,
+essa regra se aplicaria ao dois
+*/
+
+                                    /*Aula herança e especificidade*/
+body{
+    /*color: red;*/ 
+    
+    /*
+    Herança
+    
+    quando se aplica uma formatação a um elemento, essa formatação é herdada por outros elementos dentro do elemento (os elementos que estao dentro do body)*/
+
+    /*dentro dobody aplique formatações mais genericas:cor, fontes, etc. Não aplique tipo: se esta negrito ou nao, efeitos de textos, e pricnipalemnte border e background que não são herdaddos se colocados no body.
+    o seletor geral aplica em tudo
+    */
+}
+
+/*Especificidade: seletores que tem uma precendencia que definem quais regras vão ser aplicadas primeiro*/
+
+#pagina p {
+color: blue;
+}
+
+#pagina p{
+    color: red;
+}
+
+/* se eu tiver dois seletores iguais, sempre o ultimo é aplicado. Entretanto se eu usr o atributo !important ele define que a propriedade que ele esta é mais importante que as outras. Só que não use com frequencia o important */
+
+/* Se um seletor mais especifico que outro a regra mais especifica sera aplicada (tera precedencia sobre as regras mais rgerais - vai ser aplicada antes) */
+
+/* h1 ou h2 ou h3 ou h4 ou etc é mais especifico que o *, por isso esses h são aplicados e o * não */
+/* h2.verde é mais especifico ainda do que somente os h e o * */
+/* h2#amarelo é mais especifico ainda do que o h2.verde, os h e o seletor geral */
+
+/* h2.verde {
+    color:verde
+} indica que vamos colocar a cor verde em um h2 que tem a classe verde ; 
+
+/* h2 .p {
+    color:verde
+} indica que estamos selecionando os .p que estao dentro do h2 e vamos colocar a cor verde (em um elemento p que esta dentro do h2;)*/
+
+h2#amarelo{ /*aplicarei a cor amarela em um h2 que tem um id #amarelo*/
+    color: yellow;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!-- OPERADORES LOGICOS (O JS TEM 3) E (&&) - Verdadeiro se todas asoperacoes
+forem verdadeiras OU (| |) - Verdadeiro se pelo menos uma das expressoes for
+verdadeira Negacao(!) - Inverte o resultado da expressao de comparacao, se der
+true, o true eh convertido pra false -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>JavaScript</title>
+        <script>
+
+            var nota = prompt('Digite a nota do aluno: ')
+            var faltas = prompt('Digite a quantidade de faltas: ')
+
+            var media = 7
+            var faltas_maximas = 15
+            // var resultado = <condicao> ? <verdadeiro> : <falso> -> estrutura do operador
+            // ternario baseado no resultado da condicao restorna somente ou um valor
+            // verdadeiro ou um valor falso eu nao tenho a liberdade de implementar um bloco
+            // logico que faca algo mais complexo
+
+            var resultado = nota >= media && faltas <= faltas_maximas
+                ? "aprovado"
+                : "reprovado"; // -> nesse caso o operador ternario retorna ou a string aprovado ou a string reprovado, esses dados (aprovados ou reprovado) vao ser atribuidos a variavel resultado
+
+            // Essa atribuiucao nao eh do operador ternario mas sim do valor falso ou verdadeiro dependendo da condicao do operador ternario
+
+            document.write(resultado) //ai eu printo o que foi atribuido so operador ternario
+        </script>
+    </head>
+    <body></body>
+</html>

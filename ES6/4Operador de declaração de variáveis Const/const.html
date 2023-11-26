@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+
+        <script>
+            //const => nao sofre alteracao de valor nunca ao longo do processamento do script
+            //const => boa pratica o nome ser em maiusculo
+
+            const SERIE = 'Friends'
+
+            console.log(SERIE)
+
+            // SERIE = 'The Walking Dead' (cuidado!) nao da pra fazer isso pois a varaivel serie eh CONSTANTE
+
+            function x() {
+                const SERIE = 'The Walking Dead' //aqui nao teremos problemas pois o escopo global nao interfere no escopo da funcao e vice-versa. Alem de que nao sofre roisting nem nada, pois so variaveis var no escopo de bloco fazem isso.
+                console.log('Dentro da função: ' + SERIE)
+            }
+            console.log('Fora da função (escopo global, no caso): ' + SERIE)
+        </script>
+    </head>
+
+    <body></body>
+
+</html>

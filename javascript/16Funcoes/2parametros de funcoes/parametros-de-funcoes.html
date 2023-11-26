@@ -1,0 +1,46 @@
+<!--
+    uma funcao tem o objetivo de encapsular um bloco de codigos com um objetivo definido
+
+    function NOME (argumentos/paramentros){
+
+    }
+
+    argumentos/parametros -> funcionam como entrada de dados para as funcoes
+    no escopo podem trabalhar com todos os recursos do js para a criacao da logica de nossa funcao
+
+    funcoes podem ser void (quando chamads iram processsar alguma logica mas n'ao retornam nenhum tipo de retorno) ou com retorno (return, ou seja, alem de processsar alguma logica, ela dara um retorno de um valor pre definido para o script que efetuou a chamada da funcao. O script solicitante podera de posse do valor retornado da funcao, continuar seu respectivo processameto)
+
+    function calcularAreaTerreno(largura, comprimento) {
+
+        var area = largura * comprimento
+
+        return area
+
+    }
+
+
+    // prompt, .write, parseInt, parseFloat, .log, alert, etc -> sao todas funcoes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funcoes</title>
+        <script>
+
+            function soma (a, b) {
+                return a + b
+            }
+
+            console.log(soma(7, 7)) //aparece no console 14
+            console.log(soma(7, 7, 9, 15)) // a funcao descarta os demais parametros, mesmo passsando mais paramtros que eh esperado receber, em js ela desconsidera os parametros adicionais.
+            console.log(soma(7)) // mesmo passando parametros a menos, oq vai acontecer eh que a variavel a vai valer 7 e a b vai valer undefined e o resultado de: 7 + undefined = not a number (NaN) -> se acontecer isso eu posso fazer um if: b = b === undefined ? 0 : b (se nao vier numero usa 0 e se nao usa o prorpio valor de b)
+            console.log(soma()) //undefined + undefined = not a number (NaN)
+            // eu psso colocar parametros variaveis tbm se eu quiser
+            
+        </script>
+    </head>
+    <body></body>
+</html>

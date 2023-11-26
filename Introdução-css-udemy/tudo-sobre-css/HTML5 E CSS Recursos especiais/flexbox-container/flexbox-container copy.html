@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Flexbox - Flexible Box Layout</title>
+    <meta charset="utf-8">
+
+    <style type="text/css">
+        #conteudo {
+            background: #dcdcdc;
+            height: 600px;
+
+            display: flex;
+
+
+            /* flex-direction: row; 
+
+
+            flex-wrap: nowrap;
+
+
+            justify-content: space-around;
+
+
+            align-items: baseline; */
+
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background: white;
+            border: 1px solid gray;
+
+           /* flex-grow: 0; /*define a proporção de eespaço ocupado por um item, sendo que o padrao do elemento é o 0*/ /*se eu aplicasse 1 em todos os itens eles vao tentar ocupar proporcionalmente todo a largura do espaçamento disponivel do container que eles estao dentro. Se fosse um flexgrow valendo 1 e o outro valendo 2 , um ia terp proporcionalmente o dobro da largura do outro*/
+        }
+/* 
+        .ordem1{
+            order: 1;
+        }
+
+        .ordem2{
+            order: 2;
+        }
+
+        .ordem3{
+            order: 3;
+        }
+
+        .ordem4{
+            order: 4;
+        }
+
+        .ordem{
+            order: 0; /*exibe na ordem padrao que vc colocou*/ /*se fosse um valor negativo ele vai para o começo
+        } */
+
+        .item1 {
+           /*flex-grow: 1; /* colocamos o flex grow como 1 e o item que definimos como 1 ele cresce e ocupa  toda largura disponivel do container que eles estao dentro, até o maximo, até o ultimo elemento encostar no canto, ele atre emprurra os outros elementos a frente dele ate escostar e ocupar o espaço que esta sobrando*/ /*esse numero define o quanto esse item vai ocupar com relaçao aos outros itens, se estivesse 1, ele ia ocupar um tanto, se tivesse 2 ele ia ocupar o dobro do que o item1 ocupa. Isso tudo com base no container que eles estao. Se diminui o container, essa proporcao muda.*/
+           flex-grow: 2;
+        }
+        .item2 {
+            flex-grow: 1; /*como esse flex grow é menor do que o flex grow da classe item1, o elemento em que estiver aplicado essa classe item2 vai ocupar proporcionalmente menos espaço do que o item1, no caso, o item2 vai ter a metade do tamanho do item1*/
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Flexbox</h1>
+    <div id="conteudo">
+        <div class="item item1">01</div>
+        <div class="item item2">02</div>
+        <div class="item item2">03</div>
+        <div class="item">04</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

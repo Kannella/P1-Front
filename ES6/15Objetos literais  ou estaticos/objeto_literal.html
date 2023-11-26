@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        /*
+        Nós vamos falar sobre objetos literais que também são conhecidos como objetos estáticos.
+
+        Um detalhe importante aqui nessa versão do S6 já existem melhorias para a notação dos objetos literais.
+
+        Nessa aula nós vamos falar do objeto literal e na próxima aula nós vamos falar sobre essas melhorias
+        
+        Na prática o objeto literal ele é um objeto que é descrito dentro do nosso código.
+
+        Para compreender isso melhor eu vou fazer uma comparação entre um objeto produto criando esse objeto através da notação de classe e depois criando esse objeto através da notação de objeto literal.
+
+        */
+    </script>
+
+    <script>
+        class Produto { 
+            constructor(descricao, preco){
+                this.descricao = descricao
+                this.preco = preco
+            }
+
+            verDescricao(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            } // template string deve ser colocado entre sinais de crase, e entre as crases coloca-se a string que queremos concatenar com as variaveis, que no caso, as variaveis dentro das crases devem ser colocadas dessa forma:
+            // ${nome} 
+        }
+
+      
+
+        let produto = new Produto('Notebook', 2200)
+        produto.verDescricao()
+
+        // Já o objeto literal ele nada mais é do que um objeto descrito dentro do código.
+
+        /* Para indicar que eh um objeto literal: Nós precisamos abrir e fechar Chaves e aí dentro dessas chaves nós vamos definir pares formados por nomes e valores. Esses pares eles funcionam como atributos do objeto e inclusive os métodos tambem são definidos utilizando a notação de par em que nós temos o nome do método e o valor que eh a acao que esse metodo ira executar. Esses pares (nome e valor) sao separados por virugula. Dessa forma o interpretador do JavaScript consegue identificar quando um par termina.
+        
+        Eh importante que o próprio nome e o valor são separados através de um operador dois pontos. Então dessa forma o interpretador JavaScript compreende que a esquerda está o nome e a direita está o valor que deve ser atribuído a cada nome.
+
+        Outro detalhe relevante aqui o nome que fica a esquerda também conhecido alem de nome, por chave ou atributo. Entao o par eh formado pelo nome/chave/atributo (A esquerda) e o valor (a direita)
+    
+        */  
+
+        //  nosso objeto literal tera 3 conjuntos par valor
+        // descricao e preco sao varaiveis do contexto de atributos do objeto
+
+        let produtoLiteral = {
+            descricao: 'Geladeira',
+            preco: 1800,
+            verDescricao: function() {
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+        // Para utilizar esse objeto que nós não precisamos de um procedimento de instância porque o objeto já está descrito.
+
+        produtoLiteral.verDescricao() //coloco () p executar a funcao contida dentro do atributo
+
+
+        //----------------------------------------
+        // Pq duas formas de escritas de objetos?
+        // Eles são frequentemente utilizados porque nem sempre existe a necessidade da criação de uma classe para a estruturação de um objeto. Geralmente objetos literais são objetos únicos dentro da nossa aplicação. Não existe a necessidade de criar uma coleção de objetos daquele tipo 
+        //é muito comum dentro das nossas aplicações termos formulários que são submetidos para o servidor. Entao a gente recupera os dados do formulário e monta o objeto literal e na sequência que nós pegamos esse objeto literal convertemos esse objeto para json e encaminhamos esse objeto anexado à nossa requisição HTTP para o servidor que por fim armazena esses dados.
+        
+
+        /* formulário -> servidor
+            recupera dados e monta um objeto literal
+                obj literal -> JSON -> HTTP -> Server -> Armazena */
+
+        // Eu poderia fazer isso com uma classe? Poderia! Mas não existe a necessidade de criar uma classe apenas para um único formulário. A não ser claro que esse formulário ele sirva por exemplo de entrada para uma coleção de objetos. Aí sim faz sentido criar uma classe que vai lançar vários objetos do mesmo tipo  
+        
+        //Por enquanto tem em mente que o objeto literal nada mais nada menos do que um objeto descritivo que combina pares de nomes e valores sendo que esses valores podem ser strings, valores numéricos, funções, arrays ou até mesmo outros objetos literais.
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

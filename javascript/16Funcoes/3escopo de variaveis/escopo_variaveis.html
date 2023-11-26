@@ -1,0 +1,58 @@
+<!--
+    js possui 3 escopos:
+        global: eh o escopo do script como um todo
+        da funcao: corresponde ao conteudo que tem dentro da respectiva funcao
+        de bloco: sao as intrucoes contidas dentro de comandos, por ex o comando if ou switch
+
+-----------------------------------------------------------------------------------------------
+
+resumo
+
+escopo de funcao e escopo de bloco -> visualizam variaveis do escopo global
+
+
+No escopo de bloco eu tenho acesso a variaveis do escopo global
+O escopo global tem acesso a variaveis declaradas no escopo de bloco (caso o escopo de bloco tenha sido declarado no escopo global) por conta que essas variaveis sofrem roisting
+
+
+No escopo da funcao eu tenho acesso ao escopo global
+O escopo global nao tem acesso a variaveis declaradas do escopo da funcao
+
+
+variaveis declaradas dentro de escopo de bloco -> essas variaveis sofrem roisting (sofrem elevacao paara o escopo global, [caso os blocos estejam declarados no escopo global, se estiverem declarados dentro de uma funcao, a variavel tbm sofrera uma elevacao, so que para o escopo da funcao]  )
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funcoes</title>
+    <script>
+        var serie = 'friends'
+
+        if (true) { // dentro do escopo de bloco eu tenho acesso a variaveis do escopo global
+            document.write(serie)
+            var serie2 = 'game of thrones' //no escopo global eu vou ter acesso essa variavel declarada dentro do escopo do bloco
+            //Criei uma nova variavel dentro do bloco do if que faz um roisting que eh o termo no js que indica a elevacao de um termo de uma variavel. Apesar de declarar dentro de um escopo de bloco, o operador var faz com que essa variavel sofra uma elevacao pro escopo global, isso pq o escopo de bloco esta dentro do escopo global 
+        }
+
+        document.write(serie2)
+
+        document.write('<br/ >')
+
+        function x (){
+            var serie3 = 'the walking dead' // so que essa nao sofre um roisting pq o escopo da funcao, diferente do escopo de bloco, faz com que as funcoes declaradas dentro dele fiquem disponiveis somente no respectivo escopo -> o escopo da funcao a variaveis do escopo global, mas o escopo global nao tem acesso a variaveis do escopo da funcao
+            document.write(serie)
+            document.write(serie2) // como fizemos uma elevao do escopo de bloco para um escopo global, e a funcao tem acesso as variaveis de escopo global, ela consegue mostrar a variavel tbm
+        }
+
+        x() //chamei a funcao
+        document.write(serie3) //nao vai mostrar nada pois o escopo global nao tem acesso a variaveis do escopo da funcao
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,42 @@
+<!--
+    Nome da varivavel que aponta pro nosso endereço de memoria onde nos podemos de modo temporario alocar um valor e quando quisermos podemos recuperar esse valor a qualquer momento
+
+    variaveis sao referencias dee memorias pra valores  que eu atribuo a elas
+
+    Essas variaveis podem ser modificadas a qualquer momento
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <script>
+
+            //null -> representa a ausencia intencional de algum valor -> a variavel é intencionalmente vazia
+
+            var teste = null //ausencia de um valor dentro da variavel teste -> a variavel aponta para um valor inexistente
+
+            //undefined -> indica que a variavel apesar de declarada, de fato não possui nenhum valor
+            // se eu colocar só - var teste2 - tbm é undefined
+
+            var teste2 = undefined
+
+            console.log(teste)
+
+            teste = 'Valor modificado com sucesso'
+
+            console.log(teste) // alteramos o valor de null para uma string ; Podemos sempre que necessario modificar o respectivo valor da variavel ; A inferencia de tipo do js é automatica, se ela era antes null ela passou a ser uma string depois desse processo de atribuição (   teste = 'Valor modificado com sucesso'  )
+
+            teste = 134.12
+        
+            console.log(teste) // alteramos o valor de string para um number ; Podemos sempre que necessario modificar o respectivo valor da variavel ; A inferencia de tipo do js é automatica, se ela era antes string ela passou a ser uma number depois desse processo de atribuição ( teste = 134.12 )
+            
+        </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>

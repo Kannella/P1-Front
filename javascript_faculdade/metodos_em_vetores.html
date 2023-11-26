@@ -1,0 +1,14 @@
+<script>
+
+    nomes = ['adriana', 'beatriz', 'alessandro', 'cris', 'antonio']
+
+    const nomesComA = nomes.filter( (n) => n.startsWith('A')) // para cada n no vetor nomes mostra todos os nomes do vetor que comecem com a letra A
+    console.log (nomesComA)
+
+    const iniciais = nomes.map( nome => nome.charAt(0)) // para cada nome no vetor nomesmostra todos o caracter na posicao 0 da palavra 
+    console.log (iniciais)
+
+    const todoscomA = nomes.every( nome => nome.startsWith('A')) // para cada nome no vetor verifica se todos os nomes comecam com A
+    console.log (todoscomA)
+
+</script>

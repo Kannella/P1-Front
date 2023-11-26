@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <!--tratamento de erros com try, catch, throw e finally pra que nossa aplicacao se torne mais ativa em relacao ao tratamento de erros-->
+        <script>
+            //na netflix por ex
+            
+
+            var video = Array()
+
+            video[1] = Array()
+            video[1]['nome'] = 'Fullmetal Alchemist'
+            video[1]['categoria'] = 'Anime'
+
+            function getVideo(video) {
+
+                try {
+                    //lógica de requisicao http poderiam provocar erros. Por isso vamos provocar um erro para aprender
+
+                    console.log(video[0]['nome']) 
+                    
+                    //console.log(video[0] -> // vamos ter retorno undefined (n eh erro, eh um comportamento inesperado) pois nao temos o indice 0 no array, apenas o 1
+
+                    //console.log(video[0]['nome']) -> ai vamos ter um erro e o script para aqui e nao continua
+
+                    // como console.log(video[0]['nome']) eh uma codificacao passivel de dar algum erro em algum cenario, deve ficar dentro do try
+
+                } catch (erro) { // catch captura o erro por parametro
+                    tratarErro // chama a funcao que faz a logica para registrar o erro no servidor 
+
+                    //console.log(erro) -> mostra a string que representa no console
+
+                    console.log('Agora sim podemos tratar esse erro') //se deu erro mostra pro usuario essa mensgem
+
+                    throw new Error( // throw lanca excessoes dentro das nossas aplicacoes e a partir dele podemos criar uma nova instacia do objeto error e forcar a exibicao desse objeto, fazendo que a aplicacao seja interrompida. E atraves do throw podemos indicar qual o local que a excessao vai acontecer e qual mensagem ela vai apresentar. 
+                    //O throw pode ser usado em qualquer lugar, ai ele vai forcar uma excessao dentro do codigo forcando a interrupcao do script
+                        'Houve um erro mas não se preocupe, estamos trabalhando nisso agora!'
+
+                    // aqui poderiamos ter uma logica de capturar o erro e encaminhar pro servidor, e a equipe de desenvolvimento ao receber esse erro poderia ficar alerta
+                    )
+                } finally { // depois finalmente faca essa logica abaixo para tratar o erro (esse finaly pode ser aplicado apos o try ou catch)
+                    console.log('Sempre passa por aqui (try / catch)')
+                }
+
+                console.log('A aplicação não morreu')
+            }
+            function tratarErro(e) {
+                console.log(e) //logica para registrar o erro no servidor 
+            }
+            getVideo(video)
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

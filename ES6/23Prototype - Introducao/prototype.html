@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script>
+      /*prototype
+        Nada mais é do que um modelo um padrão um primeiro tipo ou primeiro exemplar de alguma coisa.
+        Então sempre quando nós criamos um objeto dentro do JavaScript esse objeto ele automaticamente é um descendente, um herdeiro, um filho de object
+
+        E aí métodos e atributos de objects são herdados dentro desse objeto que nós criamos. 
+        Repare, existe uma relação de herança e isso automaticamente de forma implícita sem que seja necessário indicar isso na criação do objeto
+      */
+    </script>
+
+    <script>
+    //aviao
+    //teremos os atributos cor e modelo e um unico método levantarVoo
+
+    // criando um objeto literal
+    let a1 = {
+      cor: 'Branco',
+      modelo: 'Airbus a380',
+      levantarVoo: function() {console.log('Levantar voo')}
+    }
+
+    //criando um objeto com base em uma função construtora
+    let AviaoF = function (){
+      this.cor = 'Azul',
+      this.modelo = 'Boeing 787',
+      this.levantarVoo = function() {console.log('Levantar Voo')}
+    }
+
+    let a2 = new AviaoF() // instanciando o objeto com base na funcao construtora
+    
+    // criando um objeto com base na classe
+    class AviaoC{
+      constructor(){
+        this.cor = 'Vermelho',
+        this.modelo = 'Embraer E-Jets'
+      }
+
+      levantarVoo() {
+        console.log('Levantar Voo')
+      }
+    }
+
+    // instanciando o objeto com base na classe
+    let a3 = new AviaoC()
+    console.log(a1)
+    console.log(a2)
+    console.log(a3)
+
+    // todos eles tem o atributo prototype que descende de object. Entao na hora que o objeto eh criado, ele descende de object, que eh nosso prototipo, ou seja, nosso padrao, nosso primeiro modelo. Em js todos os objetos descendem de object, o qual, nao eh um objeto e sim uma funcao. Por isso que dizemos que na essencia do js, objetos sao funcoes. 
+
+    // Portanto, na hora de criacao de objetos, por default os objetos que estamos criando descendem de object, uma funcao, que tambem possui seus proprios atributos e metodos, que podem ser explorados se quiser.
+
+    // Todos objetos que criamos tem uma relacao de heranca a partir do atributo prototype que descende da funcao object
+    </script>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>
