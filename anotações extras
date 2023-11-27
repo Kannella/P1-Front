@@ -22,4 +22,102 @@
 
             exemplo();
 
+
+
+
+
+
+            --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            const eAgora = async() => {
+                console.log(1);
+                console.log(2);
+                console.log(3);
+                return '123';
+            }
+            
+            async function teste() {
+                console.log(await eAgora());
+            }
+            
+            teste();
+
+            Função eAgora:
+            É uma função assíncrona declarada usando a arrow function async.
+            Dentro da função, há três instruções console.log(1), console.log(2), e console.log(3), que imprimirão os números 1, 2 e 3 no console.
+            A função retorna a string '123'.
+
+            Função teste:
+            É uma função assíncrona que utiliza a palavra-chave await.
+            Quando await é usado dentro de uma função assíncrona, ele pausa a execução da função até que a Promise seja resolvida.
+            Neste caso, await eAgora() está chamando a função assíncrona eAgora, e a execução de teste é pausada até que a função eAgora seja concluída e seja retornado a promisse ja resolvida, no caso
+            APENAS o resultado produzido pela computação a que a Promise ficou associada, ou seja, apenas a string “123”..
+            Execução de teste():
+            
+            Quando teste() é chamada, a execução começa.
+            A função teste chama await eAgora().
+            A execução é transferida para dentro de eAgora, onde os logs são exibidos e, em seguida, a string '123' é retornada.
+            A execução volta para teste(), e o resultado da Promise (a string '123') é logado no console.
+            Então, se você executar este código, a saída no console será:
+
+            resultado:
+            1
+            2
+            3
+            123
+            Em resumo, async e await são utilizados para lidar com código assíncrono de maneira mais síncrona e legível. A palavra-chave async é usada para declarar funções assíncronas, e await é usado dentro dessas funções para pausar a execução até que uma Promise seja resolvida.
+
+            --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+            async Function:
+            A palavra-chave async é usada para definir funções assíncronas em JavaScript.
+            Uma função assíncrona sempre retorna uma Promise. Mesmo que você retorne um valor diretamente, ele será encapsulado em uma Promise resolvida.
+
+            Exemplo:
+            async function minhaFuncaoAssincrona() {
+              return "Olá, mundo!";
+            }
+            await Operator:
+            
+            O operador await é usado dentro de funções assíncronas para esperar que uma Promise seja resolvida ou rejeitada.
+            Ele pausa a execução da função assíncrona até que a Promise seja concluída.
+            await só pode ser usado dentro de funções assíncronas.
+
+            Exemplo:
+            async function exemploAsyncAwait() {
+              try {
+                let resultado = await minhaFuncaoAssincrona();
+                console.log(resultado); // Exibe "Olá, mundo!"
+              } catch (erro) {
+                console.error(erro);
+              }
+            }
+            No exemplo acima, await minhaFuncaoAssincrona() pausa a execução de exemploAsyncAwait até que a Promise retorne um valor (ou seja, até que a operação assíncrona seja concluída).
+            O bloco try é usado para lidar com o resultado da operação assíncrona ou capturar possíveis erros.
+
+            Benefícios de async/await:
+            Melhora a legibilidade: Permite que você escreva código assíncrono de maneira mais síncrona e sequencial, o que é mais fácil de entender.
+            Facilita o tratamento de erros: O uso de try e catch torna mais simples lidar com erros em operações assíncronas.
+
+            Exemplo:
+            async function exemploComPromise() {
+              try {
+                let resultado = await minhaFuncaoAssincrona();
+                console.log(resultado);
+              } catch (erro) {
+                console.error(erro);
+              }
+            }
+            Comparando com uma versão usando apenas Promises:
+            function exemploSemAsyncAwait() {
+              minhaFuncaoAssincrona()
+                .then(resultado => {
+                  console.log(resultado);
+                })
+                .catch(erro => {
+                  console.error(erro);
+                });
+            }
+            A versão com async/await é mais concisa e fácil de seguir.
+            Em resumo, async e await são ferramentas poderosas em JavaScript para lidar com código assíncrono de maneira mais limpa e legível. Eles são especialmente úteis quando você tem várias operações assíncronas a serem realizadas em sequência.
+
             /*
