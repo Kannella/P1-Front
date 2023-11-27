@@ -1,0 +1,156 @@
+/*
+SIMULADO:
+2)
+<div class="container">
+  <div class="row">
+    <div class="col-md- 4 col-lg-6 ">
+      <div class="p-4 border">
+        caixa 1
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <div class="p-4 border">
+        caixa 2
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="p-4 border">
+      caixa 3
+    </div>
+  </div>
+</div>
+
+
+3)
+const c = 2 
+console.log(c)
+c = 3 
+
+4)
+var nome 
+var vaiChover = true 
+if (vaiChover){
+  console.log(nome + ', leve guarda-chuva')
+  nome = 'João'
+}
+
+console.log('Até mais, ' + nome)
+
+
+5)
+console.log(idade)
+if( idade >= 18 ){
+  let idade = 18 
+  var nome = 'Ana'
+  console.log (`Sim, ${nome}. voce pode dirigir.`)
+}
+console.log(`Parabéns pelos seus  ${idade} anos.`)
+
+
+
+
+
+
+6) 
+const nomes = ['Ana Maria', 'João']
+const r1 = nomes.every(n => n.startsWith('A'))
+console.log(r1)
+const r2  = nomes.reduce((ac, v) => ac + v)
+console.log(r2)
+
+
+7) 
+let prova = {
+  disciplina : 'programação',
+  professor : 'Bossini',
+  alunos : ['Ana', 'João'],
+  data : {
+    dia : 15,
+    mes : 6, 
+    ano : 2023
+  } 
+}
+console.log(prova['data'].ano)
+console.log(prova[alunos] [1])
+
+
+OBS: se tiver assim : console.log(prova[alunos] [1])
+Vai dar erro, o certo é assim:
+console.log(prova[‘alunos’] [1])
+mas na prova ta do primeiro jeito, o errado.
+
+
+
+
+8)
+
+const fs = require ("fs");
+const abriArquivo = function (nomeArquivo){
+  const exibirConteudo = function (erro, conteudo){
+    if (erro){
+      console.log(`Deu erro: ${erro}`);
+      } else {
+        console.log(conteudo.toString());
+        const dobro = +conteudo.toString() * 2; 
+        const finalizar = function (erro){
+          if(erro){
+            console.log('Deu erro tentando salvar o dobro')
+          } 
+          else{
+            console.log("Salvou o dobro com sucesso");
+          }
+        }
+        fs.writeFile('dobro.txt', dobro.toString(), finalizar);
+      }
+  }; 
+  fs.readFile(nomeArquivo, exibirConteudo);
+};
+abriArquivo("arquivo.txt");
+
+
+
+9) 
+function calculoRapidinho(numero) {
+  return numero >= 0 
+  ? Promise.resolve((numero * (numero + 1)) / 2)
+  : Promise.reject("somente valores positivos, por favor");
+}
+
+calculoRapidinho(10)
+.then((resultado) => {
+  console.log(resultado);
+})
+.catch((err) => { 
+  console.log(err);
+})
+calculoRapidinho(-1)
+.then((resultado) => {
+  console.log(resultado)
+})
+.catch((err) => { 
+  console.log(err);
+})
+console.log("esperando...");
+10)
+
+const eAgora = async() => {
+  console.log(1)
+  console.log(2)
+  console.log(3)
+  return '123'
+}
+
+async function teste(){
+  console.log(eAgora())
+}
+teste()
+
+
+(segunda parte)
+console.log(await eAgora())
+
+
+*/
