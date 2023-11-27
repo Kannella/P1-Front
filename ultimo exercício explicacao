@@ -15,6 +15,7 @@ teste()
 
 Neste caso, a função teste chama eAgora, mas não utiliza a palavra-chave await. Isso significa que a função eAgora será invocada, mas a execução de teste continuará antes mesmo que a Promise retornada por eAgora seja resolvida. 
 Isso pode resultar em um comportamento assíncrono inesperado.
+Uma função assíncrona sempre retorna uma Promise. Mesmo que você retorne um valor diretamente, ele será encapsulado em uma Promise resolvida.
 
 Caso 2:
 const eAgora = async() => {
