@@ -1,0 +1,79 @@
+/*
+Caso 1:
+const eAgora = async() => {
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    return '123'
+}
+
+async function teste() {
+    console.log(eAgora())
+}
+
+teste()
+
+Neste caso, a função teste chama eAgora, mas não utiliza a palavra-chave await. Isso significa que a função eAgora será invocada, mas a execução de teste continuará antes mesmo que a Promise retornada por eAgora seja resolvida. 
+Isso pode resultar em um comportamento assíncrono inesperado.
+
+Caso 2:
+const eAgora = async() => {
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    return '123'
+}
+
+async function teste() {
+    console.log(await eAgora())
+}
+
+teste()
+
+Neste caso, a função teste utiliza a palavra-chave await ao chamar eAgora. Isso significa que a execução da função teste será pausada até que a Promise retornada por eAgora seja resolvida. 
+Isso garante que o código dentro de eAgora seja executado completamente antes de prosseguir com a execução de teste.
+
+Em resumo, a principal diferença entre os dois casos está no uso ou não da palavra-chave await. 
+O uso de await garante que a execução seja pausada até que a Promise seja resolvida, enquanto a ausência de await pode resultar em um comportamento assíncrono imprevisível.
+
+User
+Mas pq o caso 1 retorna o resultado dentro de uma promisse e o caso 2 retorna somente a string 123?
+ChatGPT
+A diferença entre os dois casos está na forma como a função teste trata o resultado da função assíncrona eAgora.
+
+Caso 1:
+const eAgora = async () => {
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    return '123'
+}
+
+async function teste() {
+    console.log(eAgora())
+}
+
+teste()
+
+Neste caso, a função eAgora é chamada dentro da função teste, mas como eAgora é uma função assíncrona e retorna uma Promise, o console.log(eAgora()) imprime uma Promise no console. 
+Isso ocorre porque a função teste não está utilizando await para esperar que a Promise seja resolvida.
+
+Caso 2:
+const eAgora = async () => {
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    return '123'
+}
+
+async function teste() {
+    console.log(await eAgora())
+}
+
+teste()
+
+Isso faz com que a execução da função teste seja pausada até que a Promise retornada por eAgora seja resolvida. 
+Quando a Promise é resolvida, await retorna o valor resolvido da Promise, que é a string '123', e então esse valor é impresso no console.
+
+Em resumo, a palavra-chave await é fundamental para esperar que a Promise seja resolvida e retornar o valor resultante. Se você não usar await, estará tratando a Promise diretamente, o que pode levar a comportamentos inesperados, como no caso do primeiro exemplo.
+*/
